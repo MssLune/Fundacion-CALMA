@@ -10,13 +10,13 @@ View [all components here](https://www.facebook.com/fundacioncalma.org).
 
 #### Special thanks
 Durante todo el proceso del proyecto, se brinda las principales gracias a nuestros desarrolladores:
-- [Popper.js]Geraldine Jayo
-- [CountUp]Duany Lirio
-- [Rellax]Paris Aranda
+- Geraldine Jayo
+- Duany Lirio
+- Paris Aranda
 
 Esta es una version de prueba.
 
-## Table of Contents
+## Tabla de contenido
 
 * [Versions](#versions)
 * [Quick Start](#quick-start)
