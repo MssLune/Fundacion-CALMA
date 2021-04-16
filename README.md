@@ -1,28 +1,24 @@
-# [Soft UI Design System](http://demos.creative-tim.com/soft-ui-design-system/presentation.html?ref=readme-suds)
+# [FUNDACION CALMA](https://www.facebook.com/fundacioncalma.org/)
 
 ![version](https://img.shields.io/badge/version-1.0.3-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/soft-ui-design-system.svg?maxAge=2592000)](https://github.com/creativetimofficial/soft-ui-design-system/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/soft-ui-design-system.svg?maxAge=2592000)](https://github.com/creativetimofficial/soft-ui-design-system/issues?q=is%3Aissue+is%3Aclosed)
 
-![Image](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/opt_sds_free_thumbnail.jpg)
+![Image](https://scontent.fmxp7-1.fna.fbcdn.net/v/t1.6435-9/173822977_2538535843121659_6637527562241951253_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=730e14&_nc_ohc=RrNvOzJ-0YsAX-0rT-4&_nc_ht=scontent.fmxp7-1.fna&oh=a6691b021da13a4fac64a3395ffd3349&oe=609F6FDE)
 
-Soft UI Design System is built with over 70 frontend individual elements, like buttons, inputs, navbars, navtabs, cards or alerts, giving you the freedom of choosing and combining. All components can take variations in colour, that you can easily modify using SASS files and classes.
+Creacion del proyecto para la fundacion Calma, la principal mision del proyecto es brindar apoyo a los mas necesitados a traves de nuevas herramientas tecnologicas.
 
-You will save a lot of time going from prototyping to full-functional code, because all elements are implemented. This Freebie Bootstrap 5 UI Kit is coming with prebuilt design blocks, so the development process is seamless, switching from our pages to the real website is very easy to be done.
-
-View [all components here](https://www.creative-tim.com/learning-lab/bootstrap/alerts/soft-ui-design-system?ref=readme-suds).
+View [all components here](https://www.facebook.com/fundacioncalma.org).
 
 #### Special thanks
-During the development of this design system, we have used many existing resources from awesome developers. We want to thank them for providing their tools open source:
-- [Popper.js](https://popper.js.org/) - Kickass library used to manage poppers
-- [CountUp](https://inorganik.github.io/countUp.js/) - Dependency-free, lightweight JavaScript class that can be used to quickly create animations that display numerical data in a more interesting way
-- [Rellax](https://dixonandmoe.com/rellax/) - Lightweight, vanilla javascript parallax library
-- [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll) - A lightweight script to animate scrolling to anchor links
+Durante todo el proceso del proyecto, se brinda las principales gracias a nuestros desarrolladores:
+- [Popper.js]Geraldine Jayo
+- [CountUp]Duany Lirio
+- [Rellax]Paris Aranda
 
-Let us know your thoughts below. And good luck with development!
+Esta es una version de prueba.
 
 ## Table of Contents
 
 * [Versions](#versions)
-* [Demo](#demo)
 * [Quick Start](#quick-start)
 * [Documentation](#documentation)
 * [File Structure](#file-structure)
@@ -35,27 +31,13 @@ Let us know your thoughts below. And good luck with development!
 
 ## Versions
 
-[<img src="https://s3.amazonaws.com/creativetim_bucket/github/html.png" width="60" height="60" />](https://www.creative-tim.com/product/soft-ui-design-system?ref=readme-suds)
-
-| HTML |
-| --- |
-| [![Soft UI Design System HTML](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/opt_sds_free_thumbnail.jpg)](http://demos.creative-tim.com/soft-ui-design-system/presentation.html?ref=readme-suds)
-
-## Demo
-
-- [Sign in page](https://demos.creative-tim.com/soft-ui-design-system/pages/sign-in.html?ref=readme-suds)
-- [About us page](https://demos.creative-tim.com/soft-ui-design-system/pages/about-us.html?ref=readme-suds)
-- [Contact us page](https://demos.creative-tim.com/soft-ui-design-system/pages/contact-us.html?ref=readme-suds)
-- [Author page](https://demos.creative-tim.com/soft-ui-design-system/pages/author.html?ref=readme-suds)
-- [Page headers](https://demos.creative-tim.com/soft-ui-design-system/sections/page-sections/hero-sections.html?ref=readme-suds)
-
-[View More](https://demos.creative-tim.com/soft-ui-design-system/presentation.html?ref=readme-suds).
+[<img src="https://scontent.fmxp7-1.fna.fbcdn.net/v/t1.6435-9/44334710_1914824668826116_1316156224932151296_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=e3f864&_nc_ohc=pI-sla_pj9EAX9662Q7&_nc_ht=scontent.fmxp7-1.fna&oh=86235f8200ef3ddb6bb767f461d951a5&oe=60A01395" width="60" height="60" />](fundacion-calma)
 
 ## Quick start
 
 Quick start options:
 
-- Download from [Creative Tim](https://www.creative-tim.com/product/soft-ui-design-system?ref=readme-suds).
+- Download from [Fundacion Calma](https://www.facebook.com/fundacioncalma.org).
 
 ## Terminal Commands
 
@@ -63,7 +45,7 @@ Quick start options:
 2. Navigate to the root / directory and run npm install to install our local dependencies.
 
 ## Documentation
-The documentation for the Soft UI Design System is hosted at our [website](https://www.creative-tim.com/learning-lab/bootstrap/overview/soft-ui-design-system?ref=readme-suds).
+The documentation for the Soft UI Design System is hosted at our [website](https://www.facebook.com/fundacioncalma.org).
 
 ### What's included
 
@@ -78,10 +60,10 @@ soft-ui-design-system
     │   ├── js
     │   │   ├── core
     │   │   ├── plugins
-    │   │   └── soft-design-system.min.js
+    │   │   └── fundacion-calma-min.js
     │   └── scss
-    │       ├── soft-design-system/
-    │       └── soft-design-system.scss
+    │       ├── fundacion-calma-system/
+    │       └── fundacion-calma-system.scss
     ├── docs
     │   ├── documentation.html
     ├── pages/
@@ -99,47 +81,38 @@ At present, we officially aim to support the last two versions of the following 
 <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/chrome.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/firefox.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/edge.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/safari.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/opera.png" width="64" height="64">
 
 ## Resources
-- [Live Preview](https://demos.creative-tim.com/soft-ui-design-system/presentation.html?ref=readme-suds)
-- [Download Page](https://www.creative-tim.com/product/soft-ui-design-system?ref=readme-suds)
-- Documentation is [here](https://www.creative-tim.com/learning-lab/bootstrap/overview/soft-ui-design-system?ref=readme-suds)
-- [License Agreement](https://www.creative-tim.com/license?ref=readme-suds)
-- [Support](https://www.creative-tim.com/contact-us?ref=readme-suds)
-- Issues: [Github Issues Page](https://github.com/creativetimofficial/soft-ui-design-system/issues)
+- [Live Preview](https://www.facebook.com/fundacioncalma.org)
+- [Download Page](https://www.facebook.com/fundacioncalma.org)
+- Documentation is [here](https://www.facebook.com/fundacioncalma.org)
+- [License Agreement](https://www.facebook.com/fundacioncalma.org)
+- [Support](https://www.facebook.com/fundacioncalma.org)
+- Issues: [Github Issues Page](https://www.facebook.com/fundacioncalma.org)
 
 ## Reporting Issues
-We use GitHub Issues as the official bug tracker for the Soft UI Design System. Here are some advices for our users that want to report an issue:
+We use GitHub Issues as the official bug tracker for the Fundacion Calma. Here are some advices for our users that want to report an issue:
 
-1. Make sure that you are using the latest version of the Soft UI Design System. Check the CHANGELOG from your dashboard on our [website](https://www.creative-tim.com/product/soft-ui-design-system?ref=readme-suds).
+1. Make sure that you are using the latest version of the Soft UI Design System. Check the CHANGELOG from your dashboard on our [website](https://www.facebook.com/fundacioncalma.org).
 2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.
 3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help.
 
 ## Technical Support or Questions
-
-If you have questions or need help integrating the product please [contact us](https://www.creative-tim.com/contact-us?ref=readme-suds) instead of opening an issue.
+Si usted cuenta con alguna no dude en contactarnos. [Contactenos](https://www.facebook.com/fundacioncalma.org) .
 
 ## Licensing
 
-- Copyright 2021 [Creative Tim](https://www.creative-tim.com?ref=readme-suds)
-- Creative Tim [license](https://www.creative-tim.com/license?ref=readme-suds)
+- Copyright 2021 [Fundacion Calma](https://www.facebook.com/fundacioncalma.org)
+- Fundacion Calma [license](https://www.facebook.com/fundacioncalma.org)
 
-## Useful Links
+## Links
 
-- [More products](https://www.creative-tim.com/templates?ref=readme-suds) from Creative Tim
+- [Programa de Afiliados](https://www.facebook.com/fundacioncalma.org) (earn money)
 
-- [Tutorials](https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w)
+##### Redes Sociales
 
-- [Freebies](https://www.creative-tim.com/bootstrap-themes/free?ref=readme-suds) from Creative Tim
+Twitter: <https://www.facebook.com/fundacioncalma.org>
 
-- [Affiliate Program](https://www.creative-tim.com/affiliates/new?ref=readme-suds) (earn money)
+Facebook: <https://www.facebook.com/fundacioncalma.org>
 
-##### Social Media
+Google+: <https://www.facebook.com/fundacioncalma.org>
 
-Twitter: <https://twitter.com/CreativeTim>
-
-Facebook: <https://www.facebook.com/CreativeTim>
-
-Dribbble: <https://dribbble.com/creativetim>
-
-Google+: <https://plus.google.com/+CreativetimPage>
-
-Instagram: <https://instagram.com/creativetimofficial>
+Instagram: <https://www.facebook.com/fundacioncalma.org>
