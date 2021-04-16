@@ -16,36 +16,36 @@ Esta es una version de prueba.
 
 ## Tabla de contenido
 
-* [Versions](#versions)
-* [Quick Start](#quick-start)
-* [Documentation](#documentation)
-* [File Structure](#file-structure)
-* [Browser Support](#browser-support)
+* [Versiones](#versions)
+* [Comenzar](#quick-start)
+* [Documentacion](#documentation)
+* [Que esta incluido](#file-structure)
+* [Navegadores soportados](#browser-support)
 * [Resources](#resources)
 * [Reporting Issues](#reporting-issues)
 * [Technical Support or Questions](#technical-support-or-questions)
 * [Licensing](#licensing)
 * [Useful Links](#useful-links)
 
-## Versions
+## Versiones
 
 [<img src="https://scontent.fmxp7-1.fna.fbcdn.net/v/t1.6435-9/44334710_1914824668826116_1316156224932151296_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=e3f864&_nc_ohc=pI-sla_pj9EAX9662Q7&_nc_ht=scontent.fmxp7-1.fna&oh=86235f8200ef3ddb6bb767f461d951a5&oe=60A01395" width="60" height="60" />](fundacion-calma)
 
-## Quick start
+## Comenzar
 
 Quick start options:
 
 - Download from [Fundacion Calma](https://www.facebook.com/fundacioncalma.org).
 
-## Terminal Commands
+## Comandos del terminal
 
 1. Download and Install NodeJs from [NodeJs Official Page](https://nodejs.org/en/download/).
 2. Navigate to the root / directory and run npm install to install our local dependencies.
 
-## Documentation
+## Documentacion
 The documentation for the Soft UI Design System is hosted at our [website](https://www.facebook.com/fundacioncalma.org).
 
-### What's included
+### Que esta incluido
 
 Within the download you'll find the following directories and files:
 
@@ -72,7 +72,7 @@ soft-ui-design-system
     ├── presentation.html
 ```
 
-## Browser Support
+## Navegadores soportados
 
 At present, we officially aim to support the last two versions of the following browsers:
 
