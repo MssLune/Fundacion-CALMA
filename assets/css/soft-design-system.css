@@ -236,7 +236,7 @@ a {
 }
 
 a:hover {
-  color: #85C1E9;
+  color: #2c8bca;
   text-decoration: none;
 }
 
@@ -8456,7 +8456,7 @@ fieldset:disabled .btn {
 
 /* rtl:end:remove */
 .text-primary {
-  color: #AED6F1 !important;
+  color: #85C1E9 !important;
 }
 
 .text-secondary {
@@ -13469,7 +13469,7 @@ fieldset:disabled .btn {
 }
 
 .card.card-background.card-background-mask-primary:after {
-  background-image: linear-gradient(310deg, #7928CA 0%, #FF0080 100%);
+  background-image: linear-gradient(310deg, #D6EAF8   0%,#EBF5FB 100%);
   opacity: .85;
 }
 
@@ -13978,7 +13978,7 @@ label,
 }
 
 .bg-gradient-primary {
-  background-image: linear-gradient(310deg, #7928CA 0%, #FF0080 100%);
+  background-image: linear-gradient(310deg, #A9CCE3  0%, #85C1E9 100%);
 }
 
 .bg-gradient-secondary {
@@ -14230,11 +14230,11 @@ label,
 }
 
 svg.text-primary .color-foreground {
-  fill: #7928CA;
+  fill: #85C1E9;
 }
 
 svg.text-primary .color-background {
-  fill: #FF0080;
+  fill: #85C1E9;
 }
 
 svg.text-secondary .color-foreground {
@@ -15304,7 +15304,7 @@ p {
 }
 
 .text-gradient.text-primary {
-  background-image: linear-gradient(310deg, #7928CA, #FF0080);
+  background-image: linear-gradient(310deg, #85C1E9, #85C1E9);
 }
 
 .text-gradient.text-info {
