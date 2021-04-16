@@ -6,9 +6,7 @@
 
 Creacion del proyecto para la fundacion Calma, la principal mision del proyecto es brindar apoyo a los mas necesitados a traves de nuevas herramientas tecnologicas.
 
-View [all components here](https://www.facebook.com/fundacioncalma.org).
-
-#### Special thanks
+#### Saludos Especiales
 Durante todo el proceso del proyecto, se brinda las principales gracias a nuestros desarrolladores:
 - Geraldine Jayo
 - Duany Lirio
