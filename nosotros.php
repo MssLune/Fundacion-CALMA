@@ -8,4 +8,4 @@
 
         <?php include_once 'includes/galeria.php' ?>
 
-<?php include_once 'includes/footer.php' ?>
+<?php include_once 'includes/lol.php' ?>
