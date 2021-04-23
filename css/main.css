@@ -752,45 +752,92 @@ footer.info-testimonial cite span {
   text-transform: none;
   margin-top: 5px;
 }
-/*** Newsletter:   **/
-div.newsletter {
+/* historia años */
+
+ul.historia-años{
   position: relative;
-  height: auto;
+  padding: 40px 0;
+
 }
-div.newsletter::before {
-  background-image: url(../img/bg-newsletter.jpg);
-  content: '';
-}
-div.newsletter .contenido {
-  padding: 100px 0;
-  color: #ffffff;
-  text-align: center;
-  position: relative;
-}
-div.newsletter .contenido p {
-  font-size: 1.2em;
-  text-transform: lowercase;
-}
-div.newsletter .contenido h3 {
-  color: #ffffff;
+ul.historia-años li{
+  width: 89%;
+  float: left;
+  text-align: justify;
+  color: var(--principal);
   text-transform: uppercase;
-  font-size: 7vw;
-  font-family: 'PT Sans', sans-serif;
+  font-family: var(--oswald);
+  font-size: 1.4em;
+  padding-left:1%;
+  padding-right:5%;
+  font-weight: bold;
 }
-/** Cuenta Regresiva**/
-div.cuenta-regresiva ul li {
-  text-transform: uppercase;
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.6rem;
-  text-align: center;
+ul.historia-años img{
+  width: 10%;
+  float: left;
+
+}
+ul.historia-años p{
+  font-weight:normal;
+  font-size: .6em;
+  color: black;
+  text-transform: none;
+}
+@media only screen and (min-width:768px){
+  ul.historia-años li{
+    width: 23.3%;
+  }
 }
 
-@media only screen and (min-width:768px){
-    div.cuenta-regresiva ul li {
-        width: 25%;
-        float: left;
-    }
+div.historia-años p{
+  text-align: center;
+  color: var(--principal);
+  font-size: 1.1em;
+  padding-bottom: 5%;
 }
+/* Misión y visión */
+
+div.misionvision{
+  position: relative;
+  height: auto;
+  min-height: 400px;
+  padding-top: 2%;
+}
+div.misionvision::before{
+  background-image: url(../assets/img/fondoCalma.png);
+  content:'';
+}
+ul.misionv{
+  position: relative;
+  padding: 120px 0;
+
+}
+ul.misionv li{
+  width: 80%;
+  float: left;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-family: var(--oswald);
+  font-size: 1.2em;
+  padding-left:10%;
+  padding-right:10%;
+  font-weight: bold;
+}
+ul.misionv img{
+  width: 50px;
+
+}
+ul.misionv p{
+  font-weight:normal;
+  font-size: .8em;
+}
+@media only screen and (min-width:768px){
+  ul.misionv li{
+    width: 50%;
+  }
+}
+
+
 
 p.copyright {
   background-color: #2e2e2e;
