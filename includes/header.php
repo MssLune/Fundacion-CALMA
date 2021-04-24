@@ -110,7 +110,7 @@
           </div>
         </div>
         <header class="header-2">
-          <div class="page-header relative" style="background-image: url('./assets/img/fondoCalma.png'); height:750px;">
+          <div class="page-header relative" style="background-image: url('./assets/img/fondoCalma.png'); height:650px;">
             <div class="container">
               <div class="row">
                 <div class="col-lg-7 text-center mx-auto">
