@@ -2,6 +2,44 @@
   <div class="especiales">
     <img src="img/aliados.png" alt="Nuestros Aliados">
   </div>
+  <ul class="lista-invitados clearfix">
+      <li>
+          <div class="invitado">
+              <a class="invitado-info" href="#invitado1">
+                                   <img style="max-width:100%;" src="img/foto01.jpg" alt="Imagen invitado">
+                                   <p>Carmen Arrobas</p>
+                               </a>
+          </div>
+          <!-- END .invitado -->
+      </li>
+
+
+      <li>
+          <div class="invitado">
+              <a class="invitado-info" href="#invitado2">
+                                   <img style="max-width:100%;" src="img/foto02.jpg" alt="Imagen invitado">
+                                   <p>Marlen Perozo</p>
+                               </a>
+          </div>
+          <!-- END .invitado -->
+      </li>
+
+
+
+      <li>
+          <div class="invitado">
+              <a class="invitado-info" href="#invitado3">
+                                   <img style="max-width:100%;" src="img/foto03.jpg" alt="Imagen invitado">
+                                   <p>Kasen Lee</p>
+                               </a>
+          </div>
+          <!-- END .invitado -->
+      </li>
+
+
+</ul>
+
+
     <ul class="lista-invitados clearfix">
 
 
