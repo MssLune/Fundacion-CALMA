@@ -139,14 +139,7 @@ h2 {
     text-transform: uppercase;
     text-align: center;
 }
-h2::after {
-  content: '';
-  margin: 0 auto;
-  background-image: url(../img/separador.png);
-  height: 30px;
-  width: 100px;
-  display: block;
-}
+
 h3 {
   font-size: 1.8em;
   color: #fe4918;

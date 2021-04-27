@@ -65,20 +65,20 @@
 
                       </li>
                       <li class="nav-item dropdown dropdown-hover mx-2">
-                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a href="pages/voluntariado.php" class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages">
                           SOY VOLUNTARIO/PSICOLOGO
                         </a>
                       </li>
 
                       </li>
                       <li class="nav-item dropdown dropdown-hover mx-2">
-                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages">
                           SOY EMPRESA
                         </a>
                       </li>
 
                       <li class="nav-item dropdown dropdown-hover mx-2">
-                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages">
                           NUESTROS ESPECIALISTAS
                           <img src="./assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-1">
                         </a>
@@ -86,14 +86,14 @@
 
                       </li>
                       <li class="nav-item dropdown dropdown-hover mx-2">
-                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages">
                           BLOG "CALMA"
                         </a>
                       </li>
 
 
                       <li class="nav-item dropdown dropdown-hover mx-2">
-                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages">
                           PLAN PREMIUM
                         </a>
                       </li>
