@@ -1,5 +1,5 @@
 
-<?php include_once 'includes/header2.php' ?>
+<?php include_once 'includes/header.php' ?>
 
         <?php include_once 'includes/historia.php' ?>
 
