@@ -58,15 +58,15 @@
 
                     <ul class="navbar-nav navbar-nav-hover ms-lg-7 ps-lg-5 w-100">
                       <li class="nav-item dropdown dropdown-hover mx-2">
-                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
-                          SOY UN VOLUNTARIO
+                        <a href="nosotros.php" class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
+                          NOSOTROS
                         </a>
                       </li>
 
                       </li>
                       <li class="nav-item dropdown dropdown-hover mx-2">
                         <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
-                          SOY PSICOLOGO
+                          SOY VOLUNTARIO/PSICOLOGO
                         </a>
                       </li>
 
