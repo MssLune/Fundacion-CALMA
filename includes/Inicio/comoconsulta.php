@@ -93,12 +93,17 @@
         </div>
       </div>
       <div class="col-lg-4 ms-auto me-auto p-lg-4 mt-lg-0 mt-4">
-        <div class="card card-background card-background-mask-primary tilt" data-tilt>
-          <div class="full-background" style="background-image: url('https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/team-working.jpg')"></div>
+        <div class="card card-background tilt" data-tilt>
+          <div class="full-background" style="background-image: url('img/Fondo portada 4.jpeg')"></div>
 
           <div class="card-body pt-7 text-center">
             <div class="icon icon-lg up mb-3 mt-3">
-              <!-- <svg width="50px" height="50px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <!-- 
+
+              card-background tilt: para darle un hover negro
+              card-background-mask-primary  en div class card card-background tilt
+              
+              <svg width="50px" height="50px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>box-3d-50</title>
                 <g id="Basic-Elements" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                   <g id="Rounded-Icons" transform="translate(-2319.000000, -291.000000)" fill="#FFFFFF" fill-rule="nonzero">
@@ -114,7 +119,7 @@
               </svg> -->
             </div>
             <!-- <p class="pe-5 mb-0">Promovemos el diálogo como  <br /> herramienta principal para el logro de la paz.</p> -->
-            <a href="" target="_blank" class="btn btn-black mt-5 up" style="width:97%">Realizar una consulta ahora</a>
+            <a href="" target="_blank" class="btn btn-white mt-5 up" style="width:97%">Realizar una consulta ahora</a>
           </div>
         </div>
       </div>

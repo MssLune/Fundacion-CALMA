@@ -42,9 +42,10 @@
         <div class="container position-sticky z-index-sticky top-0">
           <div class="row">
             <div class="col-12">
+
               <nav class="navbar navbar-expand-lg  blur blur-rounded top-0 z-index-fixed shadow position-absolute my-3 py-1 start-0 end-0 mx-1"> 
-                <div class="container-fluid">
-                  <a class="navbar-brand font-weight-bolder ms-sm-3" href="" rel="tooltip"  data-placement="bottom" target="_blank" bg-gradient-secondary>
+                <div class="container-fluid" style="padding-left: 70px">
+                  <a class="navbar-brand font-weight-bolder ms-sm-3" href="index.php" rel="tooltip"  data-placement="bottom" target="_blank">
                     <img src="assets/img/logocalmaColor.png" alt="42px" width="72px"> 
                   </a>
                   <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,7 +58,7 @@
                   <!-- pt-3 pb-2 py-lg-0 w-100 -->
                   <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
 
-                    <ul class="navbar-nav navbar-nav-hover ms-lg-14 ps-lg-0 w-100">
+                    <ul class="navbar-nav navbar-nav-hover ms-lg-10 ps-lg-0 w-100">
                       <li class="nav-item dropdown dropdown-hover mx-2">
                         <a href="index.php"  class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages">
                           INICIO
@@ -75,7 +76,7 @@
 
                       </li>
                       <li class="nav-item dropdown dropdown-hover mx-2">
-                        <a  href="psicologo.php" class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages" >
+                        <a  href="nosotros.php" class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages" >
                         EMPRESA
                         </a>
                       </li>
@@ -95,7 +96,7 @@
                       </li>
 
 
-                      <li class="nav-item my-auto ms-3 ms-lg-0" style="padding-left:70px;">
+                      <li class="nav-item my-auto ms-3 ms-lg-0" style="padding-left:  90px;">
                         <a href="login.php" class="btn btn-sm  btn-white  btn-round mb-0 me-1 mt-2 mt-md-0">Iniciar Sesion</a>
                       </li>
                     </ul>

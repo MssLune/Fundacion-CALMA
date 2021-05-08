@@ -1,11 +1,9 @@
-<svg width="100%" height="30" >
-      <rect width="100%" height="100"
-      style="fill:rgba(246, 246, 248, 0.596);stroke-width:10;stroke:rgba(246, 246, 248, 0.596);" />
-    </svg>
-<section class="py-md-7 pb-5">
-    <div class="container">
+
+<section class="py-md-7 pb-5 ">
+    <div class="container ">
       <div class="row text-center">
-        <div class="col-lg-3 col-md-6">
+
+        <div class="col-lg-3 col-md-6 ">
           <div class="info">
             <div class="icon icon-shape text-center">
               <svg class="text-primary" width="25px" height="25px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -94,10 +92,19 @@
             <p>This design system is fully supported on any device.</p>
           </div>
         </div>
+        
       </div>
+    
+    
+    
     </div>
+
+   
   </section>
   <!-- -------- END Features w/ 4 infos - just colored icons -------- -->
   <!-- START Blogs w/ 3 images & quote & text -->
 
-  <hr class="dark my-md-6 mt-2 mx-7">
+  <svg width="100%" height="30" >
+      <rect width="100%" height="100"
+      style="fill:rgba(246, 246, 248, 0.596);stroke-width:10;stroke:rgba(246, 246, 248, 0.596);" />
+    </svg>

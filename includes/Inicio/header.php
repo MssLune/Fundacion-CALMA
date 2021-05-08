@@ -8,12 +8,12 @@
             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
           </div>
           <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="10000">
-              <img src="assets/img/fondoCalma.png" class="d-block w-100" style="height:600px;">
+            <div class="carousel-item active " data-bs-interval="10000">
+              <img src="assets/img/fondoCalma.png" class="d-block w-100" style="height:530px;">
               <div class="carousel-caption d-none d-md-block">
-                  <div class="col-lg-7 text-center mx-auto">
+                  <div class="col-lg-7 text-center mx-auto" style="margin-top:-347px;">
                   <h1 class="text-white pt-3 mt-n5">Fundacion Calma</h1>
-                  <p class="text-white mt-2"><br /> Somos una organización a nivel mundial que promueve la paz y la mitigación de la violencia en todos sus escenarios.<br /> <br /></p><br />
+                  <p class="text-white mt-1"><br /> Somos una organización a nivel mundial que promueve la paz y la mitigación de la violencia en todos sus escenarios.<br /> <br /></p><br />
                   <button type="button" class="btn btn-white btn-sm me-2" style="width:53%;">Agendar Consultas</button>
                   </div>
               </div>
@@ -21,23 +21,23 @@
 
 
             <div class="carousel-item" data-bs-interval="2000">
-              <img src="assets/img/fondoCalma.png" class="d-block w-100" style="height:600px;">
-              <div class="carousel-caption d-none d-md-block">
+              <img src="img/Fondo portada 5.jpeg" class="d-block w-100" style="height:530px;">
+              <!-- <div class="carousel-caption d-none d-md-block" style="margin-top:-497px;">
                   <div class="col-lg-7 text-center mx-auto">
                   <h1 class="text-white ">Fundacion Calma</h1>
                   <p class="text-white "><br /> Somos una organización a nivel mundial que promueve la paz y la mitigación de la violencia en todos sus escenarios.<br /> <br /></p><br />
                   
-                  </div>
-              </div>
+                  </div> 
+              </div>-->
             </div>
 
 
             <div class="carousel-item">
-              <img src="assets/img/fondoCalma.png" class="d-block w-100" style="height:600px;">
+              <img src="img/Fondo portada 3.jpeg" class="d-block w-100" style="height:530px;">
               
-              <div class="carousel-caption d-none d-md-block" >
+              <!-- <div class="carousel-caption d-none d-md-block" style="margin-top:-697px;">
               <h1 class="text-white">Fundacion Calma</h1>
-              </div>
+              </div> -->
             </div>
 
 

@@ -1,20 +1,16 @@
 
-<div class="page-header section-height-85 bg-gradient-secondary">
-      <div>
-        <img class="position-absolute fixed-top ms-auto w-50 h-100 z-index-0 d-none d-sm-none d-md-block border-radius-section border-top-end-radius-0 border-top-start-radius-0 border-bottom-end-radius-0" src="assets/img/prueba/escribir.jpg">
-      </div>
-      <div class="container">
-        <div class="row">
+<div class="page-header section-height-85" style="padding-left:29%; background-image:url('img/Fondo portada 4.jpeg')">
+      
+      <div class="container ">
+        <div class="row ">
           <div class="col-lg-7 d-flex">
-            <div class="card card-body blur text-md-left text-center px-sm-5 shadow-lg mt-sm-5 py-sm-5">
-              <h2 class="text-gradient text-primary mb-0">Fundacion Calma</h2>
+            <div class="card card-body blur text-md-center text-center px-sm-4 shadow-lg mt-sm-5 py-sm-6" >
+              <h2 class="text-gradient text-primary mb-0">Fundacion Calma</h2> 
               <h2 class="text-dark mb-4">Psicologos</h2>
-              <p class="lead text-dark pe-md-5 me-md-5">
-                Se parte de nuestro equipo de psicologos pro-bono
-              </p>
+              <!-- <p class="lead text-dark pe-md-4 me-md-4">
+              </p> -->
               <div class="buttons">
-                <button type="button" class="btn btn-rounded bg-gradient-primary mt-4">Registrate</button>
-                <button type="button" class="btn btn-rounded btn-outline-secondary mt-4 ms-2">Saber mas</button>
+                <button type="button" class="btn btn-rounded bg-gradient-primary mt-4" style="width:230px">Registrate</button>
               </div>
 
             </div>
