@@ -1,6 +1,7 @@
 <section class="invitados contenedor seccion">
   <div class="especiales">
-    <img src="img/aliados.png" alt="Nuestros Aliados">
+    <!-- <img src="img/aliados.png" alt="Nuestros Aliados"> -->
+    <h2 class="text-dark mb-4">Especialistas calma</h2>
   </div>
   <ul class="lista-invitados clearfix">
       <li>
