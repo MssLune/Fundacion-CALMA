@@ -23,7 +23,7 @@
              <a href="javascript:;" class="text-dark font-weight-bold">Entrada 1</a>
            </h5>
            <p>
-             Finding temporary housing for your dog should be as easy as
+             ESTOY ESCRIBIENDO ACA SOY INGRID
              renting an Airbnb. That’s the idea behind Rover ...
            </p>
            <a href="javascript:;" class="text-primary icon-move-right">Saber mas
