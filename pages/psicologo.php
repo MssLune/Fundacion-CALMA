@@ -1,4 +1,4 @@
-<?php include_once '../includes/headerPages.php' ?>
+<?php include_once '../includes/inicio/header.php' ?>
 <!-- <section class="pt-3 pb-4" id="count-stats">
     <div class="container">
       <div class="row">
@@ -20,8 +20,8 @@
   </section> -->
 
 
-  <?php include_once '../includes/voluntario/banner.php' ?>
-  <?php include_once '../includes/voluntario/aaaa.php' ?>
+  <?php include_once '../includes/psicologo/banner.php' ?>
+  <?php include_once '../includes/psicologo/aaaa.php' ?>
 
 
-<?php include_once '../includes/footerPages.php' ?>
+<?php include_once '../includes/inicio/footerPages.php' ?>

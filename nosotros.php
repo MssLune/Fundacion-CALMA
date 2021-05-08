@@ -1,14 +1,14 @@
 
-<?php include_once 'includes/header.php' ?>
+<?php include_once 'includes/inicio/header.php' ?>
 
-        <?php include_once 'includes/historia.php' ?>
+        <?php include_once 'includes/nosotros/historia.php' ?>
 
-        <?php include_once 'includes/mision.php' ?>
+        <?php include_once 'includes/nosotros/mision.php' ?>
 
-        <?php include_once 'includes/aliados.php' ?>
+        <?php include_once 'includes/nosotros/aliados.php' ?>
 
-        <?php include_once 'includes/voluntarios.php' ?>
+        <?php include_once 'includes/inicio/voluntarios.php' ?>
 
-        <?php include_once 'includes/galeria.php' ?>
+        <?php include_once 'includes/nosotros/galeria.php' ?>
 
-<?php include_once 'includes/footer.php' ?>
+<?php include_once 'includes/inicio/footer.php' ?>
