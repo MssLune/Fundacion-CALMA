@@ -42,9 +42,9 @@
         <div class="container position-sticky z-index-sticky top-0">
           <div class="row">
             <div class="col-12">
-              <nav class="navbar navbar-expand-lg  blur blur-rounded top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+              <nav class="navbar navbar-expand-lg  blur blur-rounded top-0 z-index-fixed shadow position-absolute my-3 py-1 start-0 end-0 mx-1"> 
                 <div class="container-fluid">
-                  <a class="navbar-brand font-weight-bolder ms-sm-3" href="" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom" target="_blank">
+                  <a class="navbar-brand font-weight-bolder ms-sm-3" href="" rel="tooltip"  data-placement="bottom" target="_blank">
                     <!-- <img src="assets/img/logo.jpeg" alt=""> -->
                   </a>
                   <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,51 +54,43 @@
                       <span class="navbar-toggler-bar bar3"></span>
                     </span>
                   </button>
+                  <!-- pt-3 pb-2 py-lg-0 w-100 -->
                   <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
 
-                    <ul class="navbar-nav navbar-nav-hover ms-lg-7 ps-lg-5 w-100">
+                    <ul class="navbar-nav navbar-nav-hover ms-lg-14 ps-lg-0 w-100">
+                      
                       <li class="nav-item dropdown dropdown-hover mx-2">
-                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
-                          SOY UN VOLUNTARIO
+                        <a href="voluntarios.php"  class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages">
+                          PSICOLOGO
                         </a>
                       </li>
 
                       </li>
-                      <li class="nav-item dropdown dropdown-hover mx-2">
-                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
-                          SOY PSICOLOGO
-                        </a>
-                      </li>
+                      
 
                       </li>
                       <li class="nav-item dropdown dropdown-hover mx-2">
                         <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
-                          SOY EMPRESA
+                        EMPRESA
                         </a>
                       </li>
 
                       <li class="nav-item dropdown dropdown-hover mx-2">
-                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
-                          NUESTROS ESPECIALISTAS
-                          <img src="./assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-1">
+                        <a href="voluntarios.php"  class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages">
+                          BLOG CALMA
                         </a>
+                      </li>
 
 
                       </li>
                       <li class="nav-item dropdown dropdown-hover mx-2">
                         <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
-                          BLOG "CALMA"
+                          REGISTRATE
                         </a>
                       </li>
 
 
-                      <li class="nav-item dropdown dropdown-hover mx-2">
-                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
-                          PLAN PREMIUM
-                        </a>
-                      </li>
-
-                      <li class="nav-item my-auto ms-3 ms-lg-0">
+                      <li class="nav-item my-auto ms-3 ms-lg-0" style="padding-left:70px;">
                         <a href="" class="btn btn-sm  btn-white  btn-round mb-0 me-1 mt-2 mt-md-0">Iniciar Sesion</a>
                       </li>
                     </ul>
@@ -110,16 +102,47 @@
           </div>
         </div>
         <header class="header-2">
-          <div class="page-header relative" style="background-image: url('./assets/img/fondoCalma.png'); height:600px;">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-7 text-center mx-auto">
+
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <img src="assets/img/fondoCalma.png" class="d-block w-100" style="height:600px;">
+              <div class="carousel-caption d-none d-md-block">
+                  <div class="col-lg-7 text-center mx-auto">
                   <h1 class="text-white pt-3 mt-n5">Fundacion Calma</h1>
                   <p class="text-white mt-2"><br /> Somos una organización a nivel mundial que promueve la paz y la mitigación de la violencia en todos sus escenarios.<br /> <br /></p><br />
                   <button type="button" class="btn btn-white btn-sm me-2" style="width:53%;">Agendar Consultas</button>
-                </div>
+                  </div>
               </div>
             </div>
+
+
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="assets/img/fondoCalma.png" class="d-block w-100" style="height:600px;">
+              <div class="carousel-caption d-none d-md-block">
+                  <div class="col-lg-7 text-center mx-auto">
+                  <h1 class="text-white ">Fundacion Calma</h1>
+                  <p class="text-white "><br /> Somos una organización a nivel mundial que promueve la paz y la mitigación de la violencia en todos sus escenarios.<br /> <br /></p><br />
+                  
+                  </div>
+              </div>
+            </div>
+
+
+            <div class="carousel-item">
+              <img src="assets/img/fondoCalma.png" class="d-block w-100" style="height:600px;">
+              
+              <div class="carousel-caption d-none d-md-block" >
+              <h1 class="text-white">Fundacion Calma</h1>
+              </div>
+            </div>
+
+
             <div class="position-absolute w-100 z-index-1 bottom-0">
               <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 40" preserveAspectRatio="none" shape-rendering="auto">
                 <defs>
@@ -136,5 +159,12 @@
               </svg>
             </div>
           </div>
+
+
+
+          </div>
+          
+        </div>
+
 
         </header>

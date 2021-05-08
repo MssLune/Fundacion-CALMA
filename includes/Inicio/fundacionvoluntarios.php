@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-lg-6">
         <h3 class="text-gradient text-primary mb-0 mt-2">Fundacion Calma</h3>
-        <h3>Voluntarios</h3>
+        <h3>Nosotros</h3>
         <p>Pain is what we go through as we become older. We get insulted by others, lose trust for those others. We get back stabbed by friends. It becomes harder for us to give others a hand.</p>
         <a href="javascript:;" class="text-primary icon-move-right">Descubra mas
           <i class="fas fa-arrow-right text-sm ms-1"></i>
