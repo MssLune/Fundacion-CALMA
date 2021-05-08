@@ -58,23 +58,26 @@
                   <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
 
                     <ul class="navbar-nav navbar-nav-hover ms-lg-12 ps-lg-0 w-100">
+                      
                       <li class="nav-item dropdown dropdown-hover mx-2">
-                        <a href="nosotros.php" class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
-                          NOSOTROS
+                        <a href="voluntarios.php"  class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages">
+                          PSICOLOGO
                         </a>
                       </li>
 
                       </li>
-                      <li class="nav-item dropdown dropdown-hover mx-2">
-                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
-                          SOY VOLUNTARIO
-                        </a>
-                      </li>
+                      
 
                       </li>
                       <li class="nav-item dropdown dropdown-hover mx-2">
                         <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
-                        SOY PSICOLOGO
+                        EMPRESA
+                        </a>
+                      </li>
+
+                      <li class="nav-item dropdown dropdown-hover mx-2">
+                        <a href="voluntarios.php"  class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages">
+                          BLOG CALMA
                         </a>
                       </li>
 
@@ -82,16 +85,10 @@
                       </li>
                       <li class="nav-item dropdown dropdown-hover mx-2">
                         <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
-                          BLOG "CALMA"
+                          REGISTRATE
                         </a>
                       </li>
 
-
-                      <li class="nav-item dropdown dropdown-hover mx-2">
-                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
-                          PLAN PREMIUM
-                        </a>
-                      </li>
 
                       <li class="nav-item my-auto ms-3 ms-lg-0" style="padding-left:70px;">
                         <a href="" class="btn btn-sm  btn-white  btn-round mb-0 me-1 mt-2 mt-md-0">Iniciar Sesion</a>
@@ -114,15 +111,15 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="10000">
-              <img src="img/fondo portada 3.jpeg" class="d-block w-100" alt="...">
+              <img src="img/fondo portada 3.jpeg" class="d-block w-100" style="height:600px;">
               <div class="carousel-caption d-none d-md-block">
               <div class="col-lg-7 text-center mx-auto">
                   <h1 class="text-white pt-3 mt-n5">Fundacion Calma</h1>
                   <p class="text-white mt-2"><br /> Somos una organización a nivel mundial que promueve la paz y la mitigación de la violencia en todos sus escenarios.<br /> <br /></p><br />
                   <button type="button" class="btn btn-white btn-sm me-2" style="width:53%;">Agendar Consultas</button>
-                </div>
               </div>
-            </div>
+              </div>
+          </div>
             <div class="carousel-item" data-bs-interval="2000">
               <img src="img/fondo portada 3.jpeg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
