@@ -44,8 +44,8 @@
             <div class="col-12">
               <nav class="navbar navbar-expand-lg  blur blur-rounded top-0 z-index-fixed shadow position-absolute my-3 py-1 start-0 end-0 mx-1"> 
                 <div class="container-fluid">
-                  <a class="navbar-brand font-weight-bolder ms-sm-3" href="" rel="tooltip"  data-placement="bottom" target="_blank">
-                    <!-- <img src="assets/img/logo.jpeg" alt=""> -->
+                  <a class="navbar-brand font-weight-bolder ms-sm-3" href="" rel="tooltip"  data-placement="bottom" target="_blank" bg-gradient-secondary>
+                    <img src="assets/img/logocalmaColor.png" alt="42px" width="72px"> 
                   </a>
                   <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon mt-2">
@@ -58,9 +58,14 @@
                   <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
 
                     <ul class="navbar-nav navbar-nav-hover ms-lg-14 ps-lg-0 w-100">
-                      
                       <li class="nav-item dropdown dropdown-hover mx-2">
-                        <a href="voluntarios.php"  class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages">
+                        <a href="index.php"  class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages">
+                          INICIO
+                        </a>
+                      </li>  
+
+                      <li class="nav-item dropdown dropdown-hover mx-2">
+                        <a href="psicologo.php"  class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages">
                           PSICOLOGO
                         </a>
                       </li>
@@ -70,13 +75,13 @@
 
                       </li>
                       <li class="nav-item dropdown dropdown-hover mx-2">
-                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a  href="psicologo.php" class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages" >
                         EMPRESA
                         </a>
                       </li>
 
                       <li class="nav-item dropdown dropdown-hover mx-2">
-                        <a href="voluntarios.php"  class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages">
+                        <a href="psicologo.php"  class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages">
                           BLOG CALMA
                         </a>
                       </li>
@@ -84,14 +89,14 @@
 
                       </li>
                       <li class="nav-item dropdown dropdown-hover mx-2">
-                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a  href="login.php" class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages" >
                           REGISTRATE
                         </a>
                       </li>
 
 
                       <li class="nav-item my-auto ms-3 ms-lg-0" style="padding-left:70px;">
-                        <a href="" class="btn btn-sm  btn-white  btn-round mb-0 me-1 mt-2 mt-md-0">Iniciar Sesion</a>
+                        <a href="login.php" class="btn btn-sm  btn-white  btn-round mb-0 me-1 mt-2 mt-md-0">Iniciar Sesion</a>
                       </li>
                     </ul>
                   </div>
