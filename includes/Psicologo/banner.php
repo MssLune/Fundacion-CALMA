@@ -1,5 +1,5 @@
 
-<div class="page-header section-height-85" style="padding-left:29%; background-image:url('img/Fondo portada 4.jpeg')">
+<div class="page-header section-height-85" style="padding-left:29%; background-image:url('img/BannerPsicologo2.png')">
       
       <div class="container ">
         <div class="row ">
