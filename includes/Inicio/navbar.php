@@ -43,10 +43,10 @@
           <div class="row">
             <div class="col-12">
 
-              <nav class="navbar navbar-expand-lg  blur blur-rounded top-0 z-index-fixed shadow position-absolute my-3 py-1 start-0 end-0 mx-1"> 
+              <nav class="navbar navbar-expand-lg  blur blur-rounded top-0 z-index-fixed shadow position-absolute my-3 py-1 start-0 end-0 mx-1">
                 <div class="container-fluid" style="padding-left: 70px">
                   <a class="navbar-brand font-weight-bolder ms-sm-3" href="index.php" rel="tooltip"  data-placement="bottom" target="_blank">
-                    <img src="assets/img/logocalmaColor.png" alt="42px" width="72px"> 
+                    <img src="assets/img/logocalmaColor.png" alt="42px" width="72px">
                   </a>
                   <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon mt-2">
@@ -63,7 +63,7 @@
                         <a href="index.php"  class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages">
                           INICIO
                         </a>
-                      </li>  
+                      </li>
 
                       <li class="nav-item dropdown dropdown-hover mx-2">
                         <a href="psicologo.php"  class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages">
@@ -72,7 +72,7 @@
                       </li>
 
                       </li>
-                      
+
 
                       </li>
                       <li class="nav-item dropdown dropdown-hover mx-2">
@@ -90,7 +90,7 @@
 
                       </li>
                       <li class="nav-item dropdown dropdown-hover mx-2">
-                        <a  href="login.php" class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages" >
+                        <a  href="registrar.php" class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages" >
                           REGISTRATE
                         </a>
                       </li>
@@ -107,4 +107,3 @@
             </div>
           </div>
         </div>
-       
