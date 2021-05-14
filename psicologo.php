@@ -8,4 +8,6 @@
 
 <?php include_once 'includes/psicologo/body.php' ?>
 
+<?php include_once 'includes/psicologo/beneficios.php' ?>
+
 <?php include_once 'includes/inicio/footer.php' ?>

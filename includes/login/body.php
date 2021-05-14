@@ -33,6 +33,10 @@
                 Todavia no se ha registrado?
                 <a href="javascript:;" class="text-primary text-gradient font-weight-bold">Registrarse como paciente</a>
               </p>
+              <p class="mb-4 text-sm mx-auto">
+                Unete a nosotros!
+                <a href="javascript:;" class="text-primary text-gradient font-weight-bold">Registrarse como psicólogo pro bono</a>
+              </p>
             </div>
           </div>
         </div>
