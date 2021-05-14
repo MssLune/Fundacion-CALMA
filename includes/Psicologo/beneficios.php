@@ -1,5 +1,5 @@
 <section class="aliados contenedor seccion">
   <div class="especiales">
-      Hola
+      Hola fundacion
   </div>
 </section>
