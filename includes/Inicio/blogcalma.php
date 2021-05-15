@@ -1,8 +1,3 @@
-<svg width="100%" height="2" style="margin-top: 125px;">
- <rect width="100%" height="100"
- style="fill:rgba(246, 246, 248, 0.596);stroke-width:10;stroke:rgba(159, 233, 255, 0.103);" />
-</svg>
-
 <section class="py-3">
  <div class="container">
    <div class="row">

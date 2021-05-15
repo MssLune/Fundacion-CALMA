@@ -801,7 +801,7 @@ div.misionvision::before{
 }
 ul.misionv{
   position: relative;
-  padding: 120px 0;
+  padding: 60px 0;
 
 }
 ul.misionv li{
@@ -812,21 +812,21 @@ ul.misionv li{
   text-transform: uppercase;
   font-family: var(--oswald);
   font-size: 1.2em;
-  padding-left:10%;
-  padding-right:10%;
+  padding-left:5%;
+  padding-right:5%;
   font-weight: bold;
 }
 ul.misionv img{
-  width: 50px;
+  width: 30%;
 
 }
 ul.misionv p{
   font-weight:normal;
-  font-size: .8em;
+  font-size: .7em;
 }
 @media only screen and (min-width:768px){
   ul.misionv li{
-    width: 50%;
+    width: 33.3%;
   }
 }
 
