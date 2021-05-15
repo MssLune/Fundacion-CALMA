@@ -76,13 +76,13 @@
 
                       </li>
                       <li class="nav-item dropdown dropdown-hover mx-2">
-                        <a  href="nosotros.php" class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages" >
+                        <a  href="empresa.php" class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages" >
                         EMPRESA
                         </a>
                       </li>
 
                       <li class="nav-item dropdown dropdown-hover mx-2">
-                        <a href="psicologo.php"  class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages">
+                        <a href="https://fundacioncalma.org/" target= "_blank"  class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages">
                           BLOG CALMA
                         </a>
                       </li>
