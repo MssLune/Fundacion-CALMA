@@ -18,7 +18,7 @@
              <a href="javascript:;" class="text-dark font-weight-bold">Entrada 1</a>
            </h5>
            <p>
-             ESTOY ESCRIBIENDO ACA SOY INGRID
+             ESTOY ESCRIBIENDO ACA 123 Deivy
              renting an Airbnb. That’s the idea behind Rover ...
            </p>
            <a href="javascript:;" class="text-primary icon-move-right">Saber mas
