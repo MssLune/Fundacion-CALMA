@@ -20,7 +20,7 @@
                   </g>
                 </svg>
               </div>
-              <h5 class="font-weight-bolder mt-3">Agende su consulta</h5>
+              <h5 class="font-weight-bolder mt-3">Curso Online</h5>
               <p class="pe-5">Built by developers for developers. Check the foundation and you will find everything inside our documentation.</p>
             </div>
           </div>
@@ -41,7 +41,7 @@
                   </g>
                 </svg>
               </div>
-              <h5 class="font-weight-bolder mt-3">Ingrese con sus credenciales</h5>
+              <h5 class="font-weight-bolder mt-3">Sobre Maria Arguedas</h5>
               <p class="pe-3">The world’s most popular front-end open source toolkit, featuring Sass variables and mixins.</p>
             </div>
           </div>
@@ -65,7 +65,7 @@
                   </g>
                 </svg>
               </div>
-              <h5 class="font-weight-bolder mt-3">Elija el horario</h5>
+              <h5 class="font-weight-bolder mt-3">Aprenda sobre</h5>
               <p class="pe-5">Creating your design from scratch with dedicated designers can be very expensive. Start with our Design System.</p>
             </div>
           </div>
@@ -86,7 +86,7 @@
                   </g>
                 </svg>
               </div>
-              <h5 class="font-weight-bolder mt-3">Realice su terapia</h5>
+              <h5 class="font-weight-bolder mt-3">Aprenda a su ritmo</h5>
               <p class="pe-3">Regardless of the screen size, the website content will naturally fit the given resolution.</p>
             </div>
           </div>
@@ -98,11 +98,11 @@
 
           <div class="card-body pt-7 text-center">
             <div class="icon icon-lg up mb-3 mt-3">
-              <!-- 
+              <!--
 
               card-background tilt: para darle un hover negro
               card-background-mask-primary  en div class card card-background tilt
-              
+
               <svg width="50px" height="50px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>box-3d-50</title>
                 <g id="Basic-Elements" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -119,7 +119,7 @@
               </svg> -->
             </div>
             <!-- <p class="pe-5 mb-0">Promovemos el diálogo como  <br /> herramienta principal para el logro de la paz.</p> -->
-            <a href="" target="_blank" class="btn btn-white mt-5 up" style="width:97%">Realizar una consulta ahora</a>
+            <a href="https://fundacioncalma.org/" target="_blank" class="btn btn-white mt-5 up" style="width:97%">Curso online de Maria Arguedas</a>
           </div>
         </div>
       </div>

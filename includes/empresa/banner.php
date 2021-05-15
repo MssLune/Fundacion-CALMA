@@ -6,7 +6,7 @@
           <div class="col-lg-7 d-flex">
             <div class="card card-body blur text-md-center text-center px-sm-4 shadow-lg mt-sm-5 py-sm-6" >
               <h2 class="text-gradient text-primary mb-0">CONOCE LOS BENEFICIOS</h2>
-              <h2 class="text-dark mb-4">PSICÓLOGO PRO BONO</h2>
+              <h2 class="text-dark mb-4">DONANTE RECURRENTE</h2>
               <!-- <p class="lead text-dark pe-md-4 me-md-4">
               </p> -->
               <iframe width="100%" height="315"

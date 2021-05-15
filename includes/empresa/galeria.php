@@ -1,7 +1,5 @@
 <section class="aliados contenedor seccion">
-  <div class="especiales">
-    <img src="img/aliados.png" alt="Nuestros Aliados">
-  </div>
+
 
     <div class="galeria">
         <a href="img/galeria/01.jpg" data-lightbox="galeria">

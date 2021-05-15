@@ -4,7 +4,7 @@
 
 <?php include_once 'includes/psicologo/pasos.php' ?>
 
-<?php include_once 'includes/inicio/voluntarios.php' ?>
+<?php include_once 'includes/psicologo/voluntarios.php' ?>
 
 <?php include_once 'includes/psicologo/body.php' ?>
 
