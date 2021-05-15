@@ -16,6 +16,7 @@
           </div>
           <div class="description ps-3">
             <p class="mb-0">Nuestra <b>Misión</b> se enfoca en la mitigación de la violencia en todos los escenarios de la población, para la instauración de una Cultura de Paz en el mundo.</p>
+            <h1>NUESTRA MISIÓN 22222</h1>
           </div>
         </div>
 
