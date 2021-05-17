@@ -20,7 +20,6 @@
       <div class="carousel-item active">
       <iframe class="first-slide"  width="100%" height="315"
         src="https://www.youtube.com/embed/cv3cTM4T2DA"></iframe>
-        </iframe>
       </div>
       
       <div class="carousel-item">
