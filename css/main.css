@@ -1279,6 +1279,10 @@ table.registrados tr:nth-child(4n-1) {
 }
 
 /*--Registro*/
+   /*para texto Registrar*/
+.texto-registrar{
+  margin-top: 50px;
+}
 .formulario__input-error {
 	font-size: 12px;
 	margin-bottom: 0;
