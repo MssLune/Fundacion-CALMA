@@ -1,6 +1,7 @@
 <body class="sign-in-illustration">
 
 <section>
+<iframe width="0" height="0" border="0" name="dummyframe" id="dummyframe" class="d-none"></iframe>
   <div class="page-header section-height-100">
     <div class="container">
       <div class="row">
@@ -11,26 +12,46 @@
               <p class="mb-0">Ingrese sus datos</p>
             </div>
             <div class="card-body">
-              <form role="form" id="form-registro" action="includes/registrar/registro_nuevo_usuario.php" onsubmit="registrar()" method="POST">
+              <form id="form-registro" action="#" target="dummyframe" method="POST" onsubmit="registrar_nuevo_usuario();" >
                 <div class="mb-3">
                   <input type="text" name="nombres_registrar" id="names-registro" class="form-control form-control-lg" placeholder="Nombres" aria-label="Nombres" aria-describedby="names-addon" required>
                 </div>
                 <div class="mb-3">
-                  <input type="text" name="apellidos_registrar" id="apellidos-registro" class="form-control form-control-lg" placeholder="Apellidos" aria-label="Apellidos" aria-describedby="apellidos-addon" required>
+                  <input type="text" name="apellidoPat_registrar" id="apellidoPat-registro" class="form-control form-control-lg" placeholder="Apellido Paterno" aria-label="Apellido Paterno" aria-describedby="apellidoPat-addon" required>
+                </div>
+                <div class="mb-3">
+                  <input type="text" name="apellidoMat_registrar" id="apellidoMat-registro" class="form-control form-control-lg" placeholder="Apellido Materno" aria-label="Apellido Materno" aria-describedby="apellidoMat-addon" required>
                 </div>
                 <div class="mb-3" id="grupo__email">
-                  <input type="email" name="email-user_registrar" id="email-user-registro" class="form-control form-control-lg" placeholder="Email" aria-label="Email" aria-describedby="email-addon" required>
+                  <input type="email" name="email-user_registrar" id="email-user-registro" class="form-control form-control-lg" placeholder="Email (Será su Usuario)" aria-label="Email" aria-describedby="email-addon" required>
                   <p class="formulario__input-error">Correo inválido</p>
                 </div>
                 <div class="mb-3">
-                  <input type="text" name="pais_registrar" id="pais-registro" class="form-control form-control-lg" placeholder="País" aria-label="País" aria-describedby="pais-addon" required>
+                  <select class="form-control form-control-lg letra-select" id="pais-registro" name="pais_registrar" aria-label="País" aria-describedby="pais-addon" required>
+                    <option disabled selected value="defecto_pais">Selecciona tu País</option>
+                    <option value="peru">Perú</option>
+                    <option value="bolivia">Bolivia</option>
+                    <option value="chile">Chile</option>
+                    <option value="argentina">Argentina</option>
+                    <option value="uruguay">Uruguay</option>
+                  </select>                  
                 </div>
                 <div class="mb-3">
-                  <input type="text" name="estado_registrar" id="estado-registro" class="form-control form-control-lg" placeholder="Estado" aria-label="Estado" aria-describedby="estado-addon" required>
+                  <select class="form-control form-control-lg letra-select" id="estado-registro" name="estado_registrar" aria-label="Estado" aria-describedby="estado-addon" required>
+                    <option disabled selected value="defecto_estado">Selecciona tu Estado</option>
+                    <option value="lima">Lima</option>
+                  </select>                  
                 </div>
                 <div class="mb-3" id="grupo__celular">
                   <input type="text" name="celular_registrar" id="celular-registro" class="form-control form-control-lg" placeholder="Celular" aria-label="Celular" aria-describedby="celular-addon" required>
                   <p class="formulario__input-error">Número inválido</p>
+                </div>
+                <div class="mb-3" id="grupo__genero">
+                  <select class="form-control form-control-lg letra-select" id="genero-registro" name="genero_registrar" aria-label="Select Genero" required>
+                    <option disabled selected value="defecto_genero">Género</option>
+                    <option value="1">Masculino</option>
+                    <option value="2">Femenino</option>
+                  </select>
                 </div>
                 <div class="mb-3">
                   <input type="password" name="pass_registrar" id="pass-registro" class="form-control form-control-lg" placeholder="Contraseña" aria-label="Password" aria-describedby="password-addon">
@@ -38,6 +59,9 @@
                 <div class="mb-3" id="grupo__passConfirm">
                   <input type="password" name="pass-confirm_registrar" id="pass-confirm-registro" class="form-control form-control-lg" placeholder="Repetir Contraseña" aria-label="Password Repeat" aria-describedby="passwordrepeat-addon">
                   <p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
+                </div>
+                <div class="mb-3">
+                  <input type="text" name="convenio_registrar" id="convenio-registro" class="form-control form-control-lg" placeholder="Convenio" aria-label="convenio" aria-describedby="convenio-addon">
                 </div>
                 <div class="text-center">
                   <button type="submit" class="btn btn-lg bg-gradient-primary btn-lg w-100 mt-4 mb-0">REGISTRARME</button>

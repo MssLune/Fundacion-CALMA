@@ -1294,3 +1294,12 @@ table.registrados tr:nth-child(4n-1) {
 .formulario__input-error-activo {
 	display: block;
 }
+  /*select genero*/
+.letra-select{
+  color:#b3b3b3 !important;
+}
+.letra-select option {
+  font-weight: normal !important;
+  color:#000000 !important;
+  font-family: 'Open Sans', sans-serif !important;
+}

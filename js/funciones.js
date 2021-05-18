@@ -20,11 +20,11 @@ function datos_incorrectos(){
 
 //función de  mensaje registrando
 function registrar(){
-  swal({title: "Registrando...",allowEscapeKey: false,allowOutsideClick:false,text: "Espere unos segundos.",showConfirmButton: false});
+  swal({title: "Registrando...",allowEscapeKey: false,allowOutsideClick:false,text: "Espere unos segundos.",showConfirmButton: false,timer: 1500});
 }
 //función de  mensaje registro correcto
 function registro_correcto(){
-  swal({title: "Registro Exitoso",icon: 'success',allowEscapeKey: false,allowOutsideClick:false,text: "Te has registrado correctamente.",showConfirmButton: false});
+  swal("Registro Exitoso", "Te has registrado correctamente.", "success");
 }
 
 //Función para el dropdown en nav bar
@@ -44,4 +44,70 @@ window.onclick = function(event) {
       }
     }
   }
+
+//--FUNCIÓN PARA GUARDAR NUEVO REGISTRO
+function registrar_nuevo_usuario(){
+  registrar();
+  //guardar inputs
+	var nombres_registro = document.getElementById("names-registro").value;
+  var paterno_registro = document.getElementById("apellidoPat-registro").value;
+  var materno_registro = document.getElementById("apellidoMat-registro").value;
+  var email_registro = document.getElementById("email-user-registro").value;
+  var celular_registro = document.getElementById("celular-registro").value;
+  var password_registro = document.getElementById("pass-registro").value;
+  var convenio_registro = document.getElementById("convenio-registro").value;
+  
+  //select pais
+  var campo_pais = document.getElementById("pais-registro");
+  var selected_pais = campo_pais.options[campo_pais.selectedIndex].text;
+  if(selected_pais==="Selecciona tu País"){
+    alert("Debes seleccionar un País.");
+  }else{
+    var pais_registro = document.getElementById("pais-registro").value;
+  }
+
+  //select estado
+  var campo_estado = document.getElementById("estado-registro");
+  var selected_estado = campo_estado.options[campo_estado.selectedIndex].text;
+  if(selected_estado==="Selecciona tu Estado"){
+    alert("Debes seleccionar un Estado.");
+  }else{
+    var estado_registro = document.getElementById("estado-registro").value;
+  }
+
+  //select de género
+  var campo_genero = document.getElementById("genero-registro");
+  var selected_genero = campo_genero.options[campo_genero.selectedIndex].text;
+
+  if (selected_genero==="Género") {
+    alert("Opción de Género inválida.");
+  }else if(selected_genero=="Masculino"){
+      var sexo = 1; //document.getElementById("genero-registro").value;
+  }else{
+    var sexo = 2; //Femenino
+  }
+
+  $.ajax({
+
+    url: "includes/registrar/registro_nuevo_usuario.php",
+    type: "POST",
+    data: { "nombres_r":nombres_registro,
+        "paterno_r":paterno_registro,
+        "materno_r":materno_registro,
+        "email_r":email_registro,
+        "pais_r":pais_registro,
+        "estado_r":estado_registro,
+        "celular_r":celular_registro,
+        "pass_r":password_registro,
+        "convenio_r":convenio_registro,
+        "genero_r":sexo
+    },
+    cache: false,
+    dataType: 'json',
+    success : function(arr){
+      registro_correcto();
+      setTimeout(function() {location.reload();}, 1500);
+    }
+	});
+}
 

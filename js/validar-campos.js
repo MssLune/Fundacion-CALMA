@@ -2,12 +2,12 @@
 
   //formulario
   const formulario = document.getElementById('form-registro');
-  console.log("form: " +formulario);
+  //console.log("form: " +formulario);
     //inputs
   const inputs = document.querySelectorAll('#form-registro input');
     //expresiones regulares
   const expresiones = {
-      password: /^.{4,12}$/, // 4 a 12 digitos.
+      //password: /^.{4,12}$/, // 4 a 12 digitos.
       correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
       telefono: /^\d{7,9}$/ // 7 a 9 numeros.
   }
@@ -60,9 +60,9 @@
         break;
       }
     }
-    //Comprobar en cada input escribir y click fuera
+    //Comprobar en cada input al escribir y click fuera
   inputs.forEach((input) => {
-    input.addEventListener('keyup', console.log("hola"));
+    input.addEventListener('keyup', validarFormulario);
     input.addEventListener('blur', validarFormulario);
   });
   

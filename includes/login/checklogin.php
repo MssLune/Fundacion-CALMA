@@ -45,12 +45,13 @@ if ($dato['estado_actividad'] == 1) {
     $_SESSION['estado']=$dato['estado'];
 
     if($_SESSION['privilegio'] == 0 || $_SESSION['privilegio'] == 1 || $_SESSION['privilegio'] == 2){
+        echo "<script>login_exitoso();</script>";
         header('Location: ../../index.php'); 
         $_SESSION['Logueado']=true;
-        echo "<script>login_exitoso();</script>";
     }else{
-         header('Location: ../../login.php'); 
-         $_SESSION['Logueado']=false;
+            echo "<script>datos_incorrectos();</script>";
+            header('Location: ../../login.php'); 
+             $_SESSION['Logueado']=false;
         } 
 }else{
 	$_SESSION['estado_actividad']=$dato['estado_actividad'];
