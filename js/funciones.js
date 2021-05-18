@@ -45,6 +45,21 @@ window.onclick = function(event) {
     }
   }
 
+//limpiar campos
+function limpiarCampos(){
+  document.getElementById("names-registro").value = "";
+  document.getElementById("apellidoPat-registro").value = "";
+  document.getElementById("apellidoMat-registro").value = "";
+  document.getElementById("email-user-registro").value = "";
+  document.getElementById("celular-registro").value = "";
+  document.getElementById("pass-registro").value = "";
+  document.getElementById("pass-confirm-registro").value = "";
+  document.getElementById("convenio-registro").value = "";
+  document.getElementById("pais-registro").value = "defecto_pais";
+  document.getElementById("estado-registro").value = "defecto_estado";
+  document.getElementById("genero-registro").value = "defecto_genero";
+}
+
 //--FUNCIÓN PARA GUARDAR NUEVO REGISTRO
 function registrar_nuevo_usuario(){
   registrar();
@@ -88,7 +103,6 @@ function registrar_nuevo_usuario(){
   }
 
   $.ajax({
-
     url: "includes/registrar/registro_nuevo_usuario.php",
     type: "POST",
     data: { "nombres_r":nombres_registro,
@@ -106,7 +120,8 @@ function registrar_nuevo_usuario(){
     dataType: 'json',
     success : function(arr){
       registro_correcto();
-      setTimeout(function() {location.reload();}, 1500);
+      limpiarCampos();
+      //setTimeout(function() {location.reload();}, 1500);
     }
 	});
 }

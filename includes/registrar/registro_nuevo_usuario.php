@@ -5,10 +5,10 @@ if (isset($_POST["nombres_r"])) {
 	$pdo = Database::connect();
 
     //password sin hash
-    $passSinHash = $_POST['pass_r'];
+    //$passSinHash = $_POST['pass_r'];
     //password con hash
-    $password = hash('sha256', $passSinHash);
-
+    //$password = password_hash($passSinHash, PASSWORD_BCRYPT);
+	$password = $_POST['pass_r'];
 	$sql = "INSERT INTO `usuarios`(`nombres`, `apellido_pat`, `apellido_mat`, `correo_user`, `pass`, `sexo`, `telefono`, `pais`, `estado`, `id_convenio`, `actividad`, `privilegio`, `fecha_registro`) VALUES 
 	('".$_POST['nombres_r']."',
 	'".$_POST['paterno_r']."',
