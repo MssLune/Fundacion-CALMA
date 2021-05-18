@@ -1282,6 +1282,8 @@ table.registrados tr:nth-child(4n-1) {
 .formulario__input-error {
 	font-size: 12px;
 	margin-bottom: 0;
+  color: red;
+  font-weight: bold;
 	display: none;
 }
 
