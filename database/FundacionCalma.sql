@@ -18,8 +18,8 @@ CREATE TABLE usuarios (
 	fecha_registro datetime not null
 );
 
-INSERT INTO usuarios VALUES ('1', 'JULISSA', 'CASTILLO', 'BARRERA','julissa_2@hotmail.com','123',2,'965478456', 'PERÚ','LIMA', '', 1,0,now());
-INSERT INTO usuarios VALUES ('2', 'ANDREA', 'CLARK', 'CHAVEZ','and8@hotmail.com','987',2,'996541287', 'PERÚ','LIMA', 'CDF8452', 1,2, now());
+-- seña: july123
+INSERT INTO usuarios VALUES ('1', 'JULISSA ANDREA', 'CASTILLO', 'BARRERA','jc@gmail.com','$2y$10$HPMtkwmdzIIg7mklbuBc9uFg9c/YtXa6VqIT74sR.TXtHrszH99I.',2,'965478456', 'PERÚ','LIMA', '', 1,0,now());
 
 
 CREATE TABLE privilegios (

@@ -12,35 +12,36 @@ if(isset($_POST['email_user'])){
     $username = '';
 }
 if(isset($_POST['password_user'])){
-    $password = $_POST['password_user'];
+    $password_sinHash = $_POST['password_user'];
 }else{
-    $password = '';
+    $password_sinHash = '';
 }
 
 $_SESSION['Logueado'] = false;
 
-$pdo1 = Database::connect();
-//Uso Procedimiento Almacenado
-$sql1 = "CALL procedimiento_login 
-        ('".$username."',
-            '".$password."'
-        )";
-$qr = $pdo1->prepare($sql1);
-$qr->execute(array());
-$dato = $qr->fetch(PDO::FETCH_ASSOC);
+$pdo = Database::connect();
+$sql = "SELECT * 
+            FROM usuarios 
+                WHERE correo_user = '$username'";
+$q = $pdo->prepare($sql);
+$q->execute(array());
+$dato=$q->fetch(PDO::FETCH_ASSOC);
 Database::disconnect();
 
-if ($dato['estado_actividad'] == 1) {
-    $_SESSION['nombres'] = $dato['nombres']." ".$dato['apepat']." ".$dato['apemat'];
+//password guardado en BD con hash
+$passwordHash = $dato['pass'];
+//verificar si coincide ambos passwords
+if ($dato['actividad'] == 1 && password_verify($password_sinHash, $passwordHash) ===true) {
+    $_SESSION['nombres'] = $dato['nombres']." ".$dato['apellido_pat']." ".$dato['apellido_mat'];
     $_SESSION['privilegio'] = $dato['privilegio'];
-    $_SESSION['username'] = $dato['correo_username'];
-    $_SESSION['codUsuario'] = $dato['id_user'];
+    $_SESSION['username'] = $dato['correo_user'];
+    $_SESSION['codUsuario'] = $dato['id_usuario'];
     $_SESSION['start'] = time();
     $_SESSION['expire'] = $_SESSION['start'] + (10 * 60);
-    $_SESSION['correo']=$dato['correo_username'];
-    $_SESSION['telefono']=$dato['telf'];
+    $_SESSION['correo']=$dato['correo_user'];
+    $_SESSION['telefono']=$dato['telefono'];
     $_SESSION['genero']=$dato['sexo'];
-    $_SESSION['convenio']=$dato['convenio_id'];
+    $_SESSION['convenio']=$dato['id_convenio'];
     $_SESSION['pais']=$dato['pais'];
     $_SESSION['estado']=$dato['estado'];
 
@@ -54,7 +55,7 @@ if ($dato['estado_actividad'] == 1) {
              $_SESSION['Logueado']=false;
         } 
 }else{
-	$_SESSION['estado_actividad']=$dato['estado_actividad'];
+	$_SESSION['estado_actividad']=$dato['actividad'];
     }
 
 if($_SESSION['Logueado'] != true){
