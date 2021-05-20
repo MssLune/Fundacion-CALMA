@@ -96,10 +96,8 @@ function registrar_nuevo_usuario(){
 
   if (selected_genero==="Género") {
     alert("Opción de Género inválida.");
-  }else if(selected_genero=="Masculino"){
-      var sexo = 1; //document.getElementById("genero-registro").value;
-  }else{
-    var sexo = 2; //Femenino
+  }else {
+    var sexo = parseInt(document.getElementById("genero-registro").value);
   }
 
   $.ajax({

@@ -51,6 +51,8 @@
                     <option disabled selected value="defecto_genero">Género</option>
                     <option value="1">Masculino</option>
                     <option value="2">Femenino</option>
+                    <option value="3">No Binario</option>
+                    <option value="4">Prefiero no decirlo</option>
                   </select>
                 </div>
                 <div class="mb-3">

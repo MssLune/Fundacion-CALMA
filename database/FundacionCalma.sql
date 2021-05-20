@@ -8,7 +8,7 @@ CREATE TABLE usuarios (
 	apellido_mat varchar(100) not null,
 	correo_user varchar(100) not null,
 	pass varchar(100) not null,
-	sexo int(1) not null, -- 1 = Masculino, 2 = Femenino
+	sexo int(1) not null, -- 1 = Masculino, 2 = Femenino, 3=No binario, 4=prefiero no decir
 	telefono varchar(50) not null,
     pais varchar(100) not null,
     estado varchar(100) not null,
