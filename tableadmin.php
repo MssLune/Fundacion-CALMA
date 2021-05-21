@@ -8,4 +8,6 @@
 <?php include_once 'includes/admin/tablebody.php'; ?>
 
 <?php include_once 'includes/admin/adminscripts.php'; ?>
+<!-- Page specific script -->
+<script src="js/datatableFunctions.js"></script>
 

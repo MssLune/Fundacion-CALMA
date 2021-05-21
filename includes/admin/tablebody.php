@@ -36,8 +36,7 @@
     </div>
     <!-- ./wrapper -->
 
-<!-- Page specific script -->
-<script src="js/datatableFunctions.js"></script>
+
 
 </body>
 
