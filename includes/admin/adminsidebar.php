@@ -42,13 +42,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
+                <a href="tableadmin.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Mis consultas</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Programar Consultas</p>
                 </a>

@@ -15,7 +15,7 @@
           <div class="row mb-2">
             <div class="col-sm-6">
               <h1 class="m-0">Administrar Consultas</h1>
-            </div><!-- /.col -->
+            </div>
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="consultoriocalma.php">Inicio</a></li>
@@ -61,11 +61,8 @@
       </section>
     </div>
 
-    <!-- Control Sidebar: a la derecha -->
-    <aside class="control-sidebar control-sidebar-dark">
-      <!-- Control sidebar content goes here -->
-    </aside>
-    <!-- /.control-sidebar -->
+    <?php include_once 'includes/admin/controlsidebar.php'; ?>
+
   </div>
   <!-- ./wrapper -->
 
