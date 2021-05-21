@@ -96,6 +96,7 @@
                               <div class="dropdown">
                                 <a class="dropdown-toggle btn-dropdown" onclick="dropdown();" role="button" data-toggle="dropdown">'.$_SESSION['nombres'].'</a>
                                   <div class="dropdown-menu content_dropdown" id="menu_dropdown">
+                                    <a class="dropdown-item" href="consultoriocalma.php">Ir al Administrador Calma</a>
                                     <a class="dropdown-item" href="includes/login/logout.php">Cerrar Sesión</a>
                                   </div>
                               </div>

@@ -18,7 +18,7 @@
     if(isset($_SESSION['Logueado'])){
         if($_SESSION['Logueado']===true){
             if(isset($_SESSION['expire']) && $now < $_SESSION['expire']){
-                echo '<script>window.location="index.php";</script>';   
+                echo '<script>window.location="consultoriocalma.php";</script>';   
             }
         }else{
             if(isset($_SESSION['estado_actividad']) && $_SESSION['estado_actividad'] != 1){

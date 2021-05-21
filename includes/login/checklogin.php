@@ -47,7 +47,7 @@ if ($dato['actividad'] == 1 && password_verify($password_sinHash, $passwordHash)
 
     if($_SESSION['privilegio'] == 0 || $_SESSION['privilegio'] == 1 || $_SESSION['privilegio'] == 2){
         echo "<script>login_exitoso();</script>";
-        header('Location: ../../index.php'); 
+        header('Location: ../../consultoriocalma.php'); 
         $_SESSION['Logueado']=true;
     }else{
             echo "<script>datos_incorrectos();</script>";
