@@ -1303,3 +1303,11 @@ table.registrados tr:nth-child(4n-1) {
   color:#000000 !important;
   font-family: 'Open Sans', sans-serif !important;
 }
+
+/*--ADICIONAL---*/
+  /*BODYADMIN -> smallbox*/
+  .h3-adminbody{
+    text-align: center !important; 
+    padding: 50px !important;
+    color: #ffffff;
+  }
