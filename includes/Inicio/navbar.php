@@ -1,7 +1,7 @@
-<?php 
+<?php
   ob_start();
   @session_start();
-?> 
+?>
 <!doctype html>
 <html class="no-js" lang="">
 
@@ -11,7 +11,7 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="shortcut icon" href="img/favicon.png">
     <!-- Place favicon.ico in the root directory -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -89,7 +89,7 @@
                         </a>
                       </li>
 
-                        <?php 
+                        <?php
                           if(isset($_SESSION['Logueado']) && $_SESSION['Logueado'] === true){
                             echo '
                             <li class="nav-item my-auto ms-10 ms-lg-0" style="padding-left: 90px; vertical-align: center;">
@@ -102,7 +102,7 @@
                               </div>
                             </li>';
                           }else{
-                        ?> 
+                        ?>
                       <li class="nav-item dropdown dropdown-hover mx-2">
                         <a  href="registrar.php" class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages" >
                           REGÍSTRATE
@@ -112,7 +112,7 @@
                       <li class="nav-item my-auto ms-3 ms-lg-0" style="padding-left:  90px;">
                         <a href="login.php" class="btn btn-sm  btn-white  btn-round mb-0 me-1 mt-2 mt-md-0">Iniciar Sesión</a>
                       </li>
-                        <?php 
+                        <?php
                          }
                         ?>
                     </ul>
