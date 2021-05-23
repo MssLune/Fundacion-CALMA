@@ -1311,3 +1311,8 @@ table.registrados tr:nth-child(4n-1) {
     padding: 50px !important;
     color: #ffffff;
   }
+
+  /*TABLE CONTENT -> título de tabla*/
+  .h3-tablecontent{
+    color: #000000 !important;
+  }

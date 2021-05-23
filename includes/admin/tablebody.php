@@ -25,19 +25,15 @@
                     </div>
                 </div>
             </section>
+
+            <!-- contenido de data table -->
+
+            <?php include_once 'includes/admin/tablecontent.php'; ?>
+
+            <?php include_once 'includes/admin/controlsidebar.php'; ?>
         </div>
-
-        <!-- contenido de data table -->
-
-        <?php include_once 'includes/admin/tablecontent.php'; ?>
-
-        <?php include_once 'includes/admin/controlsidebar.php'; ?>
-
     </div>
     <!-- ./wrapper -->
-
-
-
 </body>
 
 <?php include_once 'includes/admin/footeradmin.php'; ?>
