@@ -1,3 +1,5 @@
+<!-- logo browser -->
+<link rel="shortcut icon" href="img/favicon.png">
 <!-- Font Awesome -->
 <link rel="stylesheet" href="admin/plugins/fontawesome-free/css/all.min.css">
 <!-- Ionicons -->
