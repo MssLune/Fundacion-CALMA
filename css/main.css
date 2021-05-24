@@ -1310,6 +1310,14 @@ table.registrados tr:nth-child(4n-1) {
   .logo-sidebar{
      opacity: 1 !important;
    }
+  .close-session{
+    background-color: rgba(240, 46, 12, 0.85);
+    color: #ffffff !important;
+  }
+  .close-session:hover{
+    background-color: rgba(240, 46, 12, 1) !important;
+  }
+
   /*BODYADMIN -> smallbox*/
   .h3-adminbody{
     text-align: center !important; 
