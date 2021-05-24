@@ -1,3 +1,4 @@
+
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Página Calma -->
@@ -30,112 +31,136 @@
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- CONSULTAS : SOLO PARA USUARIOS (2) -->
-          <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-archive"></i>  
-              <p>
-                Consultas
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
+          <?php 
+          //TODOS
+          function sidebarAll(){
+            $opcionTodos = '
+            <li class="nav-header">PERFIL</li>
               <li class="nav-item">
-                <a href="tableadmin.php" class="nav-link">
-                  <i class="fas fa-align-left nav-icon"></i>
-                  <p>Mis consultas</p>
+                <a href="#" class="nav-link active">
+                  <i class="nav-icon fas fa-user"></i>
+                  <p>Mi Perfil</p>
                 </a>
               </li>
+            <li class="nav-header">DONACIONES</li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="fas fa-tachometer-alt nav-icon"></i>
-                  <p>Programar Consultas</p>
+                <a href="#" class="nav-link active">
+                  <i class="nav-icon fas fa-hand-holding-medical"></i>
+                  <p>Donaciones</p>
                 </a>
               </li>
-            </ul>
-          </li>
-          <!-- ADMINISTRAR CONSULTAS : SOLO PARA PSICÓLOGOS (1) -->
-          <li class="nav-item">
-            <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-tachometer-alt"></i>  
-              <p>
-                Administrar Consultas
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
+            <li class="nav-header">SALIR</li>
               <li class="nav-item">
-                <a href="tableadmin.php" class="nav-link">
-                  <i class="far fa-check-circle nav-icon"></i>
-                  <p>Consultas Aceptadas</p>
+                <a href="includes/login/logout.php" class="nav-link close-session">
+                  <i class="nav-icon fas fa-power-off"></i>
+                  <p>Cerrar Sesión</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="fas fa-tasks nav-icon"></i>
-                  <p>Aceptar Consultas</p>
+            ';
+            return $opcionTodos;
+          }
+           //CONSULTAS : SOLO PARA USUARIOS (2)
+            if(isset($_SESSION['Logueado']) && isset($_SESSION['privilegio']) && ($_SESSION['Logueado'] === true) && ($_SESSION['privilegio'] == 2)){
+              echo '
+              <li class="nav-header">USUARIO</li>
+              <li class="nav-item menu-open">
+                <a href="#" class="nav-link active">
+                  <i class="nav-icon fas fa-archive"></i>  
+                  <p>
+                    Consultas
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
                 </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="tableadmin.php" class="nav-link">
+                      <i class="fas fa-align-left nav-icon"></i>
+                      <p>Mis consultas</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="fas fa-tachometer-alt nav-icon"></i>
+                      <p>Programar Consultas</p>
+                    </a>
+                  </li>
+                </ul>
               </li>
-            </ul>
-          </li>
-          <!-- ADMINISTRACIÓN : SOLO PARA ADMIN (0) -->
-          <li class="nav-item">
-            <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-tachometer-alt"></i>  
-              <p>
-                Administración
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="tableadmin.php" class="nav-link">
-                  <i class="fas fa-user-cog nav-icon"></i>
-                  <p>Administrar Usuarios</p>
+              ';
+              echo sidebarAll();
+            }else if(isset($_SESSION['Logueado']) && isset($_SESSION['privilegio']) && ($_SESSION['Logueado'] === true) && ($_SESSION['privilegio'] == 1)){
+              //ADMINISTRAR CONSULTAS : SOLO PARA PSICÓLOGOS (1)
+              echo '
+              <li class="nav-header">PSICÓLOGO(A)</li>
+              <li class="nav-item menu-open">
+                <a href="#" class="nav-link active">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>  
+                  <p>
+                    Administrar Consultas
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
                 </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="tableadmin.php" class="nav-link">
+                      <i class="far fa-check-circle nav-icon"></i>
+                      <p>Consultas Aceptadas</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="fas fa-tasks nav-icon"></i>
+                      <p>Aceptar Consultas</p>
+                    </a>
+                  </li>
+                </ul>
               </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="fas fa-id-card-alt nav-icon"></i>
-                  <p>Administrar Psicólogos</p>
+              ';
+              echo sidebarAll();
+            }else if(isset($_SESSION['Logueado']) && isset($_SESSION['privilegio']) && ($_SESSION['Logueado'] === true) && ($_SESSION['privilegio'] == 0)){
+              //ADMINISTRACIÓN : SOLO PARA ADMIN (0)
+              echo '
+              <li class="nav-header">ADMINISTRADOR</li>
+              <li class="nav-item menu-open">
+                <a href="#" class="nav-link active">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>  
+                  <p>
+                    Administración
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
                 </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="tableadmin.php" class="nav-link">
+                      <i class="fas fa-user-cog nav-icon"></i>
+                      <p>Administrar Usuarios</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="fas fa-id-card-alt nav-icon"></i>
+                      <p>Administrar Psicólogos</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="fas fa-users nav-icon"></i>
+                      <p>Administrar Calma Informativa</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="fas fa-book-reader nav-icon"></i>
+                      <p>Administrar Calma Cursos</p>
+                    </a>
+                  </li>
+                </ul>
               </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="fas fa-users nav-icon"></i>
-                  <p>Administrar Calma Informativa</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="fas fa-book-reader nav-icon"></i>
-                  <p>Administrar Calma Cursos</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <!-- TODOS -->
-          <li class="nav-header">PERFIL</li>
-            <li class="nav-item">
-              <a href="#" class="nav-link active">
-                <i class="nav-icon fas fa-user"></i>
-                <p>Mi Perfil</p>
-              </a>
-            </li>
-          <li class="nav-header">DONACIONES</li>
-            <li class="nav-item">
-              <a href="#" class="nav-link active">
-                <i class="nav-icon fas fa-hand-holding-medical"></i>
-                <p>Donaciones</p>
-              </a>
-            </li>
-          <li class="nav-header">SALIR</li>
-            <li class="nav-item">
-              <a href="#" class="nav-link close-session">
-                <i class="nav-icon fas fa-power-off"></i>
-                <p>Cerrar Sesión</p>
-              </a>
-            </li>
+              ';
+              echo sidebarAll();
+            }
+          ?>
+          
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
