@@ -1305,6 +1305,11 @@ table.registrados tr:nth-child(4n-1) {
 }
 
 /*--ADICIONAL---*/
+
+   /*ADMIN SIDEBAR*/
+  .logo-sidebar{
+     opacity: 1 !important;
+   }
   /*BODYADMIN -> smallbox*/
   .h3-adminbody{
     text-align: center !important; 
