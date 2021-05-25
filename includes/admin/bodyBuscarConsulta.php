@@ -14,12 +14,12 @@
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0">Administrar Consultas</h1>
+              <h1 class="m-0">Buscar Consultas</h1>
             </div>
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="consultoriocalma.php">Inicio</a></li>
-                <li class="breadcrumb-item active">Administrar Consultas</li>
+                <li class="breadcrumb-item active">Buscar Consulta</li>
               </ol>
             </div><!-- /.col -->
           </div><!-- /.row -->
@@ -30,33 +30,23 @@
       <!-- Main content -->
       <section class="content">
         <div class="container-fluid">
-          <!-- Small boxes -->
-          <div class="row">
-            <div class="col-lg-6 col-6">
-              <!-- small box -->
-              <div class="small-box bg-info">
-                <div class="inner">
-                  <h3 class="h3-adminbody">Buscar Consulta</h3>
+            <h5 class="text-center">Buscar Especialidad</h5>
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div class="input-group">
+                        <select class="form-control form-control-lg letra-select" id="especialidad-search" name="buscar_especialidad" aria-label="Buscar Especialidad">
+                            <option disabled selected value="defecto_especialidad">Busca la Especialidad</option>
+                            <option value="esp1">Violencia Familiar</option>
+                            <option value="esp2">Bullying</option>
+                        </select>
+                        <div class="input-group-append">
+                            <button type="button" class="btn btn-lg btn-default">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="icon">
-                  <i class="ion ion-search"></i>
-                </div>
-                <a href="buscarConsulta.php" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
-              </div>
             </div>
-            <div class="col-lg-6 col-6">
-              <!-- small box -->
-              <div class="small-box bg-success">
-                <div class="inner">
-                  <h3 class="h3-adminbody">Agendar Consulta</h3>
-                </div>
-                <div class="icon">
-                  <i class="ion ion-calendar"></i>
-                </div>
-                <a href="#" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
     </div>

@@ -1,4 +1,4 @@
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
         
         <?php include_once 'includes/admin/preloaderadmin.php'; ?>
