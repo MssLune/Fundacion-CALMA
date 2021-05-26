@@ -90,8 +90,17 @@
               echo sidebarAll();
             }else if(isset($_SESSION['Logueado']) && isset($_SESSION['privilegio']) && ($_SESSION['Logueado'] === true) && ($_SESSION['privilegio'] == 1)){
               //ADMINISTRAR CONSULTAS : SOLO PARA PSICÓLOGOS (1)
+              $generoPsico = "";
+              if($_SESSION['genero'] == 1){
+                $generoPsico = "PSICÓLOGO";
+              }else if($_SESSION['genero'] == 2){
+                $generoPsico = "PSICÓLOGA";
+              }else {
+                $generoPsico = "PSICÓLOGO(A)";
+              }
+
               echo '
-              <li class="nav-header">PSICÓLOGO(A)</li>
+              <li class="nav-header">'.$generoPsico.'</li>
               <li class="nav-item menu-open">
                 <a href="#" class="nav-link active">
                   <i class="nav-icon fas fa-tachometer-alt"></i>  
