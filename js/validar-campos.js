@@ -32,7 +32,6 @@
   const validarPassword2 = () => {
       const inputPassword1 = document.getElementById('pass-registro');
       const inputPassword2 = document.getElementById('pass-confirm-registro');
-  
       if(inputPassword1.value !== inputPassword2.value){
           document.querySelector(`#grupo__passConfirm .formulario__input-error`).classList.add('formulario__input-error-activo');
           campos['password'] = false;

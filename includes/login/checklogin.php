@@ -41,11 +41,14 @@ if ($dato['actividad'] == 1 && password_verify($password_sinHash, $passwordHash)
     $_SESSION['correo']=$dato['correo_user'];
     $_SESSION['telefono']=$dato['telefono'];
     $_SESSION['genero']=$dato['sexo'];
+    $_SESSION['tipoDocIdentidad']=$dato['tipo_doc'];
+    $_SESSION['nroDocIdentidad']=$dato['nro_doc'];
+    $_SESSION['fechaNacimiento']=$dato['fecha_nacimiento'];
     $_SESSION['convenio']=$dato['id_convenio'];
     $_SESSION['pais']=$dato['pais'];
-    $_SESSION['estado']=$dato['estado'];
+    $_SESSION['estado']=$dato['estado_lugar'];
 
-    if($_SESSION['privilegio'] == 0 || $_SESSION['privilegio'] == 1 || $_SESSION['privilegio'] == 2){
+    if($_SESSION['privilegio'] == 0 || $_SESSION['privilegio'] == 1 || $_SESSION['privilegio'] == 2 || $_SESSION['privilegio'] == 3){
         echo "<script>login_exitoso();</script>";
         header('Location: ../../consultoriocalma.php'); 
         $_SESSION['Logueado']=true;

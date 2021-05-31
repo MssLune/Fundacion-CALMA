@@ -51,6 +51,9 @@ function limpiarCampos(){
   document.getElementById("apellidoPat-registro").value = "";
   document.getElementById("apellidoMat-registro").value = "";
   document.getElementById("email-user-registro").value = "";
+  document.getElementById("tipoDoc-registro").value = "";
+  document.getElementById("nroDoc-registro").value = "";
+  document.getElementById("nacimiento-registro").value = "";
   document.getElementById("celular-registro").value = "";
   document.getElementById("pass-registro").value = "";
   document.getElementById("pass-confirm-registro").value = "";
@@ -59,7 +62,7 @@ function limpiarCampos(){
   document.getElementById("estado-registro").value = "defecto_estado";
   document.getElementById("genero-registro").value = "defecto_genero";
 }
-
+console.log
 //--FUNCIÓN PARA GUARDAR NUEVO REGISTRO
 function registrar_nuevo_usuario(){
   registrar();
@@ -68,9 +71,19 @@ function registrar_nuevo_usuario(){
   var paterno_registro = document.getElementById("apellidoPat-registro").value;
   var materno_registro = document.getElementById("apellidoMat-registro").value;
   var email_registro = document.getElementById("email-user-registro").value;
+  var nroDoc_registro = document.getElementById("nroDoc-registro").value;
+  var fechaNac_registro = document.getElementById("nacimiento-registro").value;
   var celular_registro = document.getElementById("celular-registro").value;
   var password_registro = document.getElementById("pass-registro").value;
   var convenio_registro = document.getElementById("convenio-registro").value;
+
+  //select tipo Documento Identidad
+  var campo_tipoDoc = document.getElementById("tipoDoc-registro").value;
+  if(campo_tipoDoc==="defecto_tipoDoc"){
+    alert("Debes seleccionar un Tipo de Documento.");
+  }else{
+    var tipoDoc_registro = parseInt(campo_tipoDoc);
+  }
   
   //select pais
   var campo_pais = document.getElementById("pais-registro");
@@ -107,6 +120,9 @@ function registrar_nuevo_usuario(){
         "paterno_r":paterno_registro,
         "materno_r":materno_registro,
         "email_r":email_registro,
+        "tipoDoc_r":tipoDoc_registro,
+        "nroDoc_r":nroDoc_registro,
+        "fechaNacimiento_r":fechaNac_registro,
         "pais_r":pais_registro,
         "estado_r":estado_registro,
         "celular_r":celular_registro,

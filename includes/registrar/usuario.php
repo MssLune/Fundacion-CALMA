@@ -26,6 +26,21 @@
                   <input type="email" name="email-user_registrar" id="email-user-registro" class="form-control form-control-lg" placeholder="Email (Será su Usuario)" aria-label="Email" aria-describedby="email-addon" required>
                   <p class="formulario__input-error">Correo inválido</p>
                 </div>
+                <div class="mb-3" id="grupo__selectTipoDoc">
+                  <select class="form-control form-control-lg letra-select" id="tipoDoc-registro" name="tipoDoc_registrar" aria-label="Tipo Documento Identidad" aria-describedby="tipoDoc-addon" required>
+                    <option disabled selected value="defecto_tipoDoc">Selecciona el Tipo de Documento de Identidad</option>
+                    <option value="1">DNI</option>
+                    <option value="2">Pasaporte</option>
+                    <option value="3">Carné de Extranjería</option>
+                  </select>                  
+                </div>
+                <div class="mb-3" id="grupo__nroDoc">
+                  <input type="text" name="nroDoc_registrar" id="nroDoc-registro" class="form-control form-control-lg" placeholder="Ingrese su N° Documento" aria-label="Nro Documento Identidad" aria-describedby="nroDocIdentidad-addon" required>
+                  <!-- <p class="formulario__input-error">Solo se permiten números</p> -->
+                </div>
+                <div class="mb-3">
+                  <input type="date" name="fechaNacimiento_registrar" id="nacimiento-registro" class="form-control form-control-lg" aria-label="Fecha nacimiento" aria-describedby="fechaNacimiento-addon" required>
+                </div>
                 <div class="mb-3">
                   <select class="form-control form-control-lg letra-select" id="pais-registro" name="pais_registrar" aria-label="País" aria-describedby="pais-addon" required>
                     <option disabled selected value="defecto_pais">Selecciona tu País</option>
