@@ -45,6 +45,7 @@ if ($dato['actividad'] == 1 && password_verify($password_sinHash, $passwordHash)
     $_SESSION['nroDocIdentidad']=$dato['nro_doc'];
     $_SESSION['fechaNacimiento']=$dato['fecha_nacimiento'];
     $_SESSION['convenio']=$dato['id_convenio'];
+    $_SESSION['recurrenteDonaCod']=$dato['cod_recurrenteDona'];
     $_SESSION['pais']=$dato['pais'];
     $_SESSION['estado']=$dato['estado_lugar'];
 
