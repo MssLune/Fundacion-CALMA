@@ -31,13 +31,13 @@
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <?php 
+          <?php
           //TODOS
           function sidebarAll(){
             $opcionTodos = '
             <li class="nav-header">PERFIL</li>
               <li class="nav-item">
-                <a href="#" class="nav-link active">
+                <a href="perfil.php" class="nav-link active">
                   <i class="nav-icon fas fa-user"></i>
                   <p>Mi Perfil</p>
                 </a>
@@ -65,7 +65,7 @@
               <li class="nav-header">USUARIO</li>
               <li class="nav-item menu-open">
                 <a href="#" class="nav-link active">
-                  <i class="nav-icon fas fa-archive"></i>  
+                  <i class="nav-icon fas fa-archive"></i>
                   <p>
                     Consultas
                     <i class="right fas fa-angle-left"></i>
@@ -103,7 +103,7 @@
               <li class="nav-header">'.$generoPsico.'</li>
               <li class="nav-item menu-open">
                 <a href="#" class="nav-link active">
-                  <i class="nav-icon fas fa-tachometer-alt"></i>  
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
                   <p>
                     Administrar Consultas
                     <i class="right fas fa-angle-left"></i>
@@ -132,7 +132,7 @@
               <li class="nav-header">ADMINISTRADOR</li>
               <li class="nav-item menu-open">
                 <a href="#" class="nav-link active">
-                  <i class="nav-icon fas fa-tachometer-alt"></i>  
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
                   <p>
                     Administración
                     <i class="right fas fa-angle-left"></i>
@@ -173,7 +173,7 @@
                 <li class="nav-header">ADMIN MASTER</li>
                 <li class="nav-item menu-open">
                   <a href="#" class="nav-link active">
-                    <i class="nav-icon fas fa-tachometer-alt"></i>  
+                    <i class="nav-icon fas fa-tachometer-alt"></i>
                     <p>
                       Administración Master
                       <i class="right fas fa-angle-left"></i>
@@ -210,7 +210,7 @@
               echo sidebarAll();
             }
           ?>
-          
+
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
