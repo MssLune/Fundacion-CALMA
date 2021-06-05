@@ -146,7 +146,7 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="administrarpsicologo.php" class="nav-link">
                       <i class="fas fa-id-card-alt nav-icon"></i>
                       <p>Administrar Psicólogos</p>
                     </a>
