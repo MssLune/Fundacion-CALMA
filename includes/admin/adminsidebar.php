@@ -44,7 +44,7 @@
               </li>
             <li class="nav-header">DONACIONES</li>
               <li class="nav-item">
-                <a href="#" class="nav-link active">
+                <a href="donaciones.php" class="nav-link active">
                   <i class="nav-icon fas fa-hand-holding-medical"></i>
                   <p>Donaciones</p>
                 </a>
