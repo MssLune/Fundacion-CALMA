@@ -5,7 +5,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title h3-tablecontent">Mis consultas</h3>
+                        <h3 class="card-title h3-tablecontent">Tabla de Psicologos</h3>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
@@ -14,19 +14,29 @@
                                 <tr>
                                     <th>Status</th>
                                     <th>Psicólogo</th>
+                                    <th>Rama</th>
                                     <th>Especialidad</th>
-                                    <th>Fecha</th>
-                                    <th>Hora</th>
-                                    <th>Link Reunión</th>
+                                    <th>Sexo</th>
+                                    <th>Dni</th>
+                                    <th>Grado</th>
                                     <th>Email</th>
-                                    <th>Resultados</th>
-                                </tr>
+                              </tr>
                             </thead>
                             <tbody>
                                 <tr>
+                                  <td>Trident</td>
+                                  <td>Internet</td>
+                                  <td>Psicologia Clínica</td>
+                                  <td> 4</td>
+                                  <td>X</td>
+                                  <td>X</td>
+                                  <td>X</td>
+                                  <td>X</td>
+                                </tr>
+                                <tr>
                                     <td>Trident</td>
                                     <td>Internet</td>
-                                    <td>Win 95+</td>
+                                    <td>Psicologia Social</td>
                                     <td> 4</td>
                                     <td>X</td>
                                     <td>X</td>
@@ -36,7 +46,7 @@
                                 <tr>
                                     <td>Trident</td>
                                     <td>Internet</td>
-                                    <td>Win 95+</td>
+                                    <td>PSICOLOGÍA LABORAL</td>
                                     <td> 4</td>
                                     <td>X</td>
                                     <td>X</td>
@@ -49,11 +59,12 @@
                                     <th>Status</th>
                                     <th>Psicólogo</th>
                                     <th>Especialidad</th>
-                                    <th>Fecha</th>
-                                    <th>Hora</th>
-                                    <th>Link Reunión</th>
+                                    <th>Sexo</th>
+                                    <th>Dni</th>
+                                    <th>Grado</th>
+                                    <th>Experiencia</th>
                                     <th>Email</th>
-                                    <th>Resultados</th>
+
                                 </tr>
                             </tfoot>
                         </table>
