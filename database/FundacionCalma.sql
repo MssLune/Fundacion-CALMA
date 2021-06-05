@@ -1,4 +1,4 @@
-﻿CREATE DATABASE fundacioncalma;
+CREATE DATABASE fundacioncalma;
 USE fundacioncalma;
 
 
