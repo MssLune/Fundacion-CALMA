@@ -14,12 +14,12 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Administrar Psicologo</h1>
+                            <h1>Administrar psicologos</h1>
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="consultoriocalma.php">Inicio</a></li>
-                                <li class="breadcrumb-item active">Administrar Psicologo</li>
+                                <li class="breadcrumb-item active">Administrar psicologos</li>
                             </ol>
                         </div>
                     </div>
@@ -64,7 +64,7 @@
            
             <!-- contenido de data table -->
 
-            <?php include_once 'includes/admin/tablecontent.php'; ?>
+            <?php include_once 'includes/admin/tablepsicontent.php'; ?>
 
             <?php include_once 'includes/admin/controlsidebar.php'; ?>
         </div>

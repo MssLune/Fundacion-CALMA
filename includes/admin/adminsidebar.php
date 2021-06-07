@@ -44,7 +44,7 @@
               </li>
             <li class="nav-header">DONACIONES</li>
               <li class="nav-item">
-                <a href="#" class="nav-link active">
+                <a href="donaciones.php" class="nav-link active">
                   <i class="nav-icon fas fa-hand-holding-medical"></i>
                   <p>Donaciones</p>
                 </a>
@@ -146,7 +146,7 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="administrarpsicologo.php" class="nav-link">
                       <i class="fas fa-id-card-alt nav-icon"></i>
                       <p>Administrar Psicólogos</p>
                     </a>
