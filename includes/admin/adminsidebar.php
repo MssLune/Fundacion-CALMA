@@ -73,13 +73,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="tableadmin.php" class="nav-link">
+                    <a href="misconsultas.php" class="nav-link">
                       <i class="fas fa-align-left nav-icon"></i>
                       <p>Mis consultas</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="consultar.php" class="nav-link">
                       <i class="fas fa-tachometer-alt nav-icon"></i>
                       <p>Programar Consultas</p>
                     </a>
@@ -111,7 +111,7 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="tableadmin.php" class="nav-link">
+                    <a href="psiconsultas.php" class="nav-link">
                       <i class="far fa-check-circle nav-icon"></i>
                       <p>Consultas Aceptadas</p>
                     </a>
@@ -140,7 +140,7 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="tableadmin.php" class="nav-link">
+                    <a href="administrarusuarios.php" class="nav-link">
                       <i class="fas fa-user-cog nav-icon"></i>
                       <p>Administrar Usuarios</p>
                     </a>

@@ -8,7 +8,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Administrar Psicologos</h1>
+                            <h1>Programar consultas</h1>
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
@@ -26,8 +26,11 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
-                                <div class="card-header">
-                                    <h3 class="card-title h3-tablecontent">Mis consultas</h3>
+                                <div class="card-header" align="right">
+                                    <h3 class="card-title h3-tablecontent">PROGRAMAR A LOS USUARIOS</h3>
+                                    <a class="btn btn-app">
+                                      <i class="fas fa-user"></i> AGREGAR USUARIO
+                                    </a>
                                 </div>
                                 <!-- /.card-header -->
                                 <div class="card-body">
