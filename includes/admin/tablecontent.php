@@ -24,6 +24,8 @@ require_once 'database/database.php';
                                     <th>Link Reunión</th>
                                     <th>Email</th>
                                     <th>Resultados</th>
+                                    <th>Reprogramar</th>
+                                    <th>Cancelar</th>
 
                                 </tr>
                             </thead>
@@ -56,7 +58,21 @@ require_once 'database/database.php';
                                             <td>'. $row['hora_consulta'] .'</td>
                                             <td>'. $rowLinkMedico .'</td>
                                             <td>'. $row['email_medico'] .'</td>
-                                            <td>'. $rowDiagMedico .'</td>';
+                                            <td>'. $rowDiagMedico .'</td>
+                                            <td>
+                                                <center>
+                                                    <a class="btn btn-warning" style="font-size: 30px; padding: 20px;" href="#" title="Reprogramar">
+                                                        <i class="far fa-edit"></i>
+                                                    </a>
+                                                </center>
+                                            </td>
+                                            <td>
+                                                <center>
+                                                    <a class="btn btn-danger" style="font-size: 30px; padding: 20px;" href="#" title="Cancelar">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </a>
+                                                </center>
+                                            </td>';
                                         echo '</tr>';
                                     }
                                 ?>

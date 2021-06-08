@@ -13,7 +13,7 @@
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="consultoriocalma.php">Inicio</a></li>
-                                <li class="breadcrumb-item active">Mis consultas</li>
+                                <li class="breadcrumb-item active">Programar consultas</li>
                             </ol>
                         </div>
                     </div>
@@ -28,8 +28,9 @@
                             <div class="card">
                                 <div class="card-header" align="right">
                                     <h3 class="card-title h3-tablecontent">PROGRAMAR A LOS USUARIOS</h3>
-                                    <a class="btn btn-app">
-                                      <i class="fas fa-user"></i> AGREGAR USUARIO
+                                    <a class="btn btn-success">
+                                        <i class="fas fa-user-plus"></i>
+                                        AGREGAR USUARIO
                                     </a>
                                 </div>
                                 <!-- /.card-header -->
@@ -45,8 +46,8 @@
                                                 <th>Link Reunión</th>
                                                 <th>Email</th>
                                                 <th>Resultados</th>
-                                                <th>Editar</th>
-                                                <th>Eliminar</th>
+                                                <th>Reprogramar</th>
+                                                <th>Cancelar</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -59,31 +60,20 @@
                                                 <td>X</td>
                                                 <td>X</td>
                                                 <td>X</td>
-                                                <td><a class="btn btn-app">
-                                                  <i class="fas fa-User"></i> Edit
-                                                </a></td>
-
-                                                <td><a class="btn btn-app">
-                                                  <i class="fas fa-save"></i> Save
-                                                </a></td>
-
-                                            </tr>
-                                            <tr>
-                                                <td>Trident</td>
-                                                <td>Internet</td>
-                                                <td>Win 95+</td>
-                                                <td> 4</td>
-                                                <td>X</td>
-                                                <td>X</td>
-                                                <td>X</td>
-                                                <td>X</td>
-                                                <td><a class="btn btn-app">
-                                                  <i class="fas fa-User"></i> Edit
-                                                </a></td>
-
-                                                <td><a class="btn btn-app">
-                                                  <i class="fas fa-save"></i> Save
-                                                </a></td>
+                                                <td>
+                                                    <center>
+                                                        <a class="btn btn-warning" style="font-size: 30px; padding: 20px;" href="#" title="Reprogramar">
+                                                            <i class="far fa-edit"></i>
+                                                        </a>
+                                                    </center>
+                                                </td>
+                                                <td>
+                                                    <center>
+                                                        <a class="btn btn-danger" style="font-size: 30px; padding: 20px;" href="#" title="Cancelar">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </a>
+                                                    </center>
+                                                </td>
 
                                             </tr>
                                         </tbody>
@@ -97,8 +87,8 @@
                                                 <th>Link Reunión</th>
                                                 <th>Email</th>
                                                 <th>Resultados</th>
-                                                <th>Editar</th>
-                                                <th>Eliminar</th>
+                                                <th>Reprogramar</th>
+                                                <th>Cancelar</th>
                                             </tr>
                                         </tfoot>
                                     </table>

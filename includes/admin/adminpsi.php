@@ -8,12 +8,12 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Administrar Psicologos</h1>
+                            <h1>Administrar Psicólogos</h1>
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="consultoriocalma.php">Inicio</a></li>
-                                <li class="breadcrumb-item active">Mis consultas</li>
+                                <li class="breadcrumb-item active">Administrar Psicólogos</li>
                             </ol>
                         </div>
                     </div>
@@ -27,7 +27,7 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h3 class="card-title h3-tablecontent">Mis consultas</h3>
+                                    <h3 class="card-title h3-tablecontent">Administrar Psicólogos</h3>
                                 </div>
                                 <!-- /.card-header -->
                                 <div class="card-body">
@@ -56,31 +56,20 @@
                                                 <td>X</td>
                                                 <td>X</td>
                                                 <td>X</td>
-                                                <td><a class="btn btn-app">
-                                                  <i class="fas fa-User"></i> Edit
-                                                </a></td>
-
-                                                <td><a class="btn btn-app">
-                                                  <i class="fas fa-save"></i> Save
-                                                </a></td>
-
-                                            </tr>
-                                            <tr>
-                                                <td>Trident</td>
-                                                <td>Internet</td>
-                                                <td>Win 95+</td>
-                                                <td> 4</td>
-                                                <td>X</td>
-                                                <td>X</td>
-                                                <td>X</td>
-                                                <td>X</td>
-                                                <td><a class="btn btn-app">
-                                                  <i class="fas fa-User"></i> Edit
-                                                </a></td>
-
-                                                <td><a class="btn btn-app">
-                                                  <i class="fas fa-save"></i> Save
-                                                </a></td>
+                                                <td>
+                                                    <center>
+                                                        <a class="btn btn-warning" style="font-size: 30px; padding: 20px;" href="#" title="Editar">
+                                                            <i class="far fa-edit"></i>
+                                                        </a>
+                                                    </center>
+                                                </td>
+                                                <td>
+                                                    <center>
+                                                        <a class="btn btn-danger" style="font-size: 30px; padding: 20px;" href="#" title="Eliminar">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </a>
+                                                    </center>
+                                                </td>
 
                                             </tr>
                                         </tbody>
