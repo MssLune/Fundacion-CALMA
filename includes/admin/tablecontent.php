@@ -1,3 +1,7 @@
+<?php 
+
+require_once 'database/database.php';
+?>
 <!-- Main content -->
 <section class="content">
     <div class="container-fluid">
@@ -24,26 +28,39 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Trident</td>
-                                    <td>Internet</td>
-                                    <td>Win 95+</td>
-                                    <td> 4</td>
-                                    <td>X</td>
-                                    <td>X</td>
-                                    <td>X</td>
-                                    <td>X</td>
-                                </tr>
-                                <tr>
-                                    <td>Trident</td>
-                                    <td>Internet</td>
-                                    <td>Win 95+</td>
-                                    <td> 4</td>
-                                    <td>X</td>
-                                    <td>X</td>
-                                    <td>X</td>
-                                    <td>X</td>
-                                </tr>
+                                <?php 
+                                    $pdo = Database::connect();
+                                    if($_SESSION['privilegio'] == 3){
+                                        $sql="SELECT c.consulta_id, c.codigoMedico, c.codigoUser, c.estado_consulta, c.especialidad, c.fecha_consulta, c.hora_consulta, c.link_medico, c.diagnostico_medico, m.cod_medico, m.usuario_cod, u.id_usuario, u.nombres, u.apellido_pat, u.apellido_mat, u.correo_user, ec.id_estadoConsulta, ec.nombre_estadoConsulta, esp.especialidad_id, esp.nombre_especialidad, (SELECT u.nombres FROM consulta c INNER JOIN medicos m ON c.codigoMedico = m.cod_medico INNER JOIN usuarios u ON u.id_usuario = m.usuario_cod WHERE c.codigoMedico = m.cod_medico AND u.privilegio = 2) as 'nombre_medico', (SELECT u.apellido_pat FROM consulta c INNER JOIN medicos m ON c.codigoMedico = m.cod_medico INNER JOIN usuarios u ON u.id_usuario = m.usuario_cod WHERE c.codigoMedico = m.cod_medico AND u.privilegio = 2) as 'paterno', (SELECT u.apellido_mat FROM consulta c INNER JOIN medicos m ON c.codigoMedico = m.cod_medico INNER JOIN usuarios u ON u.id_usuario = m.usuario_cod WHERE c.codigoMedico = m.cod_medico AND u.privilegio = 2) as 'materno', (SELECT u.correo_user FROM consulta c INNER JOIN medicos m ON c.codigoMedico = m.cod_medico INNER JOIN usuarios u ON u.id_usuario = m.usuario_cod WHERE c.codigoMedico = m.cod_medico AND u.privilegio = 2) as 'email_medico' FROM consulta c INNER JOIN medicos m ON c.codigoMedico = m.cod_medico INNER JOIN usuarios u ON c.codigoUser = u.id_usuario INNER JOIN estado_consulta ec ON c.estado_consulta = ec.id_estadoConsulta INNER JOIN especialidades esp ON c.especialidad = esp.especialidad_id WHERE c.codigoUser = '".$_SESSION['codUsuario']."'";
+                                    }else{
+
+                                    }
+
+                                    foreach ($pdo->query($sql) as $row){
+                                        if($row['link_medico'] == ''){
+                                            $rowLinkMedico = 'SIN LINK DISPONIBLE';
+                                        }else{
+                                            $rowLinkMedico = $row['link_medico'];
+                                        }
+
+                                        if($row['diagnostico_medico'] == ''){
+                                            $rowDiagMedico = 'SIN RESULTADOS DISPONIBLES';
+                                        }else{
+                                            $rowDiagMedico = $row['diagnostico_medico'];
+                                        }
+                                        echo '<tr>';
+                                            echo '<td>'. $row['nombre_estadoConsulta'] .'</td>
+                                            <td>'. $row['nombre_medico'].' '. $row['paterno'].' '. $row['materno'] .'</td>
+                                            <td>'. $row['nombre_especialidad'] .'</td>
+                                            <td>'. $row['fecha_consulta'] .'</td>
+                                            <td>'. $row['hora_consulta'] .'</td>
+                                            <td>'. $rowLinkMedico .'</td>
+                                            <td>'. $row['email_medico'] .'</td>
+                                            <td>'. $rowDiagMedico .'</td>';
+                                        echo '</tr>';
+                                    }
+                                ?>
+                                
                             </tbody>
                             <tfoot>
                                 <tr>

@@ -9,6 +9,7 @@
 
 <?php include_once 'includes/admin/adminpsi.php'; ?>
 
+<<<<<<< HEAD
 
 
     <?php include_once 'includes/admin/preloaderadmin.php'; ?>
@@ -25,3 +26,8 @@
 
 
 <script src="js/datatableFunctions.js"></script>
+=======
+<?php include_once 'includes/admin/adminscripts.php'; ?>
+
+<script src="js/datatableFunctions.js"></script>
+>>>>>>> b69811c35a76cab9329da79549910d4b93996cbc
