@@ -111,7 +111,7 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="psiconsultas.php" class="nav-link">
+                    <a href="tableadmin.php" class="nav-link">
                       <i class="far fa-check-circle nav-icon"></i>
                       <p>Consultas Aceptadas</p>
                     </a>
