@@ -9,7 +9,21 @@ require_once 'database/database.php';
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title h3-tablecontent">Mis consultas</h3>
+                        <?php 
+                            if($_SESSION['privilegio'] == 3){
+                                //user
+                                echo '
+                                    <h3 class="card-title h3-tablecontent">Mis consultas</h3>
+                                ';
+                            }else if($_SESSION['privilegio'] == 2){
+                                //psicólogo
+                                echo '
+                                    <h3 class="card-title h3-tablecontent">Consultas Aceptadas</h3>
+                                ';
+                            }else{
+
+                            }
+                        ?>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
@@ -59,6 +73,7 @@ require_once 'database/database.php';
                                 <?php 
                                     $pdo = Database::connect();
                                     if($_SESSION['privilegio'] == 3){
+                                        //Usuario
                                         $sql="SELECT c.consulta_id, c.codigoMedico, c.codigoUser, c.estado_consulta, c.especialidad, c.fecha_consulta, c.hora_consulta, c.link_medico, c.diagnostico_medico, m.cod_medico, m.usuario_cod, u.id_usuario, u.nombres, u.apellido_pat, u.apellido_mat, u.correo_user, ec.id_estadoConsulta, ec.nombre_estadoConsulta, esp.especialidad_id, esp.nombre_especialidad, (SELECT u.nombres FROM consulta c INNER JOIN medicos m ON c.codigoMedico = m.cod_medico INNER JOIN usuarios u ON u.id_usuario = m.usuario_cod WHERE c.codigoMedico = m.cod_medico AND u.privilegio = 2) as 'nombre_medico', (SELECT u.apellido_pat FROM consulta c INNER JOIN medicos m ON c.codigoMedico = m.cod_medico INNER JOIN usuarios u ON u.id_usuario = m.usuario_cod WHERE c.codigoMedico = m.cod_medico AND u.privilegio = 2) as 'paterno', (SELECT u.apellido_mat FROM consulta c INNER JOIN medicos m ON c.codigoMedico = m.cod_medico INNER JOIN usuarios u ON u.id_usuario = m.usuario_cod WHERE c.codigoMedico = m.cod_medico AND u.privilegio = 2) as 'materno', (SELECT u.correo_user FROM consulta c INNER JOIN medicos m ON c.codigoMedico = m.cod_medico INNER JOIN usuarios u ON u.id_usuario = m.usuario_cod WHERE c.codigoMedico = m.cod_medico AND u.privilegio = 2) as 'email_medico' FROM consulta c INNER JOIN medicos m ON c.codigoMedico = m.cod_medico INNER JOIN usuarios u ON c.codigoUser = u.id_usuario INNER JOIN estado_consulta ec ON c.estado_consulta = ec.id_estadoConsulta INNER JOIN especialidades esp ON c.especialidad = esp.especialidad_id WHERE c.codigoUser = '".$_SESSION['codUsuario']."'";
 
                                         foreach ($pdo->query($sql) as $row){
@@ -98,8 +113,10 @@ require_once 'database/database.php';
                                             </td>';
                                             echo '</tr>';
                                         }
+                                        Database::disconnect();
 
                                     }else if($_SESSION['privilegio'] == 2){
+                                        //Psicólogo
                                         $sql="SELECT c.consulta_id, c.codigoMedico, c.codigoUser, c.estado_consulta, c.especialidad, c.fecha_consulta, c.hora_consulta, c.link_medico, c.telefono_consultaMedico, c.diagnostico_medico, c.detalle_diagnostico, c.proxSesionRecomendada, c.apuntes_medico, m.cod_medico, m.usuario_cod, u.id_usuario, u.nombres, u.apellido_pat, u.apellido_mat, u.correo_user, ec.id_estadoConsulta, ec.nombre_estadoConsulta, esp.especialidad_id, esp.nombre_especialidad, (SELECT u.nombres FROM consulta c INNER JOIN usuarios u ON u.id_usuario = c.codigoUser WHERE u.id_usuario = c.codigoUser AND u.privilegio = 3) as 'nombre_paciente', (SELECT u.apellido_pat FROM consulta c INNER JOIN usuarios u ON u.id_usuario = c.codigoUser WHERE u.id_usuario = c.codigoUser AND u.privilegio = 3) as 'paterno', (SELECT u.apellido_mat FROM consulta c INNER JOIN usuarios u ON u.id_usuario = c.codigoUser WHERE u.id_usuario = c.codigoUser AND u.privilegio = 3) as 'materno', (SELECT u.correo_user FROM consulta c INNER JOIN usuarios u ON u.id_usuario = c.codigoUser WHERE u.id_usuario = c.codigoUser AND u.privilegio = 3) as 'email_paciente' FROM consulta c INNER JOIN medicos m ON c.codigoMedico = m.cod_medico INNER JOIN usuarios u ON m.usuario_cod = u.id_usuario INNER JOIN estado_consulta ec ON c.estado_consulta = ec.id_estadoConsulta INNER JOIN especialidades esp ON c.especialidad = esp.especialidad_id WHERE u.id_usuario = '".$_SESSION['codUsuario']."'";
 
                                         foreach ($pdo->query($sql) as $row){
@@ -138,16 +155,12 @@ require_once 'database/database.php';
                                                 </center>
                                             </td>';
                                         }
+                                        Database::disconnect();
 
                                     }else{
                                         
                                     }
-
-                                    
-
-                                    
                                 ?>
-                                
                             </tbody>
                             <tfoot>
                                 <?php 

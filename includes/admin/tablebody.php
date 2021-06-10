@@ -13,15 +13,37 @@
             <section class="content-header">
                 <div class="container-fluid">
                     <div class="row mb-2">
-                        <div class="col-sm-6">
-                            <h1>Mis consultas</h1>
-                        </div>
-                        <div class="col-sm-6">
-                            <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="consultoriocalma.php">Inicio</a></li>
-                                <li class="breadcrumb-item active">Mis consultas</li>
-                            </ol>
-                        </div>
+                        <?php 
+                            if($_SESSION['privilegio'] == 3){
+                                //user
+                                echo '
+                                    <div class="col-sm-6">
+                                        <h1>Mis consultas</h1>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <ol class="breadcrumb float-sm-right">
+                                            <li class="breadcrumb-item"><a href="consultoriocalma.php">Inicio</a></li>
+                                            <li class="breadcrumb-item active">Mis consultas</li>
+                                        </ol>
+                                    </div>
+                                ';
+                            }else if($_SESSION['privilegio'] == 2){
+                                //psicólogo
+                                echo '
+                                    <div class="col-sm-6">
+                                        <h1>Consultas Aceptadas</h1>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <ol class="breadcrumb float-sm-right">
+                                            <li class="breadcrumb-item"><a href="consultoriocalma.php">Inicio</a></li>
+                                            <li class="breadcrumb-item active">Consultas Aceptadas</li>
+                                        </ol>
+                                    </div>
+                                ';
+                            }else{
+
+                            }
+                        ?>
                     </div>
                 </div>
             </section>
