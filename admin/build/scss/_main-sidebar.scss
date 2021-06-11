@@ -299,7 +299,7 @@
   // All links within the sidebar menu
   .sidebar {
     a {
-      color: $sidebar-light-color;
+      color: $sidebar-darkcolor; 
 
       &:hover {
         text-decoration: none;
@@ -431,7 +431,7 @@
       color: $sidebar-dark-color;
 
       &:hover,
-      &:focus {
+      &:focus { 
         text-decoration: none;
       }
     }

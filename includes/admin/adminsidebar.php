@@ -4,15 +4,19 @@
     <!-- Página Calma -->
     <a href="index.php" class="brand-link">
       <img src="img/favicon.png" alt="Calma Logo" class="brand-image logo-sidebar">
-      <span class="brand-text font-weight-light">Ir a Calma</span>
+      <span class="brand-text font-weight-ligth cb">Ir a Calma</span>
     </a>
+
+    <div class="avatarall">
+    <img src="assets/img/avatar.png" alt="12  0" width="120">
+    </div>
 
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="info" style="white-space: normal;">
-          <a href="#" class="d-block"><?php echo $_SESSION['nombres']; ?></a>
+          <a href="#" class="d-block p-14"><?php echo $_SESSION['nombres']; ?></a>
         </div>
       </div>
 
@@ -22,7 +26,7 @@
           <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
           <div class="input-group-append">
             <button class="btn btn-sidebar">
-              <i class="fas fa-search fa-fw"></i>
+              <i class="fas fa-search fa-fw" style="color:gray"></i>
             </button>
           </div>
         </div>
@@ -110,13 +114,13 @@
                   </p>
                 </a>
                 <ul class="nav nav-treeview">
-                  <li class="nav-item">
+                  <li class="nav-item icon icon-shape rounded-circle bg-gradient-primary shadow text-center">
                     <a href="tableadmin.php" class="nav-link">
                       <i class="far fa-check-circle nav-icon"></i>
                       <p>Consultas Aceptadas</p>
                     </a>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item icon icon-shape rounded-circle bg-gradient-primary shadow text-center">
                     <a href="#" class="nav-link">
                       <i class="fas fa-tasks nav-icon"></i>
                       <p>Aceptar Consultas</p>
@@ -132,35 +136,30 @@
               <li class="nav-header">ADMINISTRADOR</li>
               <li class="nav-item menu-open">
                 <a href="#" class="nav-link active">
-                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                <i class="fas fa-book-reader nav-icon"></i>
                   <p>
                     Administración
                     <i class="right fas fa-angle-left"></i>
                   </p>
                 </a>
                 <ul class="nav nav-treeview">
-                  <li class="nav-item">
+                  <li class="nav-item pd25-l">
                     <a href="tableadmin.php" class="nav-link">
-                      <i class="fas fa-user-cog nav-icon"></i>
-                      <p>Administrar Usuarios</p>
+                    
+                      <p class="p-15">Administrar Usuarios</p>
                     </a>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item pd25-l">
                     <a href="administrarpsicologo.php" class="nav-link">
-                      <i class="fas fa-id-card-alt nav-icon"></i>
-                      <p>Administrar Psicólogos</p>
+                      
+                      <p class="p-15">Administrar Psicólogos</p>
                     </a>
                   </li>
-                  <li class="nav-item">
+                 
+                  <li class="nav-item pd25-l">
                     <a href="#" class="nav-link">
-                      <i class="fas fa-users nav-icon"></i>
-                      <p>Administrar Calma Informativa</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      <i class="fas fa-book-reader nav-icon"></i>
-                      <p>Administrar Calma Cursos</p>
+                      
+                      <p class="p-15">Administrar Calma Cursos</p>
                     </a>
                   </li>
                 </ul>
@@ -173,7 +172,7 @@
                 <li class="nav-header">ADMIN MASTER</li>
                 <li class="nav-item menu-open">
                   <a href="#" class="nav-link active">
-                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <i class="fas fa-book-reader nav-icon"></i>
                     <p>
                       Administración Master
                       <i class="right fas fa-angle-left"></i>
@@ -182,25 +181,22 @@
                   <ul class="nav nav-treeview">
                     <li class="nav-item">
                       <a href="#" class="nav-link">
-                        <i class="fas fa-user-cog nav-icon"></i>
+                        
                         <p>Administrar Administradores</p>
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="#" class="nav-link">
-                        <i class="fas fa-id-card-alt nav-icon"></i>
+                      <a href="#" class="nav-link">                        
                         <p>Administrar Psicólogos</p>
                       </a>
                     </li>
                     <li class="nav-item">
                       <a href="#" class="nav-link">
-                        <i class="fas fa-users nav-icon"></i>
                         <p>Administrar Calma Informativa</p>
                       </a>
                     </li>
                     <li class="nav-item">
                       <a href="#" class="nav-link">
-                        <i class="fas fa-book-reader nav-icon"></i>
                         <p>Administrar Calma Cursos</p>
                       </a>
                     </li>

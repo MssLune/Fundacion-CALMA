@@ -6,6 +6,8 @@
     <?php include_once 'includes/admin/navbaradmin.php'; ?>
 
     <?php include_once 'includes/admin/adminsidebar.php'; ?>
+    
+    <?php include_once 'includes/admin/banneradmin.php'; ?>
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -34,7 +36,8 @@
           <div class="row">
             <div class="col-lg-6 col-6">
               <!-- small box -->
-              <div class="small-box bg-info">
+
+              <div class="small-box bg-color1 card card-frame mt-5 ml-5">
                 <div class="inner">
                   <h3 class="h3-adminbody">Buscar Consulta</h3>
                 </div>
@@ -44,9 +47,13 @@
                 <a href="buscarConsulta.php" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
               </div>
             </div>
+
+
             <div class="col-lg-6 col-6">
               <!-- small box -->
-              <div class="small-box bg-success">
+
+
+              <div class="small-box bg-color2 card card-frame mt-5 ml-5">
                 <div class="inner">
                   <h3 class="h3-adminbody">Agendar Consulta</h3>
                 </div>
@@ -55,6 +62,8 @@
                 </div>
                 <a href="#" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
               </div>
+
+              
             </div>
           </div>
         </div>
