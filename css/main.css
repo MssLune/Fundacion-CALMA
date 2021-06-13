@@ -1320,7 +1320,7 @@ table.registrados tr:nth-child(4n-1) {
 
   /*BODYADMIN -> smallbox*/
   .h3-adminbody{
-    text-align: center !important; 
+    text-align: center !important;
     padding: 50px !important;
     color: #ffffff;
   }
