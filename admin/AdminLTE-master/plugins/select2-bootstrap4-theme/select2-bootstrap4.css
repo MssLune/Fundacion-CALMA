@@ -104,7 +104,7 @@ form.was-validated select:valid ~ .select2-container--bootstrap4 .select2-select
 .select2-container--bootstrap4 .select2-results__group {
   display: list-item;
   padding: 6px;
-  color: #6c757d; }
+  color: #4b80af; }
 
 .select2-container--bootstrap4 .select2-selection__clear {
   float: right;

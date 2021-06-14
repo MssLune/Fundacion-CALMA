@@ -57,7 +57,7 @@
                                                 <td>X</td>
                                                 <td>X</td>
                                                 <td>
-                                                <center>
+                                                    <center>
                                                         <a button type="button" class="btn btn-warning" style="font-size: 30px; padding: 20px;" href="#" title="Editar"
                                                         data-toggle="modal" data-target=".bd-example-modal-xl">
                                                             <i class="far fa-edit"></i>
