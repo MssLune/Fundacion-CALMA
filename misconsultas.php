@@ -15,8 +15,6 @@
 
     <?php include_once 'includes/admin/adminsidebar.php'; ?>
 
-    <?php include_once 'includes/admin/controlsidebar.php'; ?>
-
 
 
 <?php include_once 'includes/admin/footeradmin.php'; ?>

@@ -5,22 +5,6 @@
 
 <?php include_once 'includes/admin/referenciasadmin.php'; ?>
 
-<?php include_once 'includes/admin/navbaradmin.php'; ?>
-
 <?php include_once 'includes/admin/donacionescontet.php'; ?>
 
-
-
-    <?php include_once 'includes/admin/preloaderadmin.php'; ?>
-
-    <?php include_once 'includes/admin/adminsidebar.php'; ?>
-
-    <?php include_once 'includes/admin/controlsidebar.php'; ?>
-
-
-
-
 <?php include_once 'includes/admin/adminscripts.php'; ?>
-
-
-<?php include_once 'includes/admin/footeradmin.php'; ?>

@@ -8,4 +8,3 @@
 <?php include_once 'includes/admin/bodyadmin.php'; ?>
 
 <?php include_once 'includes/admin/adminscripts.php'; ?>
-

@@ -7,12 +7,14 @@
       <span class="brand-text font-weight-light">Ir a Calma</span>
     </a>
 
-    <div class="avatarall">
-    <img src="assets/img/avatar.png" alt="12  0" width="120">
-    </div>
-
     <!-- Sidebar -->
     <div class="sidebar">
+      <!-- avatar -->
+      <div class="avatarall">
+        <img src="assets/img/avatar.png" alt="12  0" width="120">
+      </div>
+      <!-- fin avatar -->
+
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="info" style="white-space: normal;">
@@ -26,7 +28,7 @@
           <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
           <div class="input-group-append">
             <button class="btn btn-sidebar">
-              <i class="fas fa-search fa-fw" style="color:gray"></i>
+              <i class="fas fa-search fa-fw"></i>
             </button>
           </div>
         </div>

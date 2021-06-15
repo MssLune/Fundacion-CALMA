@@ -1307,9 +1307,17 @@ table.registrados tr:nth-child(4n-1) {
 /*--ADICIONAL---*/
 
    /*ADMIN SIDEBAR*/
+   .brand-text{
+     color: #85C1E9;
+   }
   .logo-sidebar{
      opacity: 1 !important;
    }
+   /*color de scrollbar*/
+   .os-scrollbar-handle{
+     background: rgba(133, 193, 233, 0.4) !important;
+   }
+    /*caja cerrar sesión*/
   .close-session{
     background-color: rgba(240, 46, 12, 0.85);
     color: #ffffff !important;
@@ -1324,7 +1332,10 @@ table.registrados tr:nth-child(4n-1) {
     padding: 50px !important;
     color: #ffffff;
   }
-
+  /*donaciones*/
+  #moneda{
+    text-align: right;
+  }
   /*TABLE CONTENT -> título de tabla*/
   .h3-tablecontent{
     color: #000000 !important;

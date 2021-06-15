@@ -51,8 +51,6 @@
       </section>
     </div>
 
-    <?php include_once 'includes/admin/controlsidebar.php'; ?>
-
   </div>
   <!-- ./wrapper -->
 
