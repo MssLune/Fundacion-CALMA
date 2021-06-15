@@ -20,99 +20,61 @@
                 </div>
             </section>
 
-            <!-- Main content -->
-            <section class="content">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-header" align="right">
-                                    <h3 class="card-title h3-tablecontent">PROGRAMAR A LOS USUARIOS</h3>
-                                    <a class="btn btn-success">
-                                        <i class="fas fa-user-plus"></i>
-                                        AGREGAR USUARIO
-                                    </a>
-                                </div>
-                                <!-- /.card-header -->
-                                <div class="card-body">
-                                    <table id="example1" class="table table-bordered table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>Status</th>
-                                                <th>Psicólogo</th>
-                                                <th>Especialidad</th>
-                                                <th>Fecha</th>
-                                                <th>Hora</th>
-                                                <th>Link Reunión</th>
-                                                <th>Email</th>
-                                                <th>Resultados</th>
-                                                <th>Reprogramar</th>
-                                                <th>Cancelar</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Trident</td>
-                                                <td>Internet</td>
-                                                <td>Win 95+</td>
-                                                <td> 4</td>
-                                                <td>X</td>
-                                                <td>X</td>
-                                                <td>X</td>
-                                                <td>X</td>
-                                                <td>
-                                                    <center>
-                                                        <a class="btn btn-warning" style="font-size: 30px; padding: 20px;" href="#" title="Reprogramar">
-                                                            <i class="far fa-edit"></i>
-                                                        </a>
-                                                    </center>
-                                                </td>
-                                                <td>
-                                                    <center>
-                                                        <a class="btn btn-danger" style="font-size: 30px; padding: 20px;" href="#" title="Cancelar">
-                                                            <i class="far fa-trash-alt"></i>
-                                                        </a>
-                                                    </center>
-                                                </td>
+<!-- MAKE AN APPOINTMENT -->
+<section id="appointment" data-stellar-background-ratio="3">
+          <div class="container">
+               <div class="row">
 
-                                            </tr>
-                                        </tbody>
-                                        <tfoot>
-                                            <tr>
-                                                <th>Status</th>
-                                                <th>Psicólogo</th>
-                                                <th>Especialidad</th>
-                                                <th>Fecha</th>
-                                                <th>Hora</th>
-                                                <th>Link Reunión</th>
-                                                <th>Email</th>
-                                                <th>Resultados</th>
-                                                <th>Reprogramar</th>
-                                                <th>Cancelar</th>
-                                            </tr>
-                                        </tfoot>
-                                    </table>
-                                </div>
-                                <!-- /.card-body -->
-                            </div>
-                            <!-- /.card -->
-                        </div>
-                        <!-- /.col -->
+                    
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- CONTACT FORM HERE -->
+                         <form id="appointment-form" role="form" method="post" action="#">
+
+                            
+
+                              <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                   <div class="col-md-6 col-sm-6">
+                                        <label for="name">Nombres y Apellidos</label>
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Escriba aquí">
+                                   </div>
+
+                                   <div class="col-md-6 col-sm-6">
+                                        <label for="email">Correo electronico</label>
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Escriba aquí">
+                                   </div>
+
+                                   <div class="col-md-6 col-sm-6">
+                                        <label for="date">Selecciona la fecha</label>
+                                        <input type="date" name="date" value="" class="form-control">
+                                   </div>
+
+                                   <div class="col-md-6 col-sm-6">
+                                        <label for="select">Seleccione una especialidad</label>
+                                        <select class="form-control">
+                            
+                                             <option>Psicologia</option>
+                                             <option>Nutrición</option>
+                                        </select>
+                                   </div>
+
+                                   <div class="col-md-12 col-sm-12">
+                                        <label for="telephone">Numero de celular</label>
+                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Escriba aqui">
+                                        <label for="Message">Comentarios</label>
+                                        <textarea class="form-control" rows="5" id="message" name="message" placeholder="Escriba aquí"></textarea>
+                                        <button type="submit" class="form-control" id="cf-submit" name="submit">Programar consulta</button>
+                                   </div>
+                              </div>
+                        </form>
                     </div>
-                    <!-- /.row -->
-                </div>
-                <!-- /.container-fluid -->
-            </section>
-            <!-- /.content -->
 
+               </div>
+          </div>
+     </section>
 
-
-
-        </div>
-    </div>
-    <!-- ./wrapper -->
+</div>
+</div>
 </body>
-
-
 
 </html>
