@@ -17,7 +17,7 @@
               <!-- general form elements -->
               <div class="card card-primary">
                 <div class="card-header">
-                  <h3 class="card-title">Mi perfil</h3>
+                  <h3 class="card-title h3-perfil">Mi perfil</h3>
                 </div>
                 <!-- /.card-header -->
 
@@ -124,7 +124,7 @@
               <!-- primer card -->
               <div class="card card-success">
                 <div class="card-header">
-                  <h3 class="card-title">Mi cuenta</h3>
+                  <h3 class="card-title h3-perfil">Mi cuenta</h3>
                 </div>
                 <!-- card body -->
                 <div class="card-body">
@@ -158,7 +158,7 @@
               <!-- segundo card -->
               <div class="card card-danger">
                 <div class="card-header">
-                  <h3 class="card-title">Foto </h3>
+                  <h3 class="card-title h3-perfil">Foto </h3>
                 </div>
                 <!-- card body -->
                 <div class="card-body">

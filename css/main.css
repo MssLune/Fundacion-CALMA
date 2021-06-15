@@ -1336,6 +1336,12 @@ table.registrados tr:nth-child(4n-1) {
   #moneda{
     text-align: right;
   }
+
+  /*perfil*/
+  .h3-perfil{
+    color: #ffffff;
+  }
+
   /*TABLE CONTENT -> título de tabla*/
   .h3-tablecontent{
     color: #000000 !important;

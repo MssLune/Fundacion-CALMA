@@ -107,7 +107,7 @@
                       <div class="icon">
                         <i class="ion ion-calendar"></i>
                       </div>
-                      <a href="#" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
+                      <a href="tableadmin.php" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                   </div>
                 </div>
@@ -137,7 +137,7 @@
                       <div class="icon">
                         <i class="ion ion-calendar"></i>
                       </div>
-                      <a href="#" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
+                      <a href="tableadmin.php" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                   </div>
                 </div>
@@ -167,7 +167,7 @@
                       <div class="icon">
                         <i class="ion ion-calendar"></i>
                       </div>
-                      <a href="#" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
+                      <a href="administrarusuarios.php" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                   </div>
                   <div class="col-lg-6 col-6">
@@ -179,13 +179,13 @@
                       <div class="icon">
                         <i class="ion ion-calendar"></i>
                       </div>
-                      <a href="#" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
+                      <a href="administrarpsicologo.php" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                   </div>
                 </div>
               ';
             }else if(isset($_SESSION['Logueado']) && isset($_SESSION['privilegio']) && ($_SESSION['Logueado'] === true) && ($_SESSION['privilegio'] == 0)){
-              //admin
+              //admin master
               echo '
                 <div class="row">
                   <div class="col-lg-6 col-6">
@@ -221,7 +221,7 @@
                       <div class="icon">
                         <i class="ion ion-calendar"></i>
                       </div>
-                      <a href="#" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
+                      <a href="administrarusuarios.php" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                   </div>
                   <div class="col-lg-6 col-6">
@@ -233,7 +233,7 @@
                       <div class="icon">
                         <i class="ion ion-calendar"></i>
                       </div>
-                      <a href="#" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
+                      <a href="administrarpsicologo.php" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                   </div>
                 </div>
