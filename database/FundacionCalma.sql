@@ -26,8 +26,10 @@ CREATE TABLE usuarios (
 
 -- seña: july123
 INSERT INTO usuarios VALUES ('1', 'JULISSA ANDREA', 'CASTILLO', 'BARRERA','jc@gmail.com',1,'89475632','$2y$10$HPMtkwmdzIIg7mklbuBc9uFg9c/YtXa6VqIT74sR.TXtHrszH99I.','1992-07-28',2,'965478456', 'PERÚ','LIMA', '', 1,1,1,now());
-INSERT INTO usuarios VALUES ('2', 'GERARDO', 'GODOY', 'COLLAO','ggodoy@gmail.com',3,'96748125','$2y$10$Y19dotsKTQ44l3oK0lknL.meEoBB4zBQdVH4sQZ3nJghFznfY.ZZy','1959-07-05',1,'987516987', 'PERÚ','LIMA', '',1, 3,1,now());
-INSERT INTO usuarios VALUES ('3', 'ALEJANDRO MATÍAS', 'MANRIQUEZ', 'ESPINOZA','am@gmail.com',2,'11974012600','$2y$10$Umm8NxkFjBGHuqbSzCe5j.kTidN3jRh6eEghepPx1D1HK4YO6E6Nu','1964-10-17',1,'999879841', 'PERÚ','LIMA', '',1, 2,1,now());
+-- seña: gerardo
+INSERT INTO usuarios VALUES ('2', 'GERARDO', 'GODOY', 'COLLAO','ggodoy@gmail.com',3,'96748125','$2y$10$Y19dotsKTQ44l3oK0lknL.meEoBB4zBQdVH4sQZ3nJghFznfY.ZZy','1959-07-05',1,'987516987', 'PERÚ','LIMA', '',3, 3,1,now());
+-- seña: alejandro
+INSERT INTO usuarios VALUES ('3', 'ALEJANDRO MATÍAS', 'MANRIQUEZ', 'ESPINOZA','am@gmail.com',2,'11974012600','$2y$10$Umm8NxkFjBGHuqbSzCe5j.kTidN3jRh6eEghepPx1D1HK4YO6E6Nu','1964-10-17',1,'999879841', 'PERÚ','LIMA', '',4, 2,1,now());
 -- seña: danielAmaya123
 INSERT INTO usuarios VALUES ('4', 'DANIEL', 'AMAYA', 'CARRANZA','dac@gmail.com',1,'04879870','$2y$10$VcpvlyuS/zxhZZpD5Bq0QuOLGMrlXX2pvSrH8G34h/G6TI00tpQr6','1970-01-01',1,'978412579', 'PERÚ','LIMA','', 1,0,1,now());
 
@@ -50,9 +52,9 @@ CREATE TABLE medicos (
 	motivo_inactividad text,
 	wpp_link varchar(100),
 	escuela_medico varchar(100) not NULL,
-	ramaPersonaMedico varchar(100) not NULL,
-	especializacion1 varchar(100),
-	especializacion2 varchar(100),
+	ramaPersonaMedico int(20) not NULL,
+	especializacion1 int(20) not NULL,
+	especializacion2 int(20),
 	gradoMedico int(5) not NULL,
 	nro_colegiatura varchar(100),
 	experiencia_medico text not null,
@@ -61,7 +63,7 @@ CREATE TABLE medicos (
 	historialPersonaMedico text
 );
 
-INSERT INTO medicos VALUES('1', 3, '', '', 'HUMANISMO', 'PSICOLOGÍA CLÍNICA', 'TERAPIA FAMILIAR', '', 2, '104578', 'Práctica privada y en organizaciones con poblaciones con discapacidad visual', 'Ayudar a las personas a tener una  adecuada salud mental y bienestar en su vida presente.', '', '');
+INSERT INTO medicos VALUES('1', 3, '', '', 'HUMANISMO', 1, 1, '', 2, '104578', 'Práctica privada y en organizaciones con poblaciones con discapacidad visual', 'Ayudar a las personas a tener una  adecuada salud mental y bienestar en su vida presente.', '', '');
 
 
 CREATE TABLE privilegios (
@@ -170,9 +172,9 @@ CREATE TABLE dona_recurrente (
 );
 
 INSERT INTO dona_recurrente VALUES ('1', 'SIN PLAN', '-', '0', 1);
-INSERT INTO dona_recurrente VALUES ('2', 'PLAN 1', 'CASA DE LA CALMA', '100', 3);
-INSERT INTO dona_recurrente VALUES ('3', 'PLAN 2', 'MENTE EN CALMA', '200', 5);
-INSERT INTO dona_recurrente VALUES ('4', 'PLAN 3', 'CALMA CONTINUA', '300', 8);
+INSERT INTO dona_recurrente VALUES ('2', 'PLAN 1', 'MEDITAR', '50', 1);
+INSERT INTO dona_recurrente VALUES ('3', 'PLAN 2', 'REFLEXIONAR', '100', 2);
+INSERT INTO dona_recurrente VALUES ('4', 'PLAN 3', 'COMPRENDER', '150', 3);
 
 -- Tabla de donaciones esporádicas
 CREATE TABLE donaciones_esporadica (
@@ -183,3 +185,40 @@ CREATE TABLE donaciones_esporadica (
 );
 
 INSERT INTO donaciones_esporadica VALUES ('1', 2, '50.00', '');
+
+
+-- tabla de convenios
+CREATE TABLE convenio (
+	id_convenio int(5) auto_increment primary key,
+	codigo_convenio varchar(250) not null,
+	nombre_convenio varchar(250) not null
+);
+
+INSERT INTO convenio VALUES (1, 'ABVGF129', 'SANNA');
+
+
+-- Tabla de países
+CREATE TABLE paises (
+	id_pais int(5) auto_increment primary key,
+	nombre_pais varchar(250) not null
+);
+
+INSERT INTO paises VALUES (1, 'PERÚ');
+INSERT INTO paises VALUES (2, 'COLOMBIA');
+INSERT INTO paises VALUES (3, 'ECUADOR');
+INSERT INTO paises VALUES (4, 'BRAZIL');
+INSERT INTO paises VALUES (5, 'MÉXICO');
+INSERT INTO paises VALUES (6, 'ITALIA');
+INSERT INTO paises VALUES (7, 'ARGENTINA');
+
+-- Tabla de ESTADOS
+CREATE TABLE estado_ciudad (
+	id_estado int(5) auto_increment primary key,
+	cod_pais int(5) not null,
+	nombre_estado varchar(250) not null
+);
+
+INSERT INTO estado_ciudad VALUES (1, 1, 'LIMA');
+INSERT INTO estado_ciudad VALUES (2, 7, 'BUENOS AIRES');
+INSERT INTO estado_ciudad VALUES (3, 1, 'ICA');
+INSERT INTO estado_ciudad VALUES (4, 6, 'MILÁN');

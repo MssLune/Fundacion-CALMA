@@ -1,3 +1,6 @@
+<?php 
+  require_once 'database/database.php';
+?>
 <body class="hold-transition sidebar-mini layout-fixed">
   <div class="wrapper">
       
@@ -21,6 +24,15 @@
                 </div>
                 <!-- /.card-header -->
 
+                <?php 
+                  $pdo = Database::connect();
+                  $sql = "SELECT u.id_usuario, u.nombres, u.apellido_pat, u.apellido_mat, u.correo_user, u.tipo_doc, u.nro_doc, u.pass, u.fecha_nacimiento, u.sexo, u.telefono, u.pais, u.estado_lugar, s.id_genero, s.nombre_genero FROM usuarios u INNER JOIN sexo s ON u.sexo = s.id_genero WHERE id_usuario = '".$_SESSION['codUsuario']."'";
+                  $q = $pdo->prepare($sql);
+                  $q->execute(array());
+                  $data = $q->fetch(PDO::FETCH_ASSOC);
+                  Database::disconnect();
+                ?>
+
                 <!-- card start -->
                 <div class="card-body">
 
@@ -30,7 +42,7 @@
                         <!-- text input -->
                         <div class="form-group">
                           <label>Nombres</label>
-                          <input type="text" class="form-control" placeholder="">
+                          <input type="text" class="form-control" value='<?php echo $data['nombres'] ?>' readonly>
                         </div>
                       </div>
                     </div>
@@ -40,13 +52,13 @@
                         <!-- text input -->
                         <div class="form-group">
                           <label>Apellido paterno </label>
-                          <input type="text" class="form-control" placeholder="">
+                          <input type="text" class="form-control" value='<?php echo $data['apellido_pat'] ?>' readonly>
                         </div>
                       </div>
                       <div class="col-sm-6">
                         <div class="form-group">
                           <label>Apellido Materno</label>
-                          <input type="text" class="form-control" placeholder="">
+                          <input type="text" class="form-control" value='<?php echo $data['apellido_mat'] ?>' readonly>
                         </div>
                       </div>
                     </div>
@@ -56,13 +68,13 @@
                         <!-- text input -->
                         <div class="form-group">
                           <label>Celular </label>
-                          <input type="text" class="form-control" placeholder="Enter ...">
+                          <input type="text" class="form-control" value='<?php echo $data['telefono'] ?>' readonly>
                         </div>
                       </div>
                       <div class="col-sm-6">
                         <div class="form-group">
                           <label>Documento</label>
-                          <input type="text" class="form-control" placeholder="Enter ...">
+                          <input type="text" class="form-control" value='<?php echo $data['nro_doc'] ?>' readonly>
                         </div>
                       </div>
                     </div>
@@ -72,13 +84,13 @@
                         <!-- text input -->
                         <div class="form-group">
                           <label>PAÍS</label>
-                          <input type="text" class="form-control" placeholder="">
+                          <input type="text" class="form-control" value='<?php echo $data['pais'] ?>' readonly>
                         </div>
                       </div>
                       <div class="col-sm-6">
                         <div class="form-group">
                           <label>CIUDAD</label>
-                          <input type="text" class="form-control" placeholder="">
+                          <input type="text" class="form-control" value='<?php echo $data['estado_lugar'] ?>' readonly>
                         </div>
                       </div>
                     </div>
@@ -92,7 +104,7 @@
                             <div class="input-group-prepend">
                               <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="">
+                            <input type="text" class="form-control" value='<?php echo $data['fecha_nacimiento'] ?>' readonly>
                           </div>
                         </div>
                       </div>
@@ -100,7 +112,7 @@
                       <div class="col-sm-6">
                         <div class="form-group">
                           <label>Sexo</label>
-                          <input type="text" class="form-control" placeholder="">
+                          <input type="text" class="form-control" value='<?php echo $data['nombre_genero'] ?>' readonly>
                         </div>
                       </div>
                     </div>
@@ -135,7 +147,7 @@
                       <div class="input-group-prepend">
                         <span class="input-group-text">@</span>
                       </div>
-                      <input type="text" class="form-control" placeholder="Correo">
+                      <input type="text" class="form-control" value='<?php echo $data['correo_user'] ?>' readonly>
                       <button type="submit" class="btn btn-info">Cambiar</button>
                     </div>
                   </div>
@@ -146,7 +158,7 @@
                       <div class="input-group-prepend">
                         <span class="input-group-text">#</span>
                       </div>
-                      <input type="text" class="form-control" placeholder="Contraseña">
+                      <input type="text" class="form-control" value='<?php echo $_SESSION['passSinHash'] ?>' readonly>
                       <button type="submit" class="btn btn-info">Cambiar</button>
                     </div>
                   </div>

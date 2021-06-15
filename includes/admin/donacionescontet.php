@@ -1,4 +1,6 @@
-
+<?php 
+  require_once 'database/database.php';
+?>
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
       
@@ -12,6 +14,20 @@
       <div class="content-wrapper">
         <img src="assets/img/fondocalma.png" class="d-block w-100" height="200px">
         <div class="content-header">
+          <?php 
+            $pdo = Database::connect();
+            $sql = "SELECT u.id_usuario, u.cod_recurrenteDona, dr.id_donaRecurrente, dr.nombre_donaRecurrente FROM usuarios u INNER JOIN dona_recurrente dr ON u.cod_recurrenteDona = dr.id_donaRecurrente WHERE id_usuario = '".$_SESSION['codUsuario']."'";
+            $q = $pdo->prepare($sql);
+            $q->execute(array());
+            $data = $q->fetch(PDO::FETCH_ASSOC);
+            Database::disconnect();
+
+            if($data['nombre_donaRecurrente'] == '-'){
+              $nombrePlan = 'SIN PLAN ACTUAL';
+            }else{
+              $nombrePlan = $data['nombre_donaRecurrente'];
+            }
+          ?>
           <!-- inicia card -->
           <div class="card">
             <div class="card-header">
@@ -20,7 +36,7 @@
                   <label>PLAN DE DONACIÓN ACTUAL:</label>
                 </div>
                 <div class="col-sm-9">
-                <input type="text" class="form-control" placeholder="">
+                <input type="text" class="form-control" value='<?php echo $nombrePlan ?>' readonly>
                 </div>
               </div>
             </div>
