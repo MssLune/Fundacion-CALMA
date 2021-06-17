@@ -13,7 +13,7 @@
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="consultoriocalma.php">Inicio</a></li>
-                                <li class="breadcrumb-item active">Mis consultas</li>
+                                <li class="breadcrumb-item active">Administrar Usuarios</li>
                             </ol>
                         </div>
                     </div>
@@ -27,7 +27,7 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h3 class="card-title h3-tablecontent">Mis Usuarios</h3>
+                                    <h3 class="card-title h3-tablecontent">Administrar Usuarios</h3>
                                 </div>
                                 <!-- /.card-header -->
                                 <div class="card-body">

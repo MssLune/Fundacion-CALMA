@@ -11,7 +11,18 @@
     <div class="sidebar">
       <!-- avatar -->
       <div class="avatarall">
-        <img src="assets/img/avatar.png" alt="12  0" width="120">
+        <?php 
+          if(isset($_SESSION['genero']) && ($_SESSION['genero'] == 1)){
+            //masculino
+            echo '
+              <img src="assets/img/avatar01.jpg" alt="12  0" width="120">
+            ';
+          }else if(isset($_SESSION['genero']) && ($_SESSION['genero'] == 2)){
+            echo '
+              <img src="assets/img/avatar.png" alt="12  0" width="120">
+            ';
+          }
+        ?>
       </div>
       <!-- fin avatar -->
 
@@ -120,12 +131,6 @@
                     <a href="tableadmin.php" class="nav-link">
                       <i class="far fa-check-circle nav-icon"></i>
                       <p>Consultas Aceptadas</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      <i class="fas fa-tasks nav-icon"></i>
-                      <p>Aceptar Consultas</p>
                     </a>
                   </li>
                 </ul>
