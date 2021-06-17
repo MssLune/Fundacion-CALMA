@@ -15,11 +15,12 @@
           if(isset($_SESSION['genero']) && ($_SESSION['genero'] == 1)){
             //masculino
             echo '
-              <img src="assets/img/avatar01.jpg" alt="12  0" width="120">
+              <img src="assets/img/avatar01.jpg" alt="avatar" width="120">
             ';
           }else if(isset($_SESSION['genero']) && ($_SESSION['genero'] == 2)){
+            //femenino
             echo '
-              <img src="assets/img/avatar.png" alt="12  0" width="120">
+              <img src="assets/img/avatar.png" alt="avatar" width="120">
             ';
           }
         ?>
