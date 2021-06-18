@@ -60,7 +60,7 @@
                                                     <center>
                                                         <a button type="button" class="btn btn-warning" style="font-size: 30px; padding: 20px;" href="#" title="Editar"
                                                         data-toggle="modal" data-target=".bd-example-modal-xl">
-                                                            <i class="far fa-edit"></i>
+                                                            <i class="far fa-edit"></i></a>
 
                                                             <div class="modal fade bd-example-modal-xl" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
                                                               <div class="modal-dialog modal-xl" >
@@ -103,7 +103,7 @@
                                                                 </div>
                                                               </div>
                                                             </div>
-                                                        </a>
+
                                                     </center>
                                                 </td>
                                                 <td>
