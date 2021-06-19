@@ -107,7 +107,7 @@
                       <div class="icon">
                         <i class="ion ion-calendar"></i>
                       </div>
-                      <a href="tableadmin.php" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
+                      <a href="tableConsultas.php" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                   </div>
                 </div>
@@ -137,7 +137,7 @@
                       <div class="icon">
                         <i class="ion ion-calendar"></i>
                       </div>
-                      <a href="tableadmin.php" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
+                      <a href="tableConsultas.php" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                   </div>
                 </div>
@@ -167,7 +167,7 @@
                       <div class="icon">
                         <i class="ion ion-calendar"></i>
                       </div>
-                      <a href="administrarusuarios.php" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
+                      <a href="administrarTodos.php" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                   </div>
                   <div class="col-lg-6 col-6">
@@ -179,7 +179,7 @@
                       <div class="icon">
                         <i class="ion ion-calendar"></i>
                       </div>
-                      <a href="administrarpsicologo.php" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
+                      <a href="administrarTodos.php" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                   </div>
                 </div>
@@ -221,7 +221,7 @@
                       <div class="icon">
                         <i class="ion ion-calendar"></i>
                       </div>
-                      <a href="administrarusuarios.php" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
+                      <a href="administrarTodos.php" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                   </div>
                   <div class="col-lg-6 col-6">
@@ -233,7 +233,7 @@
                       <div class="icon">
                         <i class="ion ion-calendar"></i>
                       </div>
-                      <a href="administrarpsicologo.php" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
+                      <a href="administrarTodos.php" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                   </div>
                 </div>

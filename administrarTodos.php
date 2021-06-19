@@ -7,7 +7,7 @@
 
 <?php include_once 'includes/admin/navbaradmin.php'; ?>
 
-<?php include_once 'includes/admin/adminuse.php'; ?>
+<?php include_once 'includes/admin/contentAdminTodos.php'; ?>
 
 
 
@@ -20,5 +20,6 @@
 <?php include_once 'includes/admin/footeradmin.php'; ?>
 
 <?php include_once 'includes/admin/adminscripts.php'; ?>
+
 
 <script src="js/datatableFunctions.js"></script>

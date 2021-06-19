@@ -1325,6 +1325,10 @@ table.registrados tr:nth-child(4n-1) {
   .close-session:hover{
     background-color: rgba(240, 46, 12, 1) !important;
   }
+  /*search bar -admin sidebar*/
+  [class*="sidebar-dark"] .btn-sidebar {
+    background-color: red;
+  }
 
   /*BODYADMIN -> smallbox*/
   .h3-adminbody{

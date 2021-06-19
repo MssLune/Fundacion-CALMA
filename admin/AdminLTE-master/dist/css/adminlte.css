@@ -14182,7 +14182,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
 .text-sm .nav-compact .nav-link > p > .right {
   top: .7rem;
 }
-
+/*
 [class*="sidebar-dark"] .form-control-sidebar,
 [class*="sidebar-dark"] .btn-sidebar {
   background-color: #3f474e;
@@ -14255,7 +14255,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
 
 [class*="sidebar-light"] .list-group-item .search-path {
   color: #6c757d;
-}
+}*/
 
 .sidebar .form-inline .input-group {
   width: 100%;

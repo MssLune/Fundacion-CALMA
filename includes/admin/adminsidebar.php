@@ -35,16 +35,16 @@
       </div>
 
       <!-- SidebarSearch Form -->
-      <div class="form-inline">
+      <!-- <div class="form-inline">
         <div class="input-group" data-widget="sidebar-search">
-          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Buscar" aria-label="Buscar">
           <div class="input-group-append">
             <button class="btn btn-sidebar">
-              <i class="fas fa-search fa-fw"></i>
+              <i class="fas fa-search fa-fw" style="color: rgba(0,0,0,0.2);"></i>
             </button>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
@@ -91,13 +91,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="tableadmin.php" class="nav-link">
+                    <a href="tableConsultas.php" class="nav-link">
                       <i class="fas fa-align-left nav-icon"></i>
                       <p>Mis consultas</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="consultar.php" class="nav-link">
+                    <a href="buscarConsulta.php" class="nav-link">
                       <i class="fas fa-tachometer-alt nav-icon"></i>
                       <p>Programar Consultas</p>
                     </a>
@@ -120,21 +120,10 @@
               echo '
               <li class="nav-header">'.$generoPsico.'</li>
               <li class="nav-item menu-open">
-                <a href="#" class="nav-link active">
-                  <i class="nav-icon fas fa-tachometer-alt"></i>
-                  <p>
-                    Administrar Consultas
-                    <i class="right fas fa-angle-left"></i>
-                  </p>
+                <a href="tableConsultas.php" class="nav-link">
+                  <i class="far fa-check-circle nav-icon"></i>
+                  <p>Consultas Aceptadas</p>
                 </a>
-                <ul class="nav nav-treeview">
-                  <li class="nav-item">
-                    <a href="tableadmin.php" class="nav-link">
-                      <i class="far fa-check-circle nav-icon"></i>
-                      <p>Consultas Aceptadas</p>
-                    </a>
-                  </li>
-                </ul>
               </li>
               ';
               echo sidebarAll();
@@ -152,13 +141,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="administrarusuarios.php" class="nav-link">
+                    <a href="administrarTodos.php" class="nav-link">
                       <i class="fas fa-user-cog nav-icon"></i>
                       <p>Administrar Usuarios</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="administrarpsicologo.php" class="nav-link">
+                    <a href="administrarTodos.php" class="nav-link">
                       <i class="fas fa-id-card-alt nav-icon"></i>
                       <p>Administrar Psicólogos</p>
                     </a>
@@ -193,19 +182,19 @@
                   </a>
                   <ul class="nav nav-treeview">
                     <li class="nav-item">
-                      <a href="#" class="nav-link">
+                      <a href="administrarTodos.php" class="nav-link">
                         <i class="fas fa-user-cog nav-icon"></i>
                         <p>Administrar Administradores</p>
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="administrarpsicologo.php" class="nav-link">
+                      <a href="administrarTodos.php" class="nav-link">
                         <i class="fas fa-id-card-alt nav-icon"></i>
                         <p>Administrar Psicólogos</p>
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="administrarusuarios.php" class="nav-link">
+                      <a href="administrarTodos.php" class="nav-link">
                         <i class="fas fa-id-card-alt nav-icon"></i>
                         <p>Administrar Usuarios</p>
                       </a>

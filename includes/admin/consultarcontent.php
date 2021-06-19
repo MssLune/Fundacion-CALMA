@@ -18,6 +18,28 @@
                          <!-- CONTACT FORM HERE -->
                          <form id="appointment-form" role="form" method="post" action="#">
                            
+                              <!-- Main content -->
+                              <section class="content">
+                              <div class="container-fluid">
+                                   <h5 class="text-center">Buscar Especialidad</h5>
+                                   <div class="row">
+                                        <div class="col-md-8 offset-md-2">
+                                             <div class="input-group">
+                                             <select class="form-control form-control-lg letra-select" id="especialidad-search" name="buscar_especialidad" aria-label="Buscar Especialidad">
+                                                  <option disabled selected value="defecto_especialidad">Busca la Especialidad</option>
+                                                  <option value="esp1">Violencia Familiar</option>
+                                                  <option value="esp2">Bullying</option>
+                                             </select>
+                                             <div class="input-group-append">
+                                                  <button type="button" class="btn btn-lg btn-default">
+                                                       <i class="fa fa-search"></i>
+                                                  </button>
+                                             </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                              </section>
 
                               <div class="wow fadeInUp" data-wow-delay="0.8s">
                                    <div class="col-md-6 col-sm-6">
