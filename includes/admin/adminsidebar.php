@@ -119,12 +119,12 @@
 
               echo '
               <li class="nav-header">'.$generoPsico.'</li>
-              <li class="nav-item menu-open">
-                <a href="tableConsultas.php" class="nav-link">
+              <li class="nav-item">
+                <a href="tableConsultas.php" class="nav-link active">
                   <i class="far fa-check-circle nav-icon"></i>
                   <p>Consultas Aceptadas</p>
                 </a>
-              </li>
+              </li> 
               ';
               echo sidebarAll();
             }else if(isset($_SESSION['Logueado']) && isset($_SESSION['privilegio']) && ($_SESSION['Logueado'] === true) && ($_SESSION['privilegio'] == 1)){
@@ -141,13 +141,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="administrarTodos.php" class="nav-link">
+                    <a href="administrarMedicos.php" class="nav-link">
                       <i class="fas fa-user-cog nav-icon"></i>
                       <p>Administrar Usuarios</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="administrarTodos.php" class="nav-link">
+                    <a href="administrarMedicos.php" class="nav-link">
                       <i class="fas fa-id-card-alt nav-icon"></i>
                       <p>Administrar Psicólogos</p>
                     </a>
@@ -182,19 +182,19 @@
                   </a>
                   <ul class="nav nav-treeview">
                     <li class="nav-item">
-                      <a href="administrarTodos.php" class="nav-link">
+                      <a href="administrarMedicos.php" class="nav-link">
                         <i class="fas fa-user-cog nav-icon"></i>
                         <p>Administrar Administradores</p>
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="administrarTodos.php" class="nav-link">
+                      <a href="administrarMedicos.php" class="nav-link">
                         <i class="fas fa-id-card-alt nav-icon"></i>
                         <p>Administrar Psicólogos</p>
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="administrarTodos.php" class="nav-link">
+                      <a href="administrarMedicos.php" class="nav-link">
                         <i class="fas fa-id-card-alt nav-icon"></i>
                         <p>Administrar Usuarios</p>
                       </a>

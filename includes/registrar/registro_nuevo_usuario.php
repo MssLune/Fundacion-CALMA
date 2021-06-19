@@ -8,6 +8,13 @@ if (isset($_POST["nombres_r"])) {
     $passSinHash = $_POST['pass_r'];
     //password con hash
     $password = password_hash($passSinHash, PASSWORD_BCRYPT);
+
+	//convenio vacío
+	if($_POST['convenio_r'] == ''){
+		$convenioUser = 'SIN CODIGO';
+	}else{
+		$convenioUser = $_POST['convenio_r'];
+	}
 	
 	$sql = "INSERT INTO `usuarios`(`nombres`, `apellido_pat`, `apellido_mat`, `correo_user`, `tipo_doc`,`nro_doc`,`pass`,`fecha_nacimiento`,`sexo`, `telefono`, `pais`, `estado_lugar`, `id_convenio`, `cod_recurrenteDona`,`privilegio`,`actividad`, `fecha_registro`) VALUES 
 		('".$_POST['nombres_r']."',
@@ -22,7 +29,7 @@ if (isset($_POST["nombres_r"])) {
 		'".$_POST['celular_r']."',
 		'".$_POST['pais_r']."',
 		'".$_POST['estado_r']."',
-		'".$_POST['convenio_r']."',
+		'".$convenioUser."',
 		1,
 		3,
 		1,

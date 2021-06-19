@@ -20,6 +20,9 @@
 <link rel="stylesheet" href="admin/plugins/summernote/summernote-bs4.min.css">
 <!-- stylesheet css/main -->
 <link rel="stylesheet" href="css/main.css">
+<!-- sweetAlert2 -->
+<script src="./assets/js/plugins/sweetalert2.min.js"></script> <!--Importar SweetAlert2-->
+    <link href="./assets/css/sweetalert2.min.css" rel="stylesheet"/> <!--Importar SweetAlert2-->
 <!-- DataTables -->
 <link rel="stylesheet" href="admin/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
 <link rel="stylesheet" href="admin/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">

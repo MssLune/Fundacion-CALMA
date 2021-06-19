@@ -62,7 +62,7 @@ function limpiarCampos(){
   document.getElementById("estado-registro").value = "defecto_estado";
   document.getElementById("genero-registro").value = "defecto_genero";
 }
-console.log
+
 //--FUNCIÓN PARA GUARDAR NUEVO REGISTRO
 function registrar_nuevo_usuario(){
   registrar();

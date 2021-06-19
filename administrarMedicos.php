@@ -7,7 +7,7 @@
 
 <?php include_once 'includes/admin/navbaradmin.php'; ?>
 
-<?php include_once 'includes/admin/contentAdminTodos.php'; ?>
+<?php include_once 'includes/admin/contentAdminMedico.php'; ?>
 
 
 

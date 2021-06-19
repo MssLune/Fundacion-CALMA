@@ -1,6 +1,7 @@
 <?php 
     require_once 'database/database.php';
 ?>
+<script src="js/functions-administrar.js"></script>
 
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
@@ -35,11 +36,11 @@
                                 </div>
                                 <!-- /.card-header -->
                                 <div class="card-body">
-                                    <table id="example1" class="table table-bordered table-striped">
-                                    <a href="#" class="btn btn-primary" style="width: 100%; margin-bottom: 2%;" >Nuevo  Psicólogo</a>
+                                    <table id="tableAdminMedico" class="table table-bordered table-striped">
+                                        <a href="#" class="btn btn-primary" style="width: 100%; margin-bottom: 2%;" >Nuevo  Psicólogo</a>
                                         <thead>
                                             <tr>
-                                                <th><center>Código</center></th>
+                                                <th><center>ID</center></th>
                                                 <th><center>Cargo</center></th>
                                                 <th><center>Nro. Documento</center></th>
                                                 <th><center>Nombres</center></th>
@@ -49,31 +50,48 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td>
-                                                    <center>
-                                                        <a class="btn btn-default" onclick="" title="Eliminar">
-                                                            <i class="fas fa-trash-alt"></i>
-                                                        </a>
-                                                    </center>
-                                                </td>
-                                                <td>
-                                                    <center>
-                                                        <a class="btn btn-default" href="#" data-toggle="modal" data-target="#modalAdmin" onclick="" title="Más Información">
-                                                            <i class="fas fa-info-circle"></i>
-                                                        </a>
-                                                    </center>
-                                                </td>
-                                            </tr>
+
+                                            <?php 
+                                                $pdo = Database::connect();
+                                                $sql = "SELECT *, priv.cod_privilegio, priv.nombre_privilegio FROM usuarios u INNER JOIN privilegios priv ON u.privilegio = priv.cod_privilegio WHERE privilegio = 2";
+
+                                                foreach ($pdo->query($sql) as $row){
+                                                    if($row['actividad'] === 1){
+                                                        $rowActividad = 'ACTIVO';
+                                                    }else if($row['actividad'] === 0){
+                                                        $rowActividad = 'INACTIVO';
+                                                    }
+
+                                                    echo '<tr>';
+                                                    echo '
+                                                            <td><center>'. $row['id_usuario'] .'</center></td>
+                                                            <td><center>'. $row['nombre_privilegio'] .'</center></td>
+                                                            <td><center>'. $row['nro_doc'] .'</center></td>
+                                                            <td><center>'. $row['nombres'].' '. $row['apellido_pat'].' '. $row['apellido_mat'] .'</center></td>
+                                                            <td><center>'. $row['fecha_nacimiento'] .'</center></td>
+                                                            <td>
+                                                                <center>
+                                                                    <a class="btn btn-default" onclick="" title="Eliminar">
+                                                                        <i class="fas fa-trash-alt"></i>
+                                                                    </a>
+                                                                </center>
+                                                            </td>
+                                                            <td>
+                                                                <center>
+                                                                    <a class="btn btn-default" href="#" data-toggle="modal" data-target="#modalAdmin" onclick="masInfo('."'".$row["id_usuario"]."'".');" title="Más Información">
+                                                                        <i class="fas fa-info-circle"></i>
+                                                                    </a>
+                                                                </center>
+                                                            </td>
+                                                        ';
+                                                    echo '</tr>';
+                                                }
+                                                Database::disconnect();
+                                            ?>
                                         </tbody>
                                         <tfoot>
                                             <tr>
-                                                <th><center>Código</center></th>
+                                                <th><center>ID</center></th>
                                                 <th><center>Cargo</center></th>
                                                 <th><center>Nro. Documento</center></th>
                                                 <th><center>Nombres</center></th>
@@ -127,7 +145,7 @@
                     </div>
                 </center>
                 <br>
-                <input type="hidden" name="cod_medico" id="codigo_medico" value="">
+                <input type="hidden" name="cod_medico" id="codigo_user-medico" value="">
                 <div class="row form-group">
                     <div class="col-lg-2 col-md-2 col-sm-2 col-0"></div>
                     <label class="col-lg-2 col-md-3 col-sm-3 col-4 control-label">Tipo de Documento:</label>
@@ -140,7 +158,6 @@
                         </select>
                     </div>
                 </div>
-            
                 <div class="row form-group">
                     <div class="col-lg-2 col-md-2 col-sm-2 col-0"></div>
                     <label class="col-lg-2 col-md-3 col-sm-3 col-4 control-label">Nro Documento:</label>  
@@ -231,7 +248,6 @@
                         <input class="form-control input-md" name="actividad-medico" type="text" id="actividad-med" readonly>
 
                         <select class="form-control d-none" required name="select_activ" id="select-activ" >
-                            <option value="0">Paciente</option> 
                             <option value="1">Activo</option> 
                             <option value="2">Inactivo</option> 
                         </select>

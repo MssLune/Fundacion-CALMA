@@ -25,13 +25,13 @@ CREATE TABLE usuarios (
 );
 
 -- seña: july123
-INSERT INTO usuarios VALUES ('1', 'JULISSA ANDREA', 'CASTILLO', 'BARRERA','jc@gmail.com',1,'89475632','$2y$10$HPMtkwmdzIIg7mklbuBc9uFg9c/YtXa6VqIT74sR.TXtHrszH99I.','1992-07-28',2,'965478456', 'PERÚ','LIMA', '', 1,1,1,now());
+INSERT INTO usuarios VALUES ('1', 'JULISSA ANDREA', 'CASTILLO', 'BARRERA','jc@gmail.com',1,'89475632','$2y$10$HPMtkwmdzIIg7mklbuBc9uFg9c/YtXa6VqIT74sR.TXtHrszH99I.','1992-07-28',2,'965478456', 'PERÚ','LIMA', 'SIN CONVENIO', 1,1,1,now());
 -- seña: gerardo
-INSERT INTO usuarios VALUES ('2', 'GERARDO', 'GODOY', 'COLLAO','ggodoy@gmail.com',3,'96748125','$2y$10$Y19dotsKTQ44l3oK0lknL.meEoBB4zBQdVH4sQZ3nJghFznfY.ZZy','1959-07-05',1,'987516987', 'PERÚ','LIMA', '',3, 3,1,now());
+INSERT INTO usuarios VALUES ('2', 'GERARDO', 'GODOY', 'COLLAO','ggodoy@gmail.com',3,'96748125','$2y$10$Y19dotsKTQ44l3oK0lknL.meEoBB4zBQdVH4sQZ3nJghFznfY.ZZy','1959-07-05',1,'987516987', 'PERÚ','LIMA', 'SIN CONVENIO',3, 3,1,now());
 -- seña: alejandro
-INSERT INTO usuarios VALUES ('3', 'ALEJANDRO MATÍAS', 'MANRIQUEZ', 'ESPINOZA','am@gmail.com',2,'11974012600','$2y$10$Umm8NxkFjBGHuqbSzCe5j.kTidN3jRh6eEghepPx1D1HK4YO6E6Nu','1964-10-17',1,'999879841', 'PERÚ','LIMA', '',4, 2,1,now());
+INSERT INTO usuarios VALUES ('3', 'ALEJANDRO MATÍAS', 'MANRIQUEZ', 'ESPINOZA','am@gmail.com',2,'11974012600','$2y$10$Umm8NxkFjBGHuqbSzCe5j.kTidN3jRh6eEghepPx1D1HK4YO6E6Nu','1964-10-17',1,'999879841', 'PERÚ','LIMA', 'SIN CONVENIO',4, 2,1,now());
 -- seña: danielAmaya123
-INSERT INTO usuarios VALUES ('4', 'DANIEL', 'AMAYA', 'CARRANZA','dac@gmail.com',1,'04879870','$2y$10$VcpvlyuS/zxhZZpD5Bq0QuOLGMrlXX2pvSrH8G34h/G6TI00tpQr6','1970-01-01',1,'978412579', 'PERÚ','LIMA','', 1,0,1,now());
+INSERT INTO usuarios VALUES ('4', 'DANIEL', 'AMAYA', 'CARRANZA','dac@gmail.com',1,'04879870','$2y$10$VcpvlyuS/zxhZZpD5Bq0QuOLGMrlXX2pvSrH8G34h/G6TI00tpQr6','1970-01-01',1,'978412579', 'PERÚ','LIMA','SIN CONVENIO', 1,0,1,now());
 
 
 -- Tabla Admin (inner join con tabla usuarios)
@@ -194,6 +194,7 @@ CREATE TABLE convenio (
 	nombre_convenio varchar(250) not null
 );
 
+INSERT INTO convenio VALUES (0, 'SIN CODIGO', 'SIN CONVENIO');
 INSERT INTO convenio VALUES (1, 'ABVGF129', 'SANNA');
 
 
