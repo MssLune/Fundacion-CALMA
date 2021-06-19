@@ -13,12 +13,12 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Administrar Psicólogos</h1>
+                            <h1>Administrar Usuarios</h1>
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="consultoriocalma.php">Inicio</a></li>
-                                <li class="breadcrumb-item active">Administrar Psicólogos</li>
+                                <li class="breadcrumb-item active">Administrar Usuarios</li>
                             </ol>
                         </div>
                     </div>
@@ -32,12 +32,12 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h3 class="card-title h3-tablecontent">Administrar Psicólogos</h3>
+                                    <h3 class="card-title h3-tablecontent">Administrar Usuarios</h3>
                                 </div>
                                 <!-- /.card-header -->
                                 <div class="card-body">
                                     <table id="tableAdminMedico" class="table table-bordered table-striped">
-                                        <a href="#" class="btn btn-primary" style="width: 100%; margin-bottom: 2%;" >Nuevo  Psicólogo</a>
+                                        <a href="#" class="btn btn-primary" style="width: 100%; margin-bottom: 2%;" >Nuevo  Usuario</a>
                                         <thead>
                                             <tr>
                                                 <th><center>ID</center></th>
@@ -54,8 +54,8 @@
                                             <?php 
                                                 $pdo = Database::connect();
                                                 if($_SESSION['privilegio'] == 0 || $_SESSION['privilegio'] == 1){
-                                                    $sql = "SELECT *, priv.cod_privilegio, priv.nombre_privilegio FROM usuarios u INNER JOIN privilegios priv ON u.privilegio = priv.cod_privilegio WHERE privilegio = 2";
-
+                                                    $sql = "SELECT *, priv.cod_privilegio, priv.nombre_privilegio FROM usuarios u INNER JOIN privilegios priv ON u.privilegio = priv.cod_privilegio WHERE privilegio = 3";
+    
                                                     foreach ($pdo->query($sql) as $row){
                                                         echo '<tr>';
                                                         echo '
@@ -73,7 +73,7 @@
                                                                 </td>
                                                                 <td>
                                                                     <center>
-                                                                        <a class="btn btn-default" href="#" data-toggle="modal" data-target="#modalAdmin" onclick="masInfoMedico('."'".$row["id_usuario"]."'".');" title="Más Información">
+                                                                        <a class="btn btn-default" href="#" data-toggle="modal" data-target="#modalAdmin" onclick="masInfoUser('."'".$row["id_usuario"]."'".');" title="Más Información">
                                                                             <i class="fas fa-info-circle"></i>
                                                                         </a>
                                                                     </center>
@@ -149,13 +149,13 @@
                     </div>
                 </center>
                 <br>
-                <input type="hidden" name="cod_medico" id="codigo_user-medico" value="">
+                <input type="hidden" name="cod_user" id="codigo_user" value="">
                 <div class="row form-group">
                     <div class="col-lg-2 col-md-2 col-sm-2 col-0"></div>
                     <label class="col-lg-2 col-md-3 col-sm-3 col-4 control-label">Tipo de Documento:</label>
                     <div class="col-lg-7 col-md-5 col-sm-5 col-6">
-                        <input class="form-control input-md" type="text" name="tipo_doc" id="tipo-doc" readonly>
-                        <select class="form-control d-none" required name="select_tip_doc" id="select-tip_doc" >
+                        <input class="form-control input-md" type="text" name="tipo-doc" id="tipo_doc" readonly>
+                        <select class="form-control d-none" required name="select_tip_doc" id="select_tipo_doc" >
                             <option value="1">DNI</option>
                             <option value="2">PASAPORTE</option>
                             <option value="3">CARNÉ EXTRANJERIA</option>
@@ -166,50 +166,50 @@
                     <div class="col-lg-2 col-md-2 col-sm-2 col-0"></div>
                     <label class="col-lg-2 col-md-3 col-sm-3 col-4 control-label">Nro Documento:</label>  
                     <div class="col-lg-7 col-md-5 col-sm-5 col-6">
-                        <input class="form-control input-md" name="numero_doc" type = "text" id="numdoc" readonly>
+                        <input class="form-control input-md" name="num_doc-user" type = "text" id="numdocUser" readonly>
                     </div>
                 </div>
                 <div class="row form-group">
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-0"></div>
                     <label class="col-lg-2 col-md-3 col-sm-3 col-xs-4 control-label">Nombre:</label>  
                     <div class="col-lg-7 col-md-5 col-sm-5 col-xs-6">
-                        <input class="form-control input-md" onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()" name="nombre_med" type="text" id="nombre-medico" readonly>
+                        <input class="form-control input-md" onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()" name="nombre-user" type="text" id="nombre_user" readonly>
                     </div>
                 </div>
                 <div class="row form-group">
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-0"></div>
                     <label class="col-lg-2 col-md-3 col-sm-3 col-xs-4 control-label">Apellido Paterno:</label>  
                     <div class="col-lg-7 col-md-5 col-sm-5 col-xs-6">
-                        <input class="form-control input-md" onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()" name="apellido_p-med" type="text" id="paterno_med" readonly>
+                        <input class="form-control input-md" onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()" name="apellido_p_user" type="text" id="paterno_user" readonly>
                     </div>
                 </div>
                 <div class="row form-group">
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-0"></div>
                     <label class="col-lg-2 col-md-3 col-sm-3 col-xs-4 control-label">Apellido Materno:</label>  
                     <div class="col-lg-7 col-md-5 col-sm-5 col-xs-6">
-                        <input class="form-control input-md" onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()" name="apellido_m-med" type="text" id="materno_med" readonly>
+                        <input class="form-control input-md" onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()" name="apellido_m_user" type="text" id="materno_user" readonly>
                     </div>
                 </div>
                 <div class="row form-group">
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-0"></div>
                     <label class="col-lg-2 col-md-3 col-sm-3 col-xs-4 control-label">Correo:</label>  
                     <div class="col-lg-7 col-md-5 col-sm-5 col-xs-6">
-                        <input class="form-control input-md" name="correo_med" type="email" id="correo-med" readonly>
+                        <input class="form-control input-md" name="correoUser" type="email" id="correo_user" readonly>
                     </div>
                 </div>
                 <div class="row form-group">
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-0"></div>
                     <label class="col-lg-2 col-md-3 col-sm-3 col-xs-4 control-label">Fecha Nacimiento:</label>  
                     <div class="col-lg-7 col-md-5 col-sm-5 col-xs-6">
-                        <input  class="form-control input-md" name="fecha_nac" type="date" id="nacimiento_med" readonly>
+                        <input  class="form-control input-md" name="fecha_nac-user" type="date" id="nacimiento_user" readonly>
                     </div>
                 </div>
                 <div class="row form-group">
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-0"></div>
                     <label class="col-lg-2 col-md-3 col-sm-3 col-xs-4 control-label">Sexo:</label>  
                     <div class="col-lg-7 col-md-5 col-sm-5 col-xs-6">
-                        <input class="form-control input-md" name="sexo" type="text" id="sexo-med" readonly>
-                        <select class="form-control d-none" required name="select_sexo" id="select-sexo" >
+                        <input class="form-control input-md" name="usersexo" type="text" id="sexo_user" readonly>
+                        <select class="form-control d-none" required name="sexo_select_user" id="select_sexoUser" >
                             <option value="1">Masculino</option>
                             <option value="2">Femenino</option>  
                             <option value="3">No Binario</option>
@@ -221,37 +221,37 @@
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-0"></div>
                     <label class="col-lg-2 col-md-3 col-sm-3 col-xs-4 control-label">Teléfono:</label>  
                     <div class="col-lg-7 col-md-5 col-sm-5 col-xs-6">
-                        <input class="form-control input-md" name="telf_med" type="text" id="telf-med" readonly>
+                        <input class="form-control input-md" name="telfUser" type="text" id="telf_user" readonly>
                     </div>
                 </div>
                 <div class="row form-group">
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-0"></div>
                     <label class="col-lg-2 col-md-3 col-sm-3 col-xs-4 control-label">País:</label>  
                     <div class="col-lg-7 col-md-5 col-sm-5 col-xs-6">
-                        <input class="form-control input-md" name="pais_med" type="text" id="pais-med" readonly>
+                        <input class="form-control input-md" name="paisUser" type="text" id="pais_user" readonly>
                     </div>
                 </div>
                 <div class="row form-group">
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-0"></div>
                     <label class="col-lg-2 col-md-3 col-sm-3 col-xs-4 control-label">Estado/Ciudad:</label>  
                     <div class="col-lg-7 col-md-5 col-sm-5 col-xs-6">
-                        <input class="form-control input-md" name="ciudad_med" type="text" id="estado-med" readonly>
+                        <input class="form-control input-md" name="ciudad_user" type="text" id="estadoUser" readonly>
                     </div>
                 </div>
                 <div class="row form-group">
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-0"></div>
                     <label class="col-lg-2 col-md-3 col-sm-3 col-xs-4 control-label">Convenio:</label>  
                     <div class="col-lg-7 col-md-5 col-sm-5 col-xs-6">
-                        <input class="form-control input-md" name="convenio_med" type="text" id="convenio-med" readonly>
+                        <input class="form-control input-md" name="convenio_user" type="text" id="convenioUser" readonly>
                     </div>
                 </div>
                 <div class="row form-group">
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-0"></div>
                     <label class="col-lg-2 col-md-3 col-sm-3 col-xs-4 control-label">Activo/Inactivo</label>
                     <div class="col-lg-7 col-md-5 col-sm-5 col-xs-6">
-                        <input class="form-control input-md" name="actividad-medico" type="text" id="actividad-med" readonly>
+                        <input class="form-control input-md" name="actividad-user" type="text" id="userActividad" readonly>
 
-                        <select class="form-control d-none" required name="select_activ" id="select-activ" >
+                        <select class="form-control d-none" required name="selectActiv_user" id="select_activUser" >
                             <option value="1">Activo</option> 
                             <option value="2">Inactivo</option> 
                         </select>
@@ -261,9 +261,9 @@
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-0"></div>
                     <label class="col-lg-2 col-md-3 col-sm-3 col-xs-4 control-label">Plan Donación</label>
                     <div class="col-lg-7 col-md-5 col-sm-5 col-xs-6">
-                        <input class="form-control input-md" name="dona-medico" type="text" id="planDona-med" readonly>
+                        <input class="form-control input-md" name="donaUser" type="text" id="planDona_user" readonly>
 
-                        <select class="form-control d-none" required name="select_plan" id="select-plan" >
+                        <select class="form-control d-none" required name="user_select_plan" id="select_planUser" >
                             <option value="1">Sin Plan</option> 
                             <option value="2">Plan 1: Meditar</option> 
                             <option value="3">Plan 2: Reflexionar</option>
