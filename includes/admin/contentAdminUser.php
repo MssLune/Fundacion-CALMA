@@ -128,12 +128,12 @@
 
 <!-- modal para más info -->
 
- <!-- --MODAL PSICÓLOGOS -->
+ <!-- --MODAL USER -->
 <div class="modal fade" id="modalAdmin" style="overflow:hidden;">
     <div class="modal-dialog modal-dialog-scrollable modal-lg">
         <div class="modal-content" >
             <div class="modal-header">
-                <h5 class="modal-title">Información</h5>
+                <h5 class="modal-title">Información de Usuario</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -284,7 +284,7 @@
         </div>
     </div>
 </div>
-<!-- --FIN MODAL PSICÓLOGOS -->
+<!-- --FIN MODAL USERS -->
 
 
 <!-- termina modal -->

@@ -126,6 +126,73 @@ function masInfoUser(x){
     });
 }
 
+// Función más info Admin
+function masInfoAdmin(q){
+    document.getElementById("codigo_user_admin").value="";
+    document.getElementById("area_admin").value="";
+    document.getElementById("tipo_docAdm").value="";
+    document.getElementById("select_tipo_docAdm").value="";
+    document.getElementById("numdocAdm").value="";
+    document.getElementById("nombre_adm").value="";
+    document.getElementById("paterno_admin").value="";
+    document.getElementById("materno_admin").value="";
+    document.getElementById("correo_admin").value="";
+    document.getElementById("nacimiento_adm").value="";
+    document.getElementById("sexo_admin").value="";
+    document.getElementById("select_adminSexo").value="";
+    document.getElementById("telf_admin").value="";
+    document.getElementById("pais_admin").value="";
+    document.getElementById("ciudad_admin").value="";
+    document.getElementById("convenio_adm").value="";
+    document.getElementById("actividad_admin").value="";
+    document.getElementById("select_adm_activ").value="";
+    document.getElementById("planDonaAdmin").value="";
+    document.getElementById("selectPlan_admin").value="";
+    
+    //mensaje de espera
+    swal({title: "Cargando...",allowEscapeKey: false,allowOutsideClick:false,text: "Espere unos segundos.",showConfirmButton: false});
+
+    $.ajax({
+        url: "includes/admin/crud_admin.php",
+        type: "POST",
+        data: "cod_userAdmin=" + q,
+        dataType: 'json',
+        cache: false,
+        success: function(arr){
+            document.getElementById("codigo_user_admin").value=arr[0];
+
+            document.getElementById("area_admin").value=arr[19];
+            document.getElementById("tipo_docAdm").value=arr[6];
+            document.getElementById("select_tipo_docAdm").value=arr[5];
+            document.getElementById("numdocAdm").value=arr[7];
+            document.getElementById("nombre_adm").value=arr[1];
+            document.getElementById("paterno_admin").value=arr[2];
+            document.getElementById("materno_admin").value=arr[3];
+            document.getElementById("correo_admin").value=arr[4];
+            document.getElementById("nacimiento_adm").value=arr[8];
+            document.getElementById("sexo_admin").value=arr[10];
+            document.getElementById("select_adminSexo").value=arr[9];
+            document.getElementById("telf_admin").value=arr[11];
+            document.getElementById("pais_admin").value=arr[12];
+            document.getElementById("ciudad_admin").value=arr[13];
+            document.getElementById("convenio_adm").value=arr[15];
+
+            if(arr[18] == 1){
+                var nombre_act_adm = 'ACTIVO';
+            }else{
+                nombre_act_adm = 'INACTIVO';
+            }
+            document.getElementById("actividad_admin").value=nombre_act_adm;
+            document.getElementById("select_adm_activ").value=arr[18];
+
+            document.getElementById("planDonaAdmin").value=arr[17];
+            document.getElementById("selectPlan_admin").value=arr[16];
+            
+            swal.closeModal(); 
+        }
+    });
+}
+
 // Función Eliminar Médico
 function eliminarMedico(x){
     swal({
@@ -145,14 +212,7 @@ function eliminarMedico(x){
                 data:"elimina_medico=" + x,
                 cache: false,
                 success: function (arr){
-                    var table = document.getElementById("tableAdminMedico");
-                    for (var i = 0; i < table.rows.length; i++) {
-                        console.log(i+"-"+table.rows.length);
-                        if(table.rows[i].cells.item(0).innerHTML === x){
-                            table.deleteRow(i);
-                        }
-                    }
-                    swal({
+                   swal({
                         title: 'Médico Eliminado',
                         text: 'El Médico se ha eliminado satisfactoriamente.',
                         type: 'success',
@@ -186,13 +246,6 @@ function eliminarUser(y){
                 data:"elimina_user=" + y,
                 cache: false,
                 success: function (arr){
-                    var table = document.getElementById("tableAdminUser");
-                    for (var i = 0; i < table.rows.length; i++) {
-                        console.log(i+"-"+table.rows.length);
-                        if(table.rows[i].cells.item(0).innerHTML === y){
-                            table.deleteRow(i);
-                        }
-                    }
                     swal({
                         title: 'Usuario Eliminado',
                         text: 'El Usuario se ha eliminado satisfactoriamente.',
@@ -208,12 +261,49 @@ function eliminarUser(y){
             })
 }
 
+// Función Eliminar Admin
+function eliminarAdmin(p){
+    swal({
+        title: '¿SEGURO QUE DESEA ELIMINAR ESTE ADMINISTRADOR?',
+        text: "Se eliminará el Administrador con Código "+p,
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, Eliminar',
+        cancelButtonText: 'No, Cancelar !'
+    }).then(function () {
+            $.ajax({
+                url: "includes/admin/crud_admin.php",
+                type: "POST",
+                dataType:"json",
+                data:"elimina_admin=" + p,
+                cache: false,
+                success: function (arr){
+                    swal({
+                        title: 'Administrador Eliminado',
+                        text: 'El Administrador se ha eliminado satisfactoriamente.',
+                        type: 'success',
+                    }).then(function(){ 
+                        location.reload();
+                        });
+                }
+            })
+        }, function (dismiss) {
+                if (dismiss === 'cancel') {
+                }
+            })
+}
+
+
 // ---Funciones para EDITAR -----
 
 //Función editar Médico
 function editMedico(z){
+    //boolean
     var condicion = z;
 
+    //si es falso -> edita 
     if(condicion == false) {
         document.getElementById('tipo-doc').classList.add("d-none");
         document.getElementById('select-tip_doc').classList.remove("d-none");
@@ -226,7 +316,7 @@ function editMedico(z){
 
 
         document.getElementById("guardar_med").classList.remove("d-none");
-
+        //read only = false ->se podrá editar
         document.getElementById('numdoc').readOnly=condicion;
         document.getElementById('nombre-medico').readOnly=condicion;
         document.getElementById('paterno_med').readOnly=condicion;
@@ -237,7 +327,7 @@ function editMedico(z){
         document.getElementById('pais-med').readOnly=condicion;
         document.getElementById('estado-med').readOnly=condicion;
         //document.getElementById('convenio-med').readOnly=condicion;
-    }else{ 
+    }else{ //si es true -> NO se edita
         document.getElementById('tipo-doc').classList.remove("d-none");
         document.getElementById('select-tip_doc').classList.add("d-none");
         document.getElementById('sexo-med').classList.remove("d-none");
@@ -248,7 +338,7 @@ function editMedico(z){
         document.getElementById('select-plan').classList.add("d-none");
 
         document.getElementById('guardar_med').classList.add("d-none");
-
+        //read only es verdadero : no se edita
         document.getElementById('tipo-doc').readOnly=condicion;
         document.getElementById('sexo-med').readOnly=condicion;
         document.getElementById('actividad-med').readOnly=condicion;
@@ -441,6 +531,132 @@ function actualizarUser(){
                 success: function(arr){
                     swal({
                         title: 'Usuario Actualizado',
+                        text: 'Se han actualizado los datos satisfactoriamente.',
+                        type: 'success',
+                    }).then(function(){ 
+                        location.reload();
+                        });
+                }
+            })
+        }, function (dismiss) {
+            if (dismiss === 'cancel') {
+        }
+    })
+}
+
+//Función editar Admin
+function editAdmin(z){
+    var condicion = z;
+
+    if(condicion == false) {
+        document.getElementById('tipo_docAdm').classList.add("d-none");
+        document.getElementById('select_tipo_docAdm').classList.remove("d-none");
+        document.getElementById('sexo_admin').classList.add("d-none");
+        document.getElementById('select_adminSexo').classList.remove("d-none");
+        document.getElementById('actividad_admin').classList.add("d-none");
+        document.getElementById('select_adm_activ').classList.remove("d-none");
+        document.getElementById('planDonaAdmin').classList.add("d-none");
+        document.getElementById('selectPlan_admin').classList.remove("d-none");
+
+
+        document.getElementById("guardar_admin").classList.remove("d-none");
+
+        document.getElementById('area_admin').readOnly=condicion;
+        document.getElementById('numdocAdm').readOnly=condicion;
+        document.getElementById('nombre_adm').readOnly=condicion;
+        document.getElementById('paterno_admin').readOnly=condicion;
+        document.getElementById('materno_admin').readOnly=condicion;
+        document.getElementById('correo_admin').readOnly=condicion;
+        document.getElementById('nacimiento_adm').readOnly=condicion;
+        document.getElementById('telf_admin').readOnly=condicion;
+        document.getElementById('pais_admin').readOnly=condicion;
+        document.getElementById('ciudad_admin').readOnly=condicion;
+        //document.getElementById('convenio_adm').readOnly=condicion;
+    }else{ 
+        document.getElementById('tipo_docAdm').classList.remove("d-none");
+        document.getElementById('select_tipo_docAdm').classList.add("d-none");
+        document.getElementById('sexo_admin').classList.remove("d-none");
+        document.getElementById('select_adminSexo').classList.add("d-none");
+        document.getElementById('actividad_admin').classList.remove("d-none");
+        document.getElementById('select_adm_activ').classList.add("d-none");
+        document.getElementById('planDonaAdmin').classList.remove("d-none");
+        document.getElementById('selectPlan_admin').classList.add("d-none");
+
+        document.getElementById('guardar_admin').classList.add("d-none");
+
+        document.getElementById('tipo_docAdm').readOnly=condicion;
+        document.getElementById('sexo_admin').readOnly=condicion;
+        document.getElementById('actividad_admin').readOnly=condicion;
+        document.getElementById('planDonaAdmin').readOnly=condicion;
+
+        document.getElementById('area_admin').readOnly=condicion;
+        document.getElementById('numdocAdm').readOnly=condicion;
+        document.getElementById('nombre_adm').readOnly=condicion;
+        document.getElementById('paterno_admin').readOnly=condicion;
+        document.getElementById('materno_admin').readOnly=condicion;
+        document.getElementById('correo_admin').readOnly=condicion;
+        document.getElementById('nacimiento_adm').readOnly=condicion;
+        document.getElementById('telf_admin').readOnly=condicion
+        document.getElementById('pais_admin').readOnly=condicion;
+        document.getElementById('ciudad_admin').readOnly=condicion;
+        //document.getElementById('convenio_adm').readOnly=condicion;
+    }   
+}
+
+//Función Actualizar Admin
+function actualizarAdmin(){
+    var cod_adm = document.getElementById('codigo_user_admin').value;
+    var areaAdmin = document.getElementById('area_admin').value;
+    var tipo_doc_adm = document.getElementById('select_tipo_docAdm').value;
+    var num_docAdmin = document.getElementById('numdocAdm').value;
+    var nombre_adm = document.getElementById('nombre_adm').value;
+    var adminPaterno = document.getElementById('paterno_admin').value;
+    var adminMaterno = document.getElementById('materno_admin').value;
+    var correoAdmin = document.getElementById('correo_admin').value;
+    var nacimientoAdmin = document.getElementById('nacimiento_adm').value;
+    var sexoAdmin = document.getElementById("select_adminSexo").value;
+    var telfAdmin = document.getElementById("telf_admin").value;
+
+    var adminPais = document.getElementById('pais_admin').value;
+    var adminCiudad = document.getElementById('ciudad_admin').value;
+    var actividadAdmin = document.getElementById('select_adm_activ').value;
+    var planDona_adm = document.getElementById('selectPlan_admin').value;
+    
+    swal({
+        title: '¿SEGURO QUE DESEA ACTUALIZAR ESTE REGISTRO?',
+        text: "Se actualizarán los datos de este Administrador",
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, Actualizar',
+        cancelButtonText: 'No, Cancelar !'
+    }).then(function () {
+                $.ajax({
+                url: "includes/admin/crud_admin.php",
+                type: "POST",
+                dataType:'json',
+                data:{
+                    id_admUser:cod_adm,
+                    area_adm: areaAdmin,
+                    tipo_docAdm:tipo_doc_adm,
+                    numdoc_adm:num_docAdmin,
+                    nombre_admin:nombre_adm,
+                    apellido_p_adm:adminPaterno,
+                    apellido_m_adm:adminMaterno,
+                    correo_admin: correoAdmin,
+                    fecha_nac_adm:nacimientoAdmin,
+                    sexo_adm:sexoAdmin,
+                    telefono_adm:telfAdmin,
+                    pais_adm:adminPais,
+                    ciudad_adm:adminCiudad,
+                    activ_adm:actividadAdmin,
+                    dona_adm:planDona_adm,
+                },
+                cache: false,
+                success: function(arr){
+                    swal({
+                        title: 'Administrador Actualizado',
                         text: 'Se han actualizado los datos satisfactoriamente.',
                         type: 'success',
                     }).then(function(){ 

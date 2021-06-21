@@ -182,7 +182,7 @@
                   </a>
                   <ul class="nav nav-treeview">
                     <li class="nav-item">
-                      <a href="administrarMedicos.php" class="nav-link">
+                      <a href="administrarAdmins.php" class="nav-link">
                         <i class="fas fa-user-cog nav-icon"></i>
                         <p>Administrar Administradores</p>
                       </a>
