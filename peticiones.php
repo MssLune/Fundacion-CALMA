@@ -1,4 +1,4 @@
-
+<?php include_once 'includes/inicio/head.php' ?>
     <div class="wrapper">
       <div class="page-header section-height-50" style="padding-left:0% ; padding-top:5%; background-image:url('img/BannerPsicologo2.png')">
 
