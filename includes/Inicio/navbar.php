@@ -84,6 +84,12 @@
                       </li>
 
                       <li class="nav-item dropdown dropdown-hover mx-2">
+                        <a  href="peticiones.php" class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages" >
+                        PETICIONES
+                        </a>
+                      </li>
+
+                      <li class="nav-item dropdown dropdown-hover mx-2">
                         <a href="https://fundacioncalma.org/" target= "_blank"  class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center text-monospace text-black-50 font-weight-bold" id="dropdownMenuPages">
                           BLOG CALMA
                         </a>
