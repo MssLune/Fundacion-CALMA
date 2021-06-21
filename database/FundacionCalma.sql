@@ -25,14 +25,19 @@ CREATE TABLE usuarios (
 );
 
 -- seña: july123
-INSERT INTO usuarios VALUES ('1', 'JULISSA ANDREA', 'CASTILLO', 'BARRERA','jc@gmail.com',1,'89475632','$2y$10$HPMtkwmdzIIg7mklbuBc9uFg9c/YtXa6VqIT74sR.TXtHrszH99I.','1992-07-28',2,'965478456', 'PERÚ','LIMA', 'SIN CONVENIO', 1,1,1,now());
+INSERT INTO usuarios VALUES ('1', 'JULISSA ANDREA', 'CASTILLO', 'BARRERA','jc@gmail.com',1,'89475632','$2y$10$HPMtkwmdzIIg7mklbuBc9uFg9c/YtXa6VqIT74sR.TXtHrszH99I.','1992-07-28',2,'965478456', 'PERÚ','LIMA', 'SIN CODIGO', 1,1,1,now());
 -- seña: gerardo
-INSERT INTO usuarios VALUES ('2', 'GERARDO', 'GODOY', 'COLLAO','ggodoy@gmail.com',3,'96748125','$2y$10$Y19dotsKTQ44l3oK0lknL.meEoBB4zBQdVH4sQZ3nJghFznfY.ZZy','1959-07-05',1,'987516987', 'PERÚ','LIMA', 'SIN CONVENIO',3, 3,1,now());
+INSERT INTO usuarios VALUES ('2', 'GERARDO', 'GODOY', 'COLLAO','ggodoy@gmail.com',3,'96748125','$2y$10$Y19dotsKTQ44l3oK0lknL.meEoBB4zBQdVH4sQZ3nJghFznfY.ZZy','1959-07-05',1,'987516987', 'PERÚ','LIMA', 'SIN CODIGO',3, 3,1,now());
 -- seña: alejandro
-INSERT INTO usuarios VALUES ('3', 'ALEJANDRO MATÍAS', 'MANRIQUEZ', 'ESPINOZA','am@gmail.com',2,'11974012600','$2y$10$Umm8NxkFjBGHuqbSzCe5j.kTidN3jRh6eEghepPx1D1HK4YO6E6Nu','1964-10-17',1,'999879841', 'PERÚ','LIMA', 'SIN CONVENIO',4, 2,1,now());
+INSERT INTO usuarios VALUES ('3', 'ALEJANDRO MATÍAS', 'MANRIQUEZ', 'ESPINOZA','am@gmail.com',2,'11974012600','$2y$10$Umm8NxkFjBGHuqbSzCe5j.kTidN3jRh6eEghepPx1D1HK4YO6E6Nu','1964-10-17',1,'999879841', 'PERÚ','LIMA', 'SIN CODIGO',4, 2,1,now());
 -- seña: danielAmaya123
-INSERT INTO usuarios VALUES ('4', 'DANIEL', 'AMAYA', 'CARRANZA','dac@gmail.com',1,'04879870','$2y$10$VcpvlyuS/zxhZZpD5Bq0QuOLGMrlXX2pvSrH8G34h/G6TI00tpQr6','1970-01-01',1,'978412579', 'PERÚ','LIMA','SIN CONVENIO', 1,0,1,now());
-
+INSERT INTO usuarios VALUES ('4', 'DANIEL', 'AMAYA', 'CARRANZA','dac@gmail.com',1,'04879870','$2y$10$VcpvlyuS/zxhZZpD5Bq0QuOLGMrlXX2pvSrH8G34h/G6TI00tpQr6','1970-01-01',1,'978412579', 'PERÚ','LIMA','SIN CODIGO', 1,0,1,now());
+-- seña: lorena
+INSERT INTO usuarios VALUES ('5', 'LORENA', 'CAMPOS', 'VERA','lor@gmail.com',1,'08412249','$2y$10$rPHiMTDhcxdovPQsWgVJA.keEuglt/oKFDjJ1gf7zxGuUCB3bo23q','1950-01-01',2,'986652997', 'PERÚ','LIMA','SIN CODIGO', 2,2,1,now());
+-- seña: naomi
+INSERT INTO usuarios VALUES ('6', 'NAOMI', 'CAMPBELL', 'CLARK','naomi@hotmail.com',2,'18745100244','$2y$10$dPkNFFLSZaCctuGxyfQuNOtGaPG.cdb2mQvmDHil876F5Jd6naBza','1990-08-22',4,'987141211', 'PERÚ','LIMA','ABVGF129', 1,2,1,now());
+-- seña: emma
+INSERT INTO usuarios VALUES ('7', 'EMMA', 'WATSON', 'GRANGER','ew@gmail.com',3,'11145782','$2y$10$k8hA2Q5eLplJ1X5/FMixVeworDlbmI7YV0jbPIg1SnUhgJ/mfnnKe','1991-03-30',3,'998769985', 'PERÚ','LIMA', 'SIN CODIGO',1, 3,1,now());
 
 -- Tabla Admin (inner join con tabla usuarios)
 CREATE TABLE admin (
@@ -64,6 +69,8 @@ CREATE TABLE medicos (
 );
 
 INSERT INTO medicos VALUES('1', 3, '', '', 'HUMANISMO', 1, 1, '', 2, '104578', 'Práctica privada y en organizaciones con poblaciones con discapacidad visual', 'Ayudar a las personas a tener una  adecuada salud mental y bienestar en su vida presente.', '', '');
+INSERT INTO medicos VALUES('2', 5, '', '', 'HUMANISMO', 5, 2, 3, 2, '105548', 'Práctica privada y en organizaciones con poblaciones con discapacidad visual', 'Ayudar a las personas a tener una  adecuada salud mental y bienestar en su vida presente.', '', '');
+INSERT INTO medicos VALUES('3', 6, '', '', 'HUMANISMO', 6, 6, '', 2, '114784', 'Práctica privada y en organizaciones con poblaciones con discapacidad visual', 'Ayudar a las personas a tener una  adecuada salud mental y bienestar en su vida presente.', '', '');
 
 
 CREATE TABLE privilegios (

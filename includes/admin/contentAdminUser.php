@@ -36,7 +36,7 @@
                                 </div>
                                 <!-- /.card-header -->
                                 <div class="card-body">
-                                    <table id="tableAdminMedico" class="table table-bordered table-striped">
+                                    <table id="tableAdminUser" class="table table-bordered table-striped">
                                         <a href="#" class="btn btn-primary" style="width: 100%; margin-bottom: 2%;" >Nuevo  Usuario</a>
                                         <thead>
                                             <tr>
@@ -66,14 +66,14 @@
                                                                 <td><center>'. $row['fecha_nacimiento'] .'</center></td>
                                                                 <td>
                                                                     <center>
-                                                                        <a class="btn btn-default" onclick="" title="Eliminar">
+                                                                        <a class="btn btn-danger" onclick="eliminarUser('."'".$row["id_usuario"]."'".')" title="Eliminar">
                                                                             <i class="fas fa-trash-alt"></i>
                                                                         </a>
                                                                     </center>
                                                                 </td>
                                                                 <td>
                                                                     <center>
-                                                                        <a class="btn btn-default" href="#" data-toggle="modal" data-target="#modalAdmin" onclick="masInfoUser('."'".$row["id_usuario"]."'".');" title="Más Información">
+                                                                        <a class="btn btn-info" href="#" data-toggle="modal" data-target="#modalAdmin" onclick="masInfoUser('."'".$row["id_usuario"]."'".'); editUser(true);" title="Más Información">
                                                                             <i class="fas fa-info-circle"></i>
                                                                         </a>
                                                                     </center>
@@ -143,7 +143,7 @@
                 <br>
                 <center>
                     <div class="col-lg-4 col-md-5 col-sm-5 col-xs-6">
-                        <button type="button" class="btn btn-blue" onclick="" style="color: #FFFFFF; background: #0093E9; background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);">
+                        <button type="button" class="btn btn-blue" onclick="editUser(false);" style="color: #FFFFFF; background: #0093E9; background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);">
                             Editar <i class="far fa-edit"></i>
                         </button>
                     </div>
@@ -228,14 +228,14 @@
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-0"></div>
                     <label class="col-lg-2 col-md-3 col-sm-3 col-xs-4 control-label">País:</label>  
                     <div class="col-lg-7 col-md-5 col-sm-5 col-xs-6">
-                        <input class="form-control input-md" name="paisUser" type="text" id="pais_user" readonly>
+                        <input class="form-control input-md" onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()" name="paisUser" type="text" id="pais_user" readonly>
                     </div>
                 </div>
                 <div class="row form-group">
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-0"></div>
                     <label class="col-lg-2 col-md-3 col-sm-3 col-xs-4 control-label">Estado/Ciudad:</label>  
                     <div class="col-lg-7 col-md-5 col-sm-5 col-xs-6">
-                        <input class="form-control input-md" name="ciudad_user" type="text" id="estadoUser" readonly>
+                        <input class="form-control input-md" onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()" name="ciudad_user" type="text" id="estadoUser" readonly>
                     </div>
                 </div>
                 <div class="row form-group">
@@ -272,8 +272,8 @@
                     </div>
                 </div>
             
-                <center class="d-none" id="guardar-nuevo-med">
-                    <button type="submit" class="btn btn-primary " onclick="">Guardar</button>
+                <center class="d-none" id="guardar_user">
+                    <button type="submit" class="btn btn-primary " onclick="actualizarUser();">Guardar</button>
                 </center>
                 
             </div>

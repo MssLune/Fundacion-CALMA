@@ -66,14 +66,14 @@
                                                                 <td><center>'. $row['fecha_nacimiento'] .'</center></td>
                                                                 <td>
                                                                     <center>
-                                                                        <a class="btn btn-default" onclick="" title="Eliminar">
+                                                                        <a class="btn btn-danger" onclick="eliminarMedico('."'".$row["id_usuario"]."'".')" title="Eliminar">
                                                                             <i class="fas fa-trash-alt"></i>
                                                                         </a>
                                                                     </center>
                                                                 </td>
                                                                 <td>
                                                                     <center>
-                                                                        <a class="btn btn-default" href="#" data-toggle="modal" data-target="#modalAdmin" onclick="masInfoMedico('."'".$row["id_usuario"]."'".');" title="Más Información">
+                                                                        <a class="btn btn-info" href="#" data-toggle="modal" data-target="#modalAdmin" onclick="masInfoMedico('."'".$row["id_usuario"]."'".'); editMedico(true);" title="Más Información">
                                                                             <i class="fas fa-info-circle"></i>
                                                                         </a>
                                                                     </center>
@@ -143,7 +143,7 @@
                 <br>
                 <center>
                     <div class="col-lg-4 col-md-5 col-sm-5 col-xs-6">
-                        <button type="button" class="btn btn-blue" onclick="" style="color: #FFFFFF; background: #0093E9; background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);">
+                        <button type="button" class="btn btn-blue" onclick="editMedico(false);" style="color: #FFFFFF; background: #0093E9; background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);">
                             Editar <i class="far fa-edit"></i>
                         </button>
                     </div>
@@ -228,14 +228,14 @@
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-0"></div>
                     <label class="col-lg-2 col-md-3 col-sm-3 col-xs-4 control-label">País:</label>  
                     <div class="col-lg-7 col-md-5 col-sm-5 col-xs-6">
-                        <input class="form-control input-md" name="pais_med" type="text" id="pais-med" readonly>
+                        <input class="form-control input-md" onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()" name="pais_med" type="text" id="pais-med" readonly>
                     </div>
                 </div>
                 <div class="row form-group">
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-0"></div>
                     <label class="col-lg-2 col-md-3 col-sm-3 col-xs-4 control-label">Estado/Ciudad:</label>  
                     <div class="col-lg-7 col-md-5 col-sm-5 col-xs-6">
-                        <input class="form-control input-md" name="ciudad_med" type="text" id="estado-med" readonly>
+                        <input class="form-control input-md" onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()" name="ciudad_med" type="text" id="estado-med" readonly>
                     </div>
                 </div>
                 <div class="row form-group">
@@ -253,7 +253,7 @@
 
                         <select class="form-control d-none" required name="select_activ" id="select-activ" >
                             <option value="1">Activo</option> 
-                            <option value="2">Inactivo</option> 
+                            <option value="0">Inactivo</option>
                         </select>
                     </div>
                 </div>
@@ -272,8 +272,8 @@
                     </div>
                 </div>
             
-                <center class="d-none" id="guardar-nuevo-med">
-                    <button type="submit" class="btn btn-primary " onclick="">Guardar</button>
+                <center class="d-none" id="guardar_med">
+                    <button type="submit" class="btn btn-primary" onclick="actualizarMedico();">Guardar</button>
                 </center>
                 
             </div>

@@ -125,3 +125,331 @@ function masInfoUser(x){
         }
     });
 }
+
+// Función Eliminar Médico
+function eliminarMedico(x){
+    swal({
+        title: '¿SEGURO QUE DESEA ELIMINAR ESTE MÉDICO?',
+        text: "Se eliminará el Médico con Código "+x,
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, Eliminar',
+        cancelButtonText: 'No, Cancelar !'
+    }).then(function () {
+            $.ajax({
+                url: "includes/admin/crud_medico.php",
+                type: "POST",
+                dataType:"json",
+                data:"elimina_medico=" + x,
+                cache: false,
+                success: function (arr){
+                    var table = document.getElementById("tableAdminMedico");
+                    for (var i = 0; i < table.rows.length; i++) {
+                        console.log(i+"-"+table.rows.length);
+                        if(table.rows[i].cells.item(0).innerHTML === x){
+                            table.deleteRow(i);
+                        }
+                    }
+                    swal({
+                        title: 'Médico Eliminado',
+                        text: 'El Médico se ha eliminado satisfactoriamente.',
+                        type: 'success',
+                    }).then(function(){ 
+                        location.reload();
+                        });
+                }
+            })
+        }, function (dismiss) {
+                if (dismiss === 'cancel') {
+                }
+            })
+}
+
+//Función eliminar Usuario
+function eliminarUser(y){
+    swal({
+        title: '¿SEGURO QUE DESEA ELIMINAR ESTE USUARIO?',
+        text: "Se eliminará el Usuario con Código "+y,
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, Eliminar',
+        cancelButtonText: 'No, Cancelar !'
+    }).then(function () {
+            $.ajax({
+                url: "includes/admin/crud_usuario.php",
+                type: "POST",
+                dataType:"json",
+                data:"elimina_user=" + y,
+                cache: false,
+                success: function (arr){
+                    var table = document.getElementById("tableAdminUser");
+                    for (var i = 0; i < table.rows.length; i++) {
+                        console.log(i+"-"+table.rows.length);
+                        if(table.rows[i].cells.item(0).innerHTML === y){
+                            table.deleteRow(i);
+                        }
+                    }
+                    swal({
+                        title: 'Usuario Eliminado',
+                        text: 'El Usuario se ha eliminado satisfactoriamente.',
+                        type: 'success',
+                    }).then(function(){ 
+                        location.reload();
+                        });
+                }
+            })
+        }, function (dismiss) {
+                if (dismiss === 'cancel') {
+                }
+            })
+}
+
+// ---Funciones para EDITAR -----
+
+//Función editar Médico
+function editMedico(z){
+    var condicion = z;
+
+    if(condicion == false) {
+        document.getElementById('tipo-doc').classList.add("d-none");
+        document.getElementById('select-tip_doc').classList.remove("d-none");
+        document.getElementById('sexo-med').classList.add("d-none");
+        document.getElementById('select-sexo').classList.remove("d-none");
+        document.getElementById('actividad-med').classList.add("d-none");
+        document.getElementById('select-activ').classList.remove("d-none");
+        document.getElementById('planDona-med').classList.add("d-none");
+        document.getElementById('select-plan').classList.remove("d-none");
+
+
+        document.getElementById("guardar_med").classList.remove("d-none");
+
+        document.getElementById('numdoc').readOnly=condicion;
+        document.getElementById('nombre-medico').readOnly=condicion;
+        document.getElementById('paterno_med').readOnly=condicion;
+        document.getElementById('materno_med').readOnly=condicion;
+        document.getElementById('correo-med').readOnly=condicion;
+        document.getElementById('nacimiento_med').readOnly=condicion;
+        document.getElementById('telf-med').readOnly=condicion;
+        document.getElementById('pais-med').readOnly=condicion;
+        document.getElementById('estado-med').readOnly=condicion;
+        //document.getElementById('convenio-med').readOnly=condicion;
+    }else{ 
+        document.getElementById('tipo-doc').classList.remove("d-none");
+        document.getElementById('select-tip_doc').classList.add("d-none");
+        document.getElementById('sexo-med').classList.remove("d-none");
+        document.getElementById('select-sexo').classList.add("d-none");
+        document.getElementById('actividad-med').classList.remove("d-none");
+        document.getElementById('select-activ').classList.add("d-none");
+        document.getElementById('planDona-med').classList.remove("d-none");
+        document.getElementById('select-plan').classList.add("d-none");
+
+        document.getElementById('guardar_med').classList.add("d-none");
+
+        document.getElementById('tipo-doc').readOnly=condicion;
+        document.getElementById('sexo-med').readOnly=condicion;
+        document.getElementById('actividad-med').readOnly=condicion;
+        document.getElementById('planDona-med').readOnly=condicion;
+
+        document.getElementById('numdoc').readOnly=condicion;
+        document.getElementById('nombre-medico').readOnly=condicion;
+        document.getElementById('paterno_med').readOnly=condicion;
+        document.getElementById('materno_med').readOnly=condicion;
+        document.getElementById('correo-med').readOnly=condicion;
+        document.getElementById('nacimiento_med').readOnly=condicion;
+        document.getElementById('telf-med').readOnly=condicion
+        document.getElementById('pais-med').readOnly=condicion;
+        document.getElementById('estado-med').readOnly=condicion;
+        //document.getElementById('convenio-med').readOnly=condicion;
+    }   
+}
+
+//Función Actualizar Médico
+function actualizarMedico(){
+    var cod_medico = document.getElementById('codigo_user-medico').value;
+    var tipo_doc_med = document.getElementById('select-tip_doc').value;
+    var num_docMed = document.getElementById('numdoc').value;
+    var nombreMed = document.getElementById('nombre-medico').value;
+    var medicoPaterno = document.getElementById('paterno_med').value;
+    var medicoMaterno = document.getElementById('materno_med').value;
+    var correoMed = document.getElementById('correo-med').value;
+    var nacimientoMed = document.getElementById('nacimiento_med').value;
+    var sexoMed = document.getElementById("select-sexo").value;
+    var telefMed = document.getElementById("telf-med").value;
+
+    var medicoPais = document.getElementById('pais-med').value;
+    var medicoCiudad = document.getElementById('estado-med').value;
+    var actividadMed = document.getElementById('select-activ').value;
+    var planDonaMed = document.getElementById('select-plan').value;
+    
+    swal({
+        title: '¿SEGURO QUE DESEA ACTUALIZAR ESTE REGISTRO?',
+        text: "Se actualizarán los datos de este Médico",
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, Actualizar',
+        cancelButtonText: 'No, Cancelar !'
+    }).then(function () {
+                $.ajax({
+                url: "includes/admin/crud_medico.php",
+                type: "POST",
+                dataType:'json',
+                data:{
+                    idUser_medico:cod_medico,
+                    tipo_docMed:tipo_doc_med,
+                    numdoc_med:num_docMed,
+                    nombre_med:nombreMed,
+                    apellido_p_med:medicoPaterno,
+                    apellido_m_med:medicoMaterno,
+                    correo_med: correoMed,
+                    fecha_nac_med:nacimientoMed,
+                    sexo_med:sexoMed,
+                    telefono_med:telefMed,
+                    pais_med:medicoPais,
+                    ciudad_med:medicoCiudad,
+                    activ_med:actividadMed,
+                    dona_med:planDonaMed,
+                },
+                cache: false,
+                success: function(arr){
+                    swal({
+                        title: 'Médico Actualizado',
+                        text: 'Se han actualizado los datos satisfactoriamente.',
+                        type: 'success',
+                    }).then(function(){ 
+                        location.reload();
+                        });
+                }
+            })
+        }, function (dismiss) {
+            if (dismiss === 'cancel') {
+        }
+    })
+}
+
+//Función editar Usuario
+function editUser(z){
+    var condicion = z;
+
+    if(condicion == false) {
+        document.getElementById('tipo_doc').classList.add("d-none");
+        document.getElementById('select_tipo_doc').classList.remove("d-none");
+        document.getElementById('sexo_user').classList.add("d-none");
+        document.getElementById('select_sexoUser').classList.remove("d-none");
+        document.getElementById('userActividad').classList.add("d-none");
+        document.getElementById('select_activUser').classList.remove("d-none");
+        document.getElementById('planDona_user').classList.add("d-none");
+        document.getElementById('select_planUser').classList.remove("d-none");
+
+
+        document.getElementById("guardar_user").classList.remove("d-none");
+
+        document.getElementById('numdocUser').readOnly=condicion;
+        document.getElementById('nombre_user').readOnly=condicion;
+        document.getElementById('paterno_user').readOnly=condicion;
+        document.getElementById('materno_user').readOnly=condicion;
+        document.getElementById('correo_user').readOnly=condicion;
+        document.getElementById('nacimiento_user').readOnly=condicion;
+        document.getElementById('telf_user').readOnly=condicion;
+        document.getElementById('pais_user').readOnly=condicion;
+        document.getElementById('estadoUser').readOnly=condicion;
+        //document.getElementById('convenioUser').readOnly=condicion;
+    }else{ 
+        document.getElementById('tipo_doc').classList.remove("d-none");
+        document.getElementById('select_tipo_doc').classList.add("d-none");
+        document.getElementById('sexo_user').classList.remove("d-none");
+        document.getElementById('select_sexoUser').classList.add("d-none");
+        document.getElementById('userActividad').classList.remove("d-none");
+        document.getElementById('select_activUser').classList.add("d-none");
+        document.getElementById('planDona_user').classList.remove("d-none");
+        document.getElementById('select_planUser').classList.add("d-none");
+
+        document.getElementById('guardar_user').classList.add("d-none");
+
+        document.getElementById('tipo_doc').readOnly=condicion;
+        document.getElementById('sexo_user').readOnly=condicion;
+        document.getElementById('userActividad').readOnly=condicion;
+        document.getElementById('planDona_user').readOnly=condicion;
+
+        document.getElementById('numdocUser').readOnly=condicion;
+        document.getElementById('nombre_user').readOnly=condicion;
+        document.getElementById('paterno_user').readOnly=condicion;
+        document.getElementById('materno_user').readOnly=condicion;
+        document.getElementById('correo_user').readOnly=condicion;
+        document.getElementById('nacimiento_user').readOnly=condicion;
+        document.getElementById('telf_user').readOnly=condicion
+        document.getElementById('pais_user').readOnly=condicion;
+        document.getElementById('estadoUser').readOnly=condicion;
+        //document.getElementById('convenioUser').readOnly=condicion;
+    }   
+}
+
+//Función Actualizar Usuario
+function actualizarUser(){
+    var cod_user = document.getElementById('codigo_user').value;
+    var tipo_doc_user = document.getElementById('select_tipo_doc').value;
+    var num_docUser = document.getElementById('numdocUser').value;
+    var nombreUser = document.getElementById('nombre_user').value;
+    var userPaterno = document.getElementById('paterno_user').value;
+    var userMaterno = document.getElementById('materno_user').value;
+    var correoUser = document.getElementById('correo_user').value;
+    var nacimientoUser = document.getElementById('nacimiento_user').value;
+    var sexoUser = document.getElementById("select_sexoUser").value;
+    var telefUser = document.getElementById("telf_user").value;
+
+    var userPais = document.getElementById('pais_user').value;
+    var userCiudad = document.getElementById('estadoUser').value;
+    var actividadUser = document.getElementById('select_activUser').value;
+    var planDonaUser = document.getElementById('select_planUser').value;
+    
+    swal({
+        title: '¿SEGURO QUE DESEA ACTUALIZAR ESTE REGISTRO?',
+        text: "Se actualizarán los datos de este Usuario",
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, Actualizar',
+        cancelButtonText: 'No, Cancelar !'
+    }).then(function () {
+                $.ajax({
+                url: "includes/admin/crud_usuario.php",
+                type: "POST",
+                dataType:'json',
+                data:{
+                    id_usuario:cod_user,
+                    tipo_docUser:tipo_doc_user,
+                    numdoc_user:num_docUser,
+                    nombre_user:nombreUser,
+                    apellido_p_user:userPaterno,
+                    apellido_m_user:userMaterno,
+                    correo_user: correoUser,
+                    fecha_nac_user:nacimientoUser,
+                    sexo_user:sexoUser,
+                    telefono_user:telefUser,
+                    pais_user:userPais,
+                    ciudad_user:userCiudad,
+                    activ_user:actividadUser,
+                    dona_user:planDonaUser,
+                },
+                cache: false,
+                success: function(arr){
+                    swal({
+                        title: 'Usuario Actualizado',
+                        text: 'Se han actualizado los datos satisfactoriamente.',
+                        type: 'success',
+                    }).then(function(){ 
+                        location.reload();
+                        });
+                }
+            })
+        }, function (dismiss) {
+            if (dismiss === 'cancel') {
+        }
+    })
+}

@@ -46,106 +46,66 @@ $arr='';
 		echo json_encode($arr);
 		unset($arr);
         Database::disconnect();
-	}/*else if(isset($_POST['cod_persona'])){
-		//actualizar
+	}else if(isset($_POST['idUser_medico'])){
+		//Actualizar Médico
 		$pdo=Database::connect();
-	 	$codigo_p=$_POST['cod_persona'];
-		$tip_doc=$_POST['tip_doc'];
-		$num_doc=$_POST['numdoc'];
-		$nombre=$_POST['nombre'];
-		$ape_pa=$_POST['apellido_p'];
-		$ape_ma=$_POST['apellido_m'];
-		$est_c=$_POST['estado_c'];
-		$fecha_n=$_POST['fecha_n'];
-		$sexo=$_POST['sexo'];
-		$dire=$_POST['direccion'];
-		$num_celular=$_POST['telef'];
-		$correo=$_POST['correo'];
-		$depart=$_POST['departamento'];
-		$tipo_pers=$_POST['tipo_p'];
 
-		$sql="UPDATE personas SET 
-		nombre_completo='$nombre',
-		apellido_p='$ape_pa',
-		apellido_m='$ape_ma',
-		estado_civil='$est_c',
-		fecha_nacimiento='$fecha_n',
-		sexo='$sexo',
-		tip_doc='$tip_doc',
-		num_doc='$num_doc',
-		correo='$correo',
-		ubigeo_cod='$depart',
-		direccion='$dire',
-		telefono='$num_celular',
-		privilegio='$tipo_pers' 
-		WHERE cod_persona='$codigo_p'";
+	 	$codigo_med=$_POST['idUser_medico'];
+		$tipoDoc_med=$_POST['tipo_docMed'];
+		$num_doc_med=$_POST['numdoc_med'];
+		$nombre_med=$_POST['nombre_med'];
+		$ape_pat_med=$_POST['apellido_p_med'];
+		$ape_mat_med=$_POST['apellido_m_med'];
+		$correo_med=$_POST['correo_med'];
+		$nacimiento_med=$_POST['fecha_nac_med'];
+		$sexo_med=$_POST['sexo_med'];
+		$telf_med=$_POST['telefono_med'];
+		$pais_med=$_POST['pais_med'];
+		$ciudad_med=$_POST['ciudad_med'];
+		$activ_med=$_POST['activ_med'];
+		$donacion_med=$_POST['dona_med'];
+
+		$sql="UPDATE usuarios SET 
+		nombres='$nombre_med',
+		apellido_pat='$ape_pat_med',
+		apellido_mat='$ape_mat_med',
+		correo_user='$correo_med',
+		tipo_doc='$tipoDoc_med',
+		nro_doc='$num_doc_med',
+		fecha_nacimiento='$nacimiento_med',
+		sexo='$sexo_med',
+		telefono='$telf_med',
+		pais='$pais_med',
+		estado_lugar='$ciudad_med',
+		cod_recurrenteDona='$donacion_med',
+		actividad='$activ_med' 
+		WHERE id_usuario='$codigo_med'";
 
 		$q = $pdo->prepare($sql);
 		$q->execute(array());
-		$arr='Actualizado';
+
+		$arr='Medico_actualizado';
+
 		echo json_encode($arr);
 		unset($arr);
+
 		Database::disconnect();
 
-	}else if(isset($_POST["elimina_tra"])){
-		//eliminar
-		$codi=$_POST["elimina_tra"];
+	}else if(isset($_POST["elimina_medico"])){
+		//Eliminar MÉDICO
+		$codigo_med=$_POST["elimina_medico"];
+
 		$pdo = Database::connect();
-	    $sql = "UPDATE personas SET estado= 0 where cod_persona = '".$codi."'";
+		
+		$sql = "DELETE usuarios, medicos FROM usuarios INNER JOIN medicos ON medicos.usuario_cod = usuarios.id_usuario WHERE usuarios.id_usuario = ".$codigo_med."";
+
 		$pdo->query($sql);
-		$arr = array("Eliminado");
+		error_log($sql);
+		$arr = array("Eliminado_medico");
+
 		echo json_encode($arr);
 		unset($arr);
 		Database::disconnect();
 
-	}else{
-		//registrar
-		date_default_timezone_set('America/Lima');
-		setlocale(LC_ALL,"ES_ES");
-
-		$pdo=Database::connect();
-		
-		$tipo_emple=$_POST['empleado'];
-		$tip_doc=$_POST['tipdoc'];
-		$num_doc=$_POST['numdoc'];
-		$nombre=$_POST['nombre'];
-		$ape_pa=$_POST['apellido_p'];
-		$ape_ma=$_POST['apellido_m'];
-		$est_c=$_POST['estado_civil'];
-		$fecha_n=$_POST['fecha_n'];
-		$sexo=$_POST['sexo'];
-		$dire=$_POST['direccion'];
-		$num_celular=$_POST['telef'];
-		$correo=$_POST['correo'];
-		$cod_dist=$_POST['departamento'];
-
-		$sql = "CALL generar_id 
-			('0',
-			'".$nombre."',
-			'".$ape_pa."',
-			'".$ape_ma."',
-			'".$est_c."',
-			'".$fecha_n."',
-			'".$sexo."',
-			'".$tip_doc."',
-			'".$num_doc."',
-			'".$correo."',
-			'".$cod_dist."',
-			'".$dire."',
-			'".$num_celular."',
-			'".$tipo_emple."'
-			)";
-
-		$q = $pdo->prepare($sql);
-		$q->execute(array());
-		$data = $q->fetch(PDO::FETCH_ASSOC);
-		Database::disconnect();
-		if ($_POST['rd']=='1') {
-			header('Location: tabla_registros.php');
-		}else if ($_POST['rd']=='2') {
-			header('Location: tabla_doctores.php');
-		}else{
-			header('Location: tabla_pacientes.php');
-		}
-	}*/
+	}
 ?>

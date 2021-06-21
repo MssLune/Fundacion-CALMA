@@ -35,106 +35,66 @@ $arr='';
 		echo json_encode($arr);
 		unset($arr);
         Database::disconnect();
-	}/*else if(isset($_POST['cod_persona'])){
-		//actualizar
+	}else if(isset($_POST['id_usuario'])){
+		//Actualizar Usuario
 		$pdo=Database::connect();
-	 	$codigo_p=$_POST['cod_persona'];
-		$tip_doc=$_POST['tip_doc'];
-		$num_doc=$_POST['numdoc'];
-		$nombre=$_POST['nombre'];
-		$ape_pa=$_POST['apellido_p'];
-		$ape_ma=$_POST['apellido_m'];
-		$est_c=$_POST['estado_c'];
-		$fecha_n=$_POST['fecha_n'];
-		$sexo=$_POST['sexo'];
-		$dire=$_POST['direccion'];
-		$num_celular=$_POST['telef'];
-		$correo=$_POST['correo'];
-		$depart=$_POST['departamento'];
-		$tipo_pers=$_POST['tipo_p'];
 
-		$sql="UPDATE personas SET 
-		nombre_completo='$nombre',
-		apellido_p='$ape_pa',
-		apellido_m='$ape_ma',
-		estado_civil='$est_c',
-		fecha_nacimiento='$fecha_n',
-		sexo='$sexo',
-		tip_doc='$tip_doc',
-		num_doc='$num_doc',
-		correo='$correo',
-		ubigeo_cod='$depart',
-		direccion='$dire',
-		telefono='$num_celular',
-		privilegio='$tipo_pers' 
-		WHERE cod_persona='$codigo_p'";
+	 	$codigo_user=$_POST['id_usuario'];
+		$tipoDoc_user=$_POST['tipo_docUser'];
+		$num_doc_user=$_POST['numdoc_user'];
+		$nombre_user=$_POST['nombre_user'];
+		$ape_pat_user=$_POST['apellido_p_user'];
+		$ape_mat_user=$_POST['apellido_m_user'];
+		$correo_user=$_POST['correo_user'];
+		$nacimiento_user=$_POST['fecha_nac_user'];
+		$sexo_user=$_POST['sexo_user'];
+		$telf_user=$_POST['telefono_user'];
+		$pais_user=$_POST['pais_user'];
+		$ciudad_user=$_POST['ciudad_user'];
+		$activ_user=$_POST['activ_user'];
+		$donacion_user=$_POST['dona_user'];
+
+		$sql="UPDATE usuarios SET 
+		nombres='$nombre_user',
+		apellido_pat='$ape_pat_user',
+		apellido_mat='$ape_mat_user',
+		correo_user='$correo_user',
+		tipo_doc='$tipoDoc_user',
+		nro_doc='$num_doc_user',
+		fecha_nacimiento='$nacimiento_user',
+		sexo='$sexo_user',
+		telefono='$telf_user',
+		pais='$pais_user',
+		estado_lugar='$ciudad_user',
+		cod_recurrenteDona='$donacion_user',
+		actividad='$activ_user' 
+		WHERE id_usuario='$codigo_user'";
 
 		$q = $pdo->prepare($sql);
 		$q->execute(array());
-		$arr='Actualizado';
+
+		$arr='Usuario_actualizado';
+
 		echo json_encode($arr);
 		unset($arr);
+
 		Database::disconnect();
 
-	}else if(isset($_POST["elimina_tra"])){
-		//eliminar
-		$codi=$_POST["elimina_tra"];
+	}else if(isset($_POST["elimina_user"])){
+		//Eliminar Usuario
+		$codigo_user=$_POST["elimina_user"];
+
 		$pdo = Database::connect();
-	    $sql = "UPDATE personas SET estado= 0 where cod_persona = '".$codi."'";
+		
+		$sql = "DELETE FROM usuarios WHERE id_usuario = ".$codigo_user."";
+		
 		$pdo->query($sql);
-		$arr = array("Eliminado");
+		error_log($sql);
+		$arr = array("Eliminado_user");
+
 		echo json_encode($arr);
 		unset($arr);
 		Database::disconnect();
 
-	}else{
-		//registrar
-		date_default_timezone_set('America/Lima');
-		setlocale(LC_ALL,"ES_ES");
-
-		$pdo=Database::connect();
-		
-		$tipo_emple=$_POST['empleado'];
-		$tip_doc=$_POST['tipdoc'];
-		$num_doc=$_POST['numdoc'];
-		$nombre=$_POST['nombre'];
-		$ape_pa=$_POST['apellido_p'];
-		$ape_ma=$_POST['apellido_m'];
-		$est_c=$_POST['estado_civil'];
-		$fecha_n=$_POST['fecha_n'];
-		$sexo=$_POST['sexo'];
-		$dire=$_POST['direccion'];
-		$num_celular=$_POST['telef'];
-		$correo=$_POST['correo'];
-		$cod_dist=$_POST['departamento'];
-
-		$sql = "CALL generar_id 
-			('0',
-			'".$nombre."',
-			'".$ape_pa."',
-			'".$ape_ma."',
-			'".$est_c."',
-			'".$fecha_n."',
-			'".$sexo."',
-			'".$tip_doc."',
-			'".$num_doc."',
-			'".$correo."',
-			'".$cod_dist."',
-			'".$dire."',
-			'".$num_celular."',
-			'".$tipo_emple."'
-			)";
-
-		$q = $pdo->prepare($sql);
-		$q->execute(array());
-		$data = $q->fetch(PDO::FETCH_ASSOC);
-		Database::disconnect();
-		if ($_POST['rd']=='1') {
-			header('Location: tabla_registros.php');
-		}else if ($_POST['rd']=='2') {
-			header('Location: tabla_doctores.php');
-		}else{
-			header('Location: tabla_pacientes.php');
-		}
-	}*/
+	}
 ?>
