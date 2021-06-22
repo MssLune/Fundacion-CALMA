@@ -631,7 +631,7 @@ function actualizarAdmin(){
         cancelButtonColor: '#d33',
         confirmButtonText: 'Sí, Actualizar',
         cancelButtonText: 'No, Cancelar !'
-    }).then(function () {
+    }).then(function () { 
                 $.ajax({
                 url: "includes/admin/crud_admin.php",
                 type: "POST",
