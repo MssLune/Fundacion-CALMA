@@ -8,12 +8,13 @@
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
+        <div style="width:100%; height:300px; background-color:#5e72e4"></div>
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Administrar Usuarios</h1>
+                            
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
@@ -93,17 +94,7 @@
                                                 }
                                             ?>
                                         </tbody>
-                                        <tfoot>
-                                            <tr>
-                                                <th><center>ID</center></th>
-                                                <th><center>Cargo</center></th>
-                                                <th><center>Nro. Documento</center></th>
-                                                <th><center>Nombres</center></th>
-                                                <th><center>Fecha Nacimiento</center></th>
-                                                <th><center>Eliminar</center></th>
-                                                <th><center>Más Info</center></th>
-                                            </tr>
-                                        </tfoot>
+                                        
                                     </table>
 
                                 </div>

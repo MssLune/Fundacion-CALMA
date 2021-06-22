@@ -1096,6 +1096,7 @@ table td {
   border: 1px solid #999999;
   border-collapse: collapse;
   padding: 20px;
+  font-size: 13;
 }
 table.registrados thead {
   background-color: #353535;
@@ -1404,7 +1405,7 @@ table.registrados tr:nth-child(4n-1) {
     background-clip: border-box;
     border: 0 solid rgba(255, 255, 255, 0.973);
     border-radius: 1rem;
-    box-shadow: 0 0 1px rgb(0 0 0 / 13%), 0 1px 3px rgb(0 0 0 / 20%);
+    box-shadow: 0 0 1px rgb(255 255 255 / 13%), 0 1px 3px rgb(255 255 255 / 20%);
     display: block;
     margin-bottom: 20px;
     position: relative;

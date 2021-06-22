@@ -4,6 +4,7 @@
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
       
+      
       <?php include_once 'includes/admin/preloaderadmin.php'; ?>
 
       <?php include_once 'includes/admin/navbaradmin.php'; ?>
@@ -12,7 +13,9 @@
 
       <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
-        <img src="assets/img/fondocalma.png" class="d-block w-100" height="200px">
+      <div style="width:100%; height:300px; background-color:#5e72e4">
+      <!-- <img src="assets/img/shapes/waves-white.svg" alt="pattern-lines" class="position-absolute opacity-2 start-0"> -->
+    </div>
         <div class="content-header">
           <?php 
             $pdo = Database::connect();
@@ -67,13 +70,13 @@
               <div class="card">
                 <div class="card-header">
                   <div class="alert alert-danger alert-dismissible">
-                    <h5><i class="icon fas fa-ban"></i>MEDITAR</h5>
+                    <h5><center><i class="icon fas fa-ban"></i>MEDITAR</center></h5>
                   </div>
                 </div>
 
                 <div class="card-body">
                   <ul>
-                    <li><center>50 SOLES</center></li>
+                    <li><center><p>S/ 50</p>/MES<p></p></center> </li>
                   </ul>
                   <ul>
                     <li><center>1 Consultas por Mes</center></li>

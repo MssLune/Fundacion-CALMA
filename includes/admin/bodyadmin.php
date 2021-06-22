@@ -10,7 +10,9 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
       <!-- Content Header (Page header) #f8f9fe-->
-      <div style="width:100%; height:300px; background-color:#5e72e4"></div>
+      <div style="width:100%; height:300px; background-color:#5e72e4">
+      <!-- <img src="assets/img/shapes/waves-white.svg" alt="pattern-lines" class="position-absolute opacity-2 start-0"> -->
+    </div>
       <div class="content-header">
       
         <div class="container-fluid">

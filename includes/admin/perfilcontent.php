@@ -12,6 +12,9 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
+    <div style="width:100%; height:300px; background-color:#5e72e4">
+    
+    </div>
       <div class="content-header">
         <div class="container-fluid">
           <div class="row">
