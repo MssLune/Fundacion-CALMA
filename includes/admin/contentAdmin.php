@@ -5,7 +5,7 @@
 
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
-
+        <div style="width:100%; height:90px; background-color:#5e72e4"></div>
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->

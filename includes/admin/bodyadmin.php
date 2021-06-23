@@ -2,12 +2,6 @@
   <div class="wrapper">
     <div style="width:100%; height:90px; background-color:#5e72e4"></div>
 
-    <?php include_once 'includes/admin/preloaderadmin.php'; ?>
-
-    <?php include_once 'includes/admin/navbaradmin.php'; ?>
-
-    <?php include_once 'includes/admin/adminsidebar.php'; ?>
-
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
       <!-- Content Header (Page header) #f8f9fe-->
@@ -217,7 +211,5 @@
   <!-- ./wrapper -->
 
 </body>
-
-<?php include_once 'includes/admin/footeradmin.php'; ?>
 
 </html>
