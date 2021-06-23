@@ -37,7 +37,7 @@
                                 <!-- /.card-header -->
                                 <div class="card-body">
                                     <table id="tableAdmins" class="table table-bordered table-striped">
-                                        <a href="#" class="btn btn-primary" style="width: 100%; margin-bottom: 2%;" >Nuevo  Administrador</a>
+                                        <a href="newAdmin.php" class="btn btn-primary" style="width: 100%; margin-bottom: 2%;" >Nuevo  Administrador</a>
                                         <thead>
                                             <tr>
                                                 <th><center>ID</center></th>

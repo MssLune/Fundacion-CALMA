@@ -230,3 +230,40 @@ INSERT INTO estado_ciudad VALUES (1, 1, 'LIMA');
 INSERT INTO estado_ciudad VALUES (2, 7, 'BUENOS AIRES');
 INSERT INTO estado_ciudad VALUES (3, 1, 'ICA');
 INSERT INTO estado_ciudad VALUES (4, 6, 'MILÁN');
+
+
+-- Procedimientos Almacenados
+DELIMITER $$
+CREATE PROCEDURE insertNewMedico(gen_param char(1), param_nombre varchar(250), param_ap_pat varchar(100), param_ap_mat varchar(100), param_email varchar(100), param_tipoDoc int(5), param_nroDoc char(20), param_pass varchar(100), param_nacimiento date, param_sexo int(1), param_telf varchar(50), param_pais varchar(100), param_ciudad varchar(100), param_convenio varchar(250), param_dona int(10), param_priv int(1), param_escuela varchar(100), param_rama int(20), parama_esp1 int(20), parama_esp2 int(20), param_grado int(5), param_nroGrado varchar(100), param_exp text, param_espect text)
+
+BEGIN	
+	IF gen_param = 0 THEN
+		BEGIN
+			DECLARE ultimoUser int(10);
+			DECLARE finalUser int(10);
+			DECLARE ultimoMed int(10);
+			DECLARE finalMed int(10);
+
+			SET ultimoUser = (SELECT u.id_usuario FROM usuarios u ORDER BY u.id_usuario DESC LIMIT 1);
+				IF ultimoUser IS NULL OR ultimoUser = '' THEN
+					SET finalUser = '1';
+				ELSE
+					SET finalUser = (ultimoUser+1);
+				END IF;
+
+			SET ultimoMed = (SELECT m.cod_medico FROM medicos m ORDER BY m.cod_medico DESC LIMIT 1);
+				IF ultimoMed IS NULL OR ultimoMed = '' THEN
+					SET finalMed = '1';
+				ELSE
+					SET finalMed = (ultimoMed+1);
+				END IF;
+				
+			INSERT INTO usuarios VALUES(finalUser, param_nombre, param_ap_pat, param_ap_mat, param_email, param_tipoDoc, param_nroDoc, param_pass, param_nacimiento, param_sexo, param_telf, param_pais, param_ciudad, param_convenio, param_dona, param_priv, 1, now());
+
+			INSERT INTO medicos VALUES(finalMed, finalUser, '', '', param_escuela, param_rama, parama_esp1, parama_esp2, param_grado, param_nroGrado, param_exp, param_espect, '', '');
+		END;
+	END IF;
+END
+$$
+
+DELIMITER ;

@@ -669,3 +669,15 @@ function actualizarAdmin(){
         }
     })
 }
+
+//---- FUNCIONES PARA AÑADIR NUEVOS USER/PSICO/ADMINS----
+//función mensaje
+function msje_regUser(){
+    swal({title: "Registrando Usuario...",allowEscapeKey: false,allowOutsideClick:false,text: "Espere unos segundos.",showConfirmButton: false});
+}
+function msje_regMed(){
+    swal({title: "Registrando Médico...",allowEscapeKey: false,allowOutsideClick:false,text: "Espere unos segundos.",showConfirmButton: false});
+}
+function msje_regAdm(){
+    swal({title: "Registrando Administrador...",allowEscapeKey: false,allowOutsideClick:false,text: "Espere unos segundos.",showConfirmButton: false});
+}

@@ -107,5 +107,80 @@ $arr='';
 		unset($arr);
 		Database::disconnect();
 
+	}else{
+		//Nuevo Medico
+		$pdo=Database::connect();
+		
+		//para tabla usuarios
+		$rolMed=$_POST['rolUserMed'];
+		$medNombres=$_POST['newMed_nombres'];
+		$medPaterno=$_POST['newMed_paterno'];
+		$medMaterno=$_POST['newMed_materno'];
+		$medEmail=$_POST['newMed_email'];
+		$med_tipoDoc=$_POST['newMed_tipoDoc'];
+		$med_nroDoc=$_POST['newMed_nroDoc'];
+		$medNacimiento=$_POST['newMed_nacimiento'];
+		$medPais=$_POST['newMed_pais'];
+		$medCiudad=$_POST['newMed_ciudad'];
+		$medTelf=$_POST['newMed_telf'];
+		$medSexo=$_POST['newMed_sexo'];
+		$medDonacion=$_POST['newMed_dona'];
+
+		//password sin hash
+		$medPassSinHash=$_POST['newMed_pass'];
+		//password con hash
+		$medPassword = password_hash($medPassSinHash, PASSWORD_BCRYPT);
+	
+		//convenio vacío
+		if($_POST['newMed_convenio'] == ''){
+			$medConvenio = 'SIN CODIGO';
+		}else{
+			$medConvenio = $_POST['newMed_convenio'];
+		}
+
+		//para tabla medicos
+		$medEscuela=$_POST['newMed_escuela'];
+		$medRama=$_POST['newMed_rama'];
+		$medEsp1=$_POST['newMed_esp1'];
+		$medEsp2=$_POST['newMed_esp2'];
+		$medGrado=$_POST['newMed_grado'];
+		$medNroGrado=$_POST['newMed_nroGrado'];
+		$medExp=$_POST['newMed_experiencia'];
+		$medEspect=$_POST['newMed_espectativa'];
+
+		$sql = "CALL insertNewMedico 
+			('0',
+			'".$medNombres."',
+			'".$medPaterno."',
+			'".$medMaterno."',
+			'".$medEmail."',
+			'".$med_tipoDoc."',
+			'".$med_nroDoc."',
+			'".$medPassword."',
+			'".$medNacimiento."',
+			'".$medSexo."',
+			'".$medTelf."',
+			'".$medPais."',
+			'".$medCiudad."',
+			'".$medConvenio."',
+			'".$medDonacion."',
+			'".$rolMed."',
+			'".$medEscuela."',
+			'".$medRama."',
+			'".$medEsp1."',
+			'".$medEsp2."',
+			'".$medGrado."',
+			'".$medNroGrado."',
+			'".$medExp."',
+			'".$medEspect."'
+		)";
+
+		$q = $pdo->prepare($sql);
+		$q->execute(array());
+		$data = $q->fetch(PDO::FETCH_ASSOC);
+		error_log($sql);
+		Database::disconnect();
+
+		header('Location: ../../administrarMedicos.php');
 	}
 ?>

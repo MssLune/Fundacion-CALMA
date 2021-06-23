@@ -5,10 +5,10 @@
 
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
-
+        <div style="width:100%; height:90px; background-color:#5e72e4"></div>
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
-        <div style="width:100%; height:300px; background-color:#5e72e4"></div>
+        
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <div class="container-fluid">
@@ -38,7 +38,7 @@
                                 <!-- /.card-header -->
                                 <div class="card-body">
                                     <table id="tableAdminUser" class="table table-bordered table-striped">
-                                        <a href="#" class="btn btn-primary" style="width: 100%; margin-bottom: 2%;" >Nuevo  Usuario</a>
+                                        <a href="#" data-toggle="modal" data-target="#newUserModal" class="btn btn-primary" style="width: 100%; margin-bottom: 2%;" >Nuevo  Usuario</a>
                                         <thead>
                                             <tr>
                                                 <th><center>ID</center></th>
@@ -277,5 +277,111 @@
 </div>
 <!-- --FIN MODAL USERS -->
 
+<!-- INICIA MODAL NEW USER -->
+<div class="modal fade" id="newUserModal" style="overflow:hidden;" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+            <div class="modal-header" style="background: rgba(133, 193, 233, 0.4);">
+                <h5 class="modal-title">Agregar Nuevo Usuario</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <!-- contenido modal -->
+            <div class="modal-body" style="background: rgba(133, 193, 233, 0.2);">
+                <!-- CARD BODY -->
+                <div class="card-body">
+                    <form id="form_newUser" action="includes/admin/crud_usuario.php" method="POST" onsubmit="msje_regUser();" >
+                                                
+                        <input class="d-none" type="text" name="rolUser" value="3">
+
+                        <div class="mb-3">
+                            <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">Nombres:</label> 
+                            <input type="text" onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()" name="newUser_nombres" id="newuser_name" class="form-control form-control-lg" placeholder="Nombres" aria-label="Nombres" aria-describedby="names-addon" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">Apellido Paterno:</label> 
+                            <input type="text" onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()" name="newUser_paterno" id="newuser_paterno" class="form-control form-control-lg" placeholder="Apellido Paterno" aria-label="Apellido Paterno" aria-describedby="apellidoPat-addon" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">Apellido Materno:</label> 
+                            <input type="text" onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()" name="newUser_materno" id="newuser_materno" class="form-control form-control-lg" placeholder="Apellido Materno" aria-label="Apellido Materno" aria-describedby="apellidoMat-addon" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">Correo:</label> 
+                            <input type="email" name="newUser_email" id="newuser_correo" class="form-control form-control-lg" placeholder="Email (Será su Usuario)" aria-label="Email" aria-describedby="email-addon" required>
+                        </div>
+                        <div class="mb-3" id="grupo__selectTipoDoc">
+                            <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">Tipo Documento de Identidad:</label> 
+                            <select class="form-control form-control-lg letra-select" id="newuser_tipo_doc" name="newUser_tipoDoc" aria-label="Tipo Documento Identidad" aria-describedby="tipoDoc-addon" required>
+                                <option disabled selected value="defecto_tipoDoc">Tipo de Documento de Identidad</option>
+                                <option value="1">DNI</option>
+                                <option value="2">Pasaporte</option>
+                                <option value="3">Carné de Extranjería</option>
+                            </select>                  
+                        </div>
+                        <div class="mb-3" id="grupo__nroDoc">
+                            <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">Número de Documento de Identidad:</label> 
+                            <input type="text" name="newUser_nroDoc" id="newuser_num_doc" class="form-control form-control-lg" placeholder="N° Documento" aria-label="Nro Documento Identidad" aria-describedby="nroDocIdentidad-addon" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">Fecha de Nacimiento:</label> 
+                            <input type="date" name="newUser_nacimiento" id="newuser_fechaNac" class="form-control form-control-lg" aria-label="Fecha nacimiento" aria-describedby="fechaNacimiento-addon" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">País:</label> 
+                            <input onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()" type="text" name="newUser_pais" id="newuserPais" class="form-control form-control-lg" placeholder="País" aria-label="País" aria-describedby="pais-addon" required>            
+                        </div>
+                        <div class="mb-3">
+                            <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">Ciudad/Estado:</label> 
+                            <input onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()" type="text" name="newUser_ciudad" id="newuserCiudad" class="form-control form-control-lg" placeholder="Estado/ Ciudad" aria-label="Estado/Ciudad" aria-describedby="estado-addon" required>                 
+                        </div>
+                        <div class="mb-3">
+                            <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">Celular:</label> 
+                            <input type="text" name="newUser_telf" id="newuserTelf" class="form-control form-control-lg" placeholder="Celular" aria-label="Celular" aria-describedby="celular-addon" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">Sexo:</label> 
+                            <select class="form-control form-control-lg letra-select" id="newUser_genero" name="newUser_sexo" aria-label="Select Genero" required>
+                                <option disabled selected value="defecto_genero">Género</option>
+                                <option value="1">Masculino</option>
+                                <option value="2">Femenino</option>
+                                <option value="3">No Binario</option>
+                                <option value="4">Prefiero no decirlo</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">Contraseña:</label> 
+                            <input type="password" name="newUser_pass" id="newuserPass" class="form-control form-control-lg" placeholder="Contraseña" aria-label="Password" aria-describedby="password-addon">
+                        </div>
+                        <div class="mb-3">
+                            <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">Plan de Donación:</label> 
+                            <select class="form-control form-control-lg letra-select" id="newUserDona" name="newUser_dona" aria-label="Select Donacion" required>
+                                <option disabled selected value="defecto_dona">Selecciona Plan de Donación</option>
+                                <option value="1">Sin Plan</option>
+                                <option value="2">Plan 1: Meditar</option>
+                                <option value="3">Plan 2: Reflexionar</option>
+                                <option value="4">Plan 3: Comprender</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">Convenio:</label> 
+                            <input type="text" name="newUser_convenio" id="newuserConv" class="form-control form-control-lg" placeholder="Convenio" aria-label="convenio" aria-describedby="convenio-addon">
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-lg bg-gradient-primary btn-lg w-100 mt-4 mb-0">AÑADIR NUEVO USUARIO</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- FIN CARD BODY -->
+            </div>
+            <!-- fin contenido modal -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FIN MODAL NEW USER -->
 
 <!-- termina modal -->

@@ -1,5 +1,6 @@
 <body class="hold-transition sidebar-mini layout-fixed">
   <div class="wrapper">
+    <div style="width:100%; height:90px; background-color:#5e72e4"></div>
 
     <?php include_once 'includes/admin/preloaderadmin.php'; ?>
 
@@ -10,9 +11,7 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
       <!-- Content Header (Page header) #f8f9fe-->
-      <div style="width:100%; height:300px; background-color:#5e72e4">
-      <!-- <img src="assets/img/shapes/waves-white.svg" alt="pattern-lines" class="position-absolute opacity-2 start-0"> -->
-    </div>
+      
       <div class="content-header">
       
         <div class="container-fluid">
@@ -123,18 +122,6 @@
                 <div class="row">
                   <div class="col-lg-6 col-6">
                     <!-- small box -->
-                    <div class="small-box bg-primary">
-                      <div class="inner">
-                        <h3 class="h3-adminbody">Buscar Consulta</h3>
-                      </div>
-                      <div class="icon">
-                        <i class="ion ion-search"></i>
-                      </div>
-                      <a href="buscarConsulta.php" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 col-6">
-                    <!-- small box -->
                     <div class="small-box bg-success">
                       <div class="inner">
                         <h3 class="h3-adminbody">Consultas Aceptadas</h3>
@@ -151,18 +138,6 @@
               //admin
               echo '
                 <div class="row">
-                  <div class="col-lg-6 col-6">
-                    <!-- small box -->
-                    <div class="small-box bg-primary">
-                      <div class="inner">
-                        <h3 class="h3-adminbody">Buscar Consulta</h3>
-                      </div>
-                      <div class="icon">
-                        <i class="ion ion-search"></i>
-                      </div>
-                      <a href="buscarConsulta.php" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
-                    </div>
-                  </div>
                   <div class="col-lg-6 col-6">
                     <!-- small box -->
                     <div class="small-box bg-success">
@@ -193,18 +168,6 @@
               //admin master
               echo '
                 <div class="row">
-                  <div class="col-lg-6 col-6">
-                    <!-- small box -->
-                    <div class="small-box bg-primary">
-                      <div class="inner">
-                        <h3 class="h3-adminbody">Buscar Consulta</h3>
-                      </div>
-                      <div class="icon">
-                        <i class="ion ion-search"></i>
-                      </div>
-                      <a href="buscarConsulta.php" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
-                    </div>
-                  </div>
                   <div class="col-lg-6 col-6">
                     <!-- small box -->
                     <div class="small-box bg-success">

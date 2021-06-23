@@ -89,12 +89,68 @@ $arr='';
 		$sql = "DELETE FROM usuarios WHERE id_usuario = ".$codigo_user."";
 		
 		$pdo->query($sql);
-		error_log($sql);
+		
 		$arr = array("Eliminado_user");
 
 		echo json_encode($arr);
 		unset($arr);
 		Database::disconnect();
 
+	}else{
+		//Nuevo Usuario
+		$pdo=Database::connect();
+		
+		$rolUser=$_POST['rolUser'];
+		$userNombres=$_POST['newUser_nombres'];
+		$userPaterno=$_POST['newUser_paterno'];
+		$userMaterno=$_POST['newUser_materno'];
+		$userEmail=$_POST['newUser_email'];
+		$user_tipoDoc=$_POST['newUser_tipoDoc'];
+		$user_nroDoc=$_POST['newUser_nroDoc'];
+		$userNacimiento=$_POST['newUser_nacimiento'];
+		$userPais=$_POST['newUser_pais'];
+		$userCiudad=$_POST['newUser_ciudad'];
+		$userTelf=$_POST['newUser_telf'];
+		$userSexo=$_POST['newUser_sexo'];
+		$userDonacion=$_POST['newUser_dona'];
+
+		//password sin hash
+		$userPassSinHash=$_POST['newUser_pass'];
+		//password con hash
+		$userPassword = password_hash($userPassSinHash, PASSWORD_BCRYPT);
+	
+		//convenio vacío
+		if($_POST['newUser_convenio'] == ''){
+			$userConvenio = 'SIN CODIGO';
+		}else{
+			$userConvenio = $_POST['newUser_convenio'];
+		}
+
+		$sql = "INSERT INTO `usuarios`(`nombres`, `apellido_pat`, `apellido_mat`, `correo_user`, `tipo_doc`,`nro_doc`,`pass`,`fecha_nacimiento`,`sexo`, `telefono`, `pais`, `estado_lugar`, `id_convenio`, `cod_recurrenteDona`,`privilegio`,`actividad`, `fecha_registro`) VALUES 
+			('".$userNombres."',
+			'".$userPaterno."',
+			'".$userMaterno."',
+			'".$userEmail."',
+			'".$user_tipoDoc."',
+			'".$user_nroDoc."',
+			'".$userPassword."',
+			'".$userNacimiento."',
+			'".$userSexo."',
+			'".$userTelf."',
+			'".$userPais."',
+			'".$userCiudad."',
+			'".$userConvenio."',
+			'".$userDonacion."',
+			'".$rolUser."',
+			1,
+			now()
+		)";
+
+		$q = $pdo->prepare($sql);
+		$q->execute(array());
+		$data = $q->fetch(PDO::FETCH_ASSOC);
+		Database::disconnect();
+
+		header('Location: ../../administrarUsers.php');
 	}
 ?>
