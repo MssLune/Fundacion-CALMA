@@ -266,4 +266,36 @@ BEGIN
 END
 $$
 
+CREATE PROCEDURE insertNewAdmin(gen_param char(1), param_nombre varchar(250), param_ap_pat varchar(100), param_ap_mat varchar(100), param_email varchar(100), param_tipoDoc int(5), param_nroDoc char(20), param_pass varchar(100), param_nacimiento date, param_sexo int(1), param_telf varchar(50), param_pais varchar(100), param_ciudad varchar(100), param_convenio varchar(250), param_dona int(10), param_priv int(1), param_areaAdm varchar(100))
+
+BEGIN	
+	IF gen_param = 1 THEN
+		BEGIN
+			DECLARE ultimoUser int(10);
+			DECLARE finalUser int(10);
+			DECLARE ultimoAdm int(10);
+			DECLARE finalAdm int(10);
+
+			SET ultimoUser = (SELECT u.id_usuario FROM usuarios u ORDER BY u.id_usuario DESC LIMIT 1);
+				IF ultimoUser IS NULL OR ultimoUser = '' THEN
+					SET finalUser = '1';
+				ELSE
+					SET finalUser = (ultimoUser+1);
+				END IF;
+
+			SET ultimoAdm = (SELECT adm.cod_admin FROM admin adm ORDER BY adm.cod_admin DESC LIMIT 1);
+				IF ultimoAdm IS NULL OR ultimoAdm = '' THEN
+					SET finalAdm = '1';
+				ELSE
+					SET finalAdm = (ultimoAdm+1);
+				END IF;
+				
+			INSERT INTO usuarios VALUES(finalUser, param_nombre, param_ap_pat, param_ap_mat, param_email, param_tipoDoc, param_nroDoc, param_pass, param_nacimiento, param_sexo, param_telf, param_pais, param_ciudad, param_convenio, param_dona, param_priv, 1, now());
+
+			INSERT INTO admin VALUES(finalAdm, finalUser, param_areaAdm);
+		END;
+	END IF;
+END
+$$
+
 DELIMITER ;

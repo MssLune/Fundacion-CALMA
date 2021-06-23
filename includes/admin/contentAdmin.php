@@ -37,7 +37,7 @@
                                 <!-- /.card-header -->
                                 <div class="card-body">
                                     <table id="tableAdmins" class="table table-bordered table-striped">
-                                        <a href="newAdmin.php" class="btn btn-primary" style="width: 100%; margin-bottom: 2%;" >Nuevo  Administrador</a>
+                                        <a href="newAdmin.php" data-toggle="modal" data-target="#newAdmModal"  class="btn btn-primary" style="width: 100%; margin-bottom: 2%;" >Nuevo  Administrador</a>
                                         <thead>
                                             <tr>
                                                 <th><center>ID</center></th>
@@ -294,7 +294,130 @@
         </div>
     </div>
 </div>
-<!-- --FIN MODAL ADMIN -->
+<!-- --FIN MODAL INFO ADMIN -->
 
+<!-- INICIA MODAL NEW ADMIN -->
+<div class="modal fade" id="newAdmModal" style="overflow:hidden;" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+            <div class="modal-header" style="background: rgba(133, 193, 233, 0.4);">
+                <h5 class="modal-title">Agregar Nuevo Administrador</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <!-- contenido modal -->
+            <div class="modal-body" style="background: rgba(133, 193, 233, 0.2);">
+                <!-- CARD BODY -->
+                <div class="card-body">
+                    <form id="form_newAdm" action="includes/admin/crud_admin.php" method="POST" onsubmit="msje_regAdm();" >
+                                                
+                        <input class="d-none" type="text" name="rol_adm" value="1">
+
+                        <div>
+                            <h5>DATOS PERSONALES</h5>
+                            <hr style="background: rgba(133, 193, 233, 0.4);">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">Nombres:</label> 
+                            <input type="text" onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()" name="newAdm_nombres" id="newadm_name" class="form-control form-control-lg" placeholder="Nombres" aria-label="Nombres" aria-describedby="names-addon" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">Apellido Paterno:</label> 
+                            <input type="text" onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()" name="newAdm_paterno" id="newadm_paterno" class="form-control form-control-lg" placeholder="Apellido Paterno" aria-label="Apellido Paterno" aria-describedby="apellidoPat-addon" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">Apellido Materno:</label> 
+                            <input type="text" onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()" name="newAdm_materno" id="newadm_materno" class="form-control form-control-lg" placeholder="Apellido Materno" aria-label="Apellido Materno" aria-describedby="apellidoMat-addon" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">Correo:</label> 
+                            <input type="email" name="newAdm_email" id="newadm_correo" class="form-control form-control-lg" placeholder="Email (Será su Usuario)" aria-label="Email" aria-describedby="email-addon" required>
+                        </div>
+                        <div class="mb-3" id="grupo__selectTipoDoc">
+                            <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">Tipo Documento de Identidad:</label> 
+                            <select class="form-control form-control-lg letra-select" id="newadm_tipo_doc" name="newAdm_tipoDoc" aria-label="Tipo Documento Identidad" aria-describedby="tipoDoc-addon" required>
+                                <option disabled selected value="defecto_tipoDoc">Tipo de Documento de Identidad</option>
+                                <option value="1">DNI</option>
+                                <option value="2">Pasaporte</option>
+                                <option value="3">Carné de Extranjería</option>
+                            </select>                  
+                        </div>
+                        <div class="mb-3" id="grupo__nroDoc">
+                            <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">Número de Documento de Identidad:</label> 
+                            <input type="text" name="newAdm_nroDoc" id="newadm_num_doc" class="form-control form-control-lg" placeholder="N° Documento" aria-label="Nro Documento Identidad" aria-describedby="nroDocIdentidad-addon" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">Fecha de Nacimiento:</label> 
+                            <input type="date" name="newAdm_nacimiento" id="newadm_fechaNac" class="form-control form-control-lg" aria-label="Fecha nacimiento" aria-describedby="fechaNacimiento-addon" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">País:</label> 
+                            <input onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()" type="text" name="newAdm_pais" id="newadmPais" class="form-control form-control-lg" placeholder="País" aria-label="País" aria-describedby="pais-addon" required>            
+                        </div>
+                        <div class="mb-3">
+                            <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">Ciudad/Estado:</label> 
+                            <input onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()" type="text" name="newAdm_ciudad" id="newadmCiudad" class="form-control form-control-lg" placeholder="Estado/ Ciudad" aria-label="Estado/Ciudad" aria-describedby="estado-addon" required>                 
+                        </div>
+                        <div class="mb-3">
+                            <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">Celular:</label> 
+                            <input type="text" name="newAdm_telf" id="newadmTelf" class="form-control form-control-lg" placeholder="Celular" aria-label="Celular" aria-describedby="celular-addon" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">Sexo:</label> 
+                            <select class="form-control form-control-lg letra-select" id="newAdm_genero" name="newAdm_sexo" aria-label="Select Genero" required>
+                                <option disabled selected value="defecto_genero">Género</option>
+                                <option value="1">Masculino</option>
+                                <option value="2">Femenino</option>
+                                <option value="3">No Binario</option>
+                                <option value="4">Prefiero no decirlo</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">Contraseña:</label> 
+                            <input type="password" name="newAdm_pass" id="newadmPass" class="form-control form-control-lg" placeholder="Contraseña" aria-label="Password" aria-describedby="password-addon">
+                        </div>
+                        <div class="mb-3">
+                            <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">Plan de Donación:</label> 
+                            <select class="form-control form-control-lg letra-select" id="newadmDona" name="newAdm_dona" aria-label="Select Donacion" required>
+                                <option disabled selected value="defecto_dona">Selecciona Plan de Donación</option>
+                                <option value="1">Sin Plan</option>
+                                <option value="2">Plan 1: Meditar</option>
+                                <option value="3">Plan 2: Reflexionar</option>
+                                <option value="4">Plan 3: Comprender</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">Convenio:</label> 
+                            <input type="text" name="newAdm_convenio" id="newadmConv" class="form-control form-control-lg" placeholder="Convenio" aria-label="convenio" aria-describedby="convenio-addon">
+                        </div>
+
+                        <div>
+                            <br><br>
+                            <h5>DATOS ADMINISTRADOR</h5>
+                            <hr style="background: rgba(133, 193, 233, 0.4);">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">Área:</label> 
+                            <input type="text" onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()" name="newAdm_area" id="newadmArea" class="form-control form-control-lg" placeholder="Área del Administrador" aria-label="administrador" aria-describedby="admin-addon" required>
+                        </div>
+                        
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-lg bg-gradient-primary btn-lg w-100 mt-4 mb-0">AÑADIR NUEVO ADMINISTRADOR</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- FIN CARD BODY -->
+            </div>
+            <!-- fin contenido modal -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FIN MODAL NEW ADMIN -->
 
 <!-- termina modal -->

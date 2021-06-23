@@ -178,7 +178,7 @@ $arr='';
 		$q = $pdo->prepare($sql);
 		$q->execute(array());
 		$data = $q->fetch(PDO::FETCH_ASSOC);
-		error_log($sql);
+		
 		Database::disconnect();
 
 		header('Location: ../../administrarMedicos.php');

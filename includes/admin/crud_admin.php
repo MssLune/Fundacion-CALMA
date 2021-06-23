@@ -104,5 +104,66 @@ $arr='';
 		unset($arr);
 		Database::disconnect();
 
+	}else{
+		//Nuevo administrador
+		$pdo=Database::connect();
+		
+		//para tabla usuarios
+		$rolAdm=$_POST['rol_adm'];
+		$admNombres=$_POST['newAdm_nombres'];
+		$admPaterno=$_POST['newAdm_paterno'];
+		$admMaterno=$_POST['newAdm_materno'];
+		$admEmail=$_POST['newAdm_email'];
+		$adm_tipoDoc=$_POST['newAdm_tipoDoc'];
+		$adm_nroDoc=$_POST['newAdm_nroDoc'];
+		$admNacimiento=$_POST['newAdm_nacimiento'];
+		$admPais=$_POST['newAdm_pais'];
+		$admCiudad=$_POST['newAdm_ciudad'];
+		$admTelf=$_POST['newAdm_telf'];
+		$admSexo=$_POST['newAdm_sexo'];
+		$admDonacion=$_POST['newAdm_dona'];
+
+		//password sin hash
+		$admPassSinHash=$_POST['newAdm_pass'];
+		//password con hash
+		$admPassword = password_hash($admPassSinHash, PASSWORD_BCRYPT);
+	
+		//convenio vacío
+		if($_POST['newAdm_convenio'] == ''){
+			$admConvenio = 'SIN CODIGO';
+		}else{
+			$admConvenio = $_POST['newAdm_convenio'];
+		}
+
+		//para tabla admin
+		$admArea=$_POST['newAdm_area'];
+
+		$sql = "CALL insertNewAdmin 
+			('1',
+			'".$admNombres."',
+			'".$admPaterno."',
+			'".$admMaterno."',
+			'".$admEmail."',
+			'".$adm_tipoDoc."',
+			'".$adm_nroDoc."',
+			'".$admPassword."',
+			'".$admNacimiento."',
+			'".$admSexo."',
+			'".$admTelf."',
+			'".$admPais."',
+			'".$admCiudad."',
+			'".$admConvenio."',
+			'".$admDonacion."',
+			'".$rolAdm."',
+			'".$admArea."'
+		)";
+
+		$q = $pdo->prepare($sql);
+		$q->execute(array());
+		$data = $q->fetch(PDO::FETCH_ASSOC);
+		
+		Database::disconnect();
+
+		header('Location: ../../administrarAdmins.php');
 	}
 ?>
