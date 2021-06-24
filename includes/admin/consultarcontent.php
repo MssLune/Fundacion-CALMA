@@ -7,10 +7,10 @@
             <section class="content-header">
                 <div class="container-fluid">
                     <div class="row mb-2">
-                        <div class="col-sm-6">
+                        <div class="col-sm-6 mx-auto">
           
               <!-- general form elements -->
-              <div class="card card-primary">
+              <div class="card card-primary pd25">
                 <div class="card-header">
                   <h3 class="card-title h3-perfil">Programar consulta</h3>
                 </div>

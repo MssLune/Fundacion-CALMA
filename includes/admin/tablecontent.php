@@ -141,14 +141,14 @@
                                             <td>'. $rowDiagMedico .'</td>
                                             <td>
                                                 <center>
-                                                    <a class="btn btn-warning" style="font-size: 30px; padding: 20px;" href="#" title="Reprogramar">
+                                                    <a class="btn btn-warning" style="font-size: 10px; padding: 10px;" href="#" title="Reprogramar">
                                                         <i class="far fa-edit"></i>
                                                     </a>
                                                 </center>
                                             </td>
                                             <td>
                                                 <center>
-                                                    <a class="btn btn-danger" style="font-size: 30px; padding: 20px;" href="#" title="Cancelar">
+                                                    <a class="btn btn-danger" style="font-size: 10px; padding: 10px;" href="#" title="Cancelar">
                                                         <i class="far fa-trash-alt"></i>
                                                     </a>
                                                 </center>
@@ -161,19 +161,7 @@
                                     }
                                 ?>
                             </tbody>
-                            <tfoot>
-                                <?php 
-                                    if($_SESSION['privilegio'] == 3){
-                                        //usuario
-                                        echo $theadUser;
-                                    }else if($_SESSION['privilegio'] == 2){
-                                        //psicólogo
-                                        echo $theadPsico;
-                                    }else{
-
-                                    }
-                                ?>
-                            </tfoot>
+                            
                         </table>
                     </div>
                     <!-- /.card-body -->

@@ -54,19 +54,7 @@
                                     <td>X</td>
                                 </tr>
                             </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th>Status</th>
-                                    <th>Psicólogo</th>
-                                    <th>Especialidad</th>
-                                    <th>Sexo</th>
-                                    <th>Dni</th>
-                                    <th>Grado</th>
-                                    <th>Experiencia</th>
-                                    <th>Email</th>
-
-                                </tr>
-                            </tfoot>
+                            
                         </table>
                     </div>
                     <!-- /.card-body -->

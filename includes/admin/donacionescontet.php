@@ -13,9 +13,9 @@
 
       <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
-      <div style="width:100%; height:300px; background-color:#5e72e4">
+      <div style="width:100%; height:90px; background-color:#5e72e4">
       <!-- <img src="assets/img/shapes/waves-white.svg" alt="pattern-lines" class="position-absolute opacity-2 start-0"> -->
-    </div>
+      </div>
         <div class="content-header">
           <?php 
             $pdo = Database::connect();
@@ -42,7 +42,7 @@
                 <input type="text" class="form-control" value='<?php echo $nombrePlan ?>' readonly>
                 </div>
               </div>
-            </div>
+          </div>
 
             <!-- inicia card body -->
             <div class="card-body" id="moneda">
@@ -65,81 +65,86 @@
 
           <!-- inicia planes -->
           <div class="row">
+
             <!-- inicia card -->
             <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
               <div class="card">
                 <div class="card-header">
-                  <div class="alert alert-danger alert-dismissible">
-                    <h5><center><i class="icon fas fa-ban"></i>MEDITAR</center></h5>
-                  </div>
+                <h4 class="my-0 font-weight-normal">Meditar</h4>
                 </div>
 
                 <div class="card-body">
                   <ul>
-                    <li><center><p>S/ 50</p>/MES<p></p></center> </li>
+                    <li><center><h1 class=" pricing-card-title">S/ 50 <small class="text-muted">/ mes</small></h1></center></li>
+                    <br/>
                   </ul>
-                  <ul>
+                  <ul class="list-unstyled mt-3 mb-4">
                     <li><center>1 Consultas por Mes</center></li>
                     <li><center>Beneficios Adicionales </center> </li>
                   </ul>
                   <td>
-                    <button type="button" class="btn btn-block bg-gradient-success btn-lg">Solicita Ya</button>
+                    <button type="button" class="btn btn-lg btn-block btn-outline-primary">Solicita Ya</button>
                   </td>
                 </div>
               </div>
+             </div>
             </div>
+
             <!--fin card -->
 
             <!-- inicia card -->
             <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
               <div class="card">
                 <div class="card-header" >
-                  <div class="alert alert-info alert-dismissible">
-                    <h5><i class="icon fas fa-info"></i> REFLEXIONAR </h5>
-                  </div>
+                <h4 class="my-0 font-weight-normal">Reflexionar</h4>
                 </div>
 
                 <div class="card-body">
-                  <ul>
-                    <li><center>100 SOLES</center></li>
+                <ul>
+                    <li><center><h1 class=" pricing-card-title">S/ 100 <small class="text-muted">/ mes</small></h1></center></li>
+                    <br/>
                   </ul>
-                  <ul>
+                  <ul class="list-unstyled mt-3 mb-4">
                     <li><center>2 Consultas por Mes</center></li>
                     <li><center>Beneficios Adicionales </center> </li>
                   </ul>
                   <td>
-                    <button type="button" class="btn btn-block bg-gradient-success btn-lg">Solicita Ya</button>
+                    <button type="button"class="btn btn-lg btn-block btn-primary">Solicita Ya</button>
                   </td>
                 </div>
               </div>
+            </div>
             </div>
             <!-- fin card -->
 
             <!-- inicia card -->
             <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
               <div class="card">
                 <div class="card-header">
-                  <div class="alert alert-warning alert-dismissible">
-                    <h5><i class="icon fas fa-exclamation-triangle"></i> COMPRENDER!</h5>
-                  </div>
+                <h4 class="my-0 font-weight-normal">Comprender</h4>
                 </div>
 
                 <div class="card-body">
-                  <ul>
-                    <li><center>150 SOLES</center></li>
+                <ul>
+                    <li><center><h1 class=" pricing-card-title">S/ 150 <small class="text-muted">/ mes</small></h1></center></li>
+                    <br/>
                   </ul>
-                  <ul>
+                  <ul class="list-unstyled mt-3 mb-4">
                     <li><center>3 Consultas por Mes</center></li>
                     <li><center>Beneficios Adicionales</center> </li>
                   </ul>
                   <td>
-                    <button type="button" class="btn btn-block bg-gradient-success btn-lg">Solicita Ya</button>
+                    <button type="button" class="btn btn-lg btn-block btn-primary">Solicita Ya</button>
                   </td>
                 </div>
               </div>
             </div>
+            </div>
             <!-- fin card -->
-          </div>
+           </div>
           <!-- fin planes -->
         </div>
       </div>
