@@ -13,138 +13,134 @@
 
 
 
-    <div class="carousel-item active">
+  <div class="carousel-item active">
 
-      <ul class="lista-invitados clearfix">
-      <li>
-          <div class="invitado">
-              <a class="invitado-info" href="#invitado1">
-                                   <img style="max-width:100%; height:440px" src="img/foto01.jpg" alt="Imagen invitado">
-                                   <p>Carmen Arrobas</p>
-                               </a>
-          </div>
-          <!-- END .invitado -->
-      </li>
+<ul class="lista-invitados clearfix">
+<li>
+    <div class="invitado">
+        <a class="invitado-info" href="#invitado1">
+                             <img style="max-width:100%; height:440px" src="img/foto01.png" alt="Imagen invitado">
+                             </a>
+    </div>
+    <!-- END .invitado -->
+</li>
 
 
-      <li>
-          <div class="invitado">
-              <a class="invitado-info" href="#invitado3">
-                                   <img style="max-width:100%;height:440px" src="img/foto02.jpg" alt="Imagen invitado">
-                                   <p>Kasen Lee</p>
-                               </a>
-          </div>
-          <!-- END .invitado -->
-      </li>
+<li>
+    <div class="invitado">
+        <a class="invitado-info" href="#invitado3">
+                             <img style="max-width:100%;height:440px" src="img/foto02.png" alt="Imagen invitado">
+                         </a>
+    </div>
+    <!-- END .invitado -->
+</li>
 
 
 
-      <li>
-          <div class="invitado">
-              <a class="invitado-info" href="#invitado2">
-                                   <img style="max-width:100%; height:440px" src="img/foto01.jpg" alt="">
-                                   <p>Marlen Perozo</p>
-                               </a>
-          </div>
-          <!-- END .invitado -->
-      </li>
+<li>
+    <div class="invitado">
+        <a class="invitado-info" href="#invitado2">
+                             <img style="max-width:100%; height:440px" src="img/foto03.png" alt="">
+                                     </a>
+    </div>
+    <!-- END .invitado -->
+</li>
 
 
 
-      
+
 
 
 </ul>
 
+</div>
+
+
+
+
+<div class="carousel-item">
+<ul class="lista-invitados clearfix">
+<li>
+    <div class="invitado">
+        <a class="invitado-info" href="#invitado1">
+                             <img style="max-width:100%;height:440px" src="img/foto04.png" alt="Imagen invitado">
+                                                           </a>
     </div>
+    <!-- END .invitado -->
+</li>
+
+
+<li>
+    <div class="invitado">
+        <a class="invitado-info" href="#invitado2">
+                             <img style="max-width:100%;height:440px" src="img/foto05.png" alt="Imagen invitado">
+                                                         </a>
+    </div>
+    <!-- END .invitado -->
+</li>
 
 
 
-
-    <div class="carousel-item">
-    <ul class="lista-invitados clearfix">
-      <li>
-          <div class="invitado">
-              <a class="invitado-info" href="#invitado1">
-                                   <img style="max-width:100%;height:440px" src="img/foto01.jpg" alt="Imagen invitado">
-                                   <p>Carmen Arrobas</p>
-                               </a>
-          </div>
-          <!-- END .invitado -->
-      </li>
-
-
-      <li>
-          <div class="invitado">
-              <a class="invitado-info" href="#invitado2">
-                                   <img style="max-width:100%;height:440px" src="img/foto02.jpg" alt="Imagen invitado">
-                                   <p>Marlen Perozo</p>
-                               </a>
-          </div>
-          <!-- END .invitado -->
-      </li>
-
-
-
-      <li>
-          <div class="invitado">
-              <a class="invitado-info" href="#invitado3">
-                                   <img style="max-width:100%;height:440px" src="img/foto01.jpg" alt="Imagen invitado">
-                                   <p>Kasen Lee</p>
-                               </a>
-          </div>
-          <!-- END .invitado -->
-      </li>
+<li>
+    <div class="invitado">
+        <a class="invitado-info" href="#invitado3">
+                             <img style="max-width:100%;height:440px" src="img/foto06.png" alt="Imagen invitado">
+                            
+                         </a>
+    </div>
+    <!-- END .invitado -->
+</li>
 
 
 </ul>
+</div>
+
+
+
+
+
+
+
+
+<div class="carousel-item">
+<ul class="lista-invitados clearfix">
+<li>
+    <div class="invitado">
+        <a class="invitado-info" href="#invitado1">
+                             <img style="max-width:100%;height:440px" src="img/foto07.png" alt="Imagen invitado">
+                                                         </a>
     </div>
+    <!-- END .invitado -->
+</li>
+
+
+<li>
+    <div class="invitado">
+        <a class="invitado-info" href="#invitado2">
+                             <img style="max-width:100%;height:440px" src="img/foto08.png" alt="Imagen invitado">
+                                                            </a>
+    </div>
+    <!-- END .invitado -->
+</li>
 
 
 
-
-
-
-
-
-    <div class="carousel-item">
-      <ul class="lista-invitados clearfix">
-      <li>
-          <div class="invitado">
-              <a class="invitado-info" href="#invitado1">
-                                   <img style="max-width:100%;height:440px" src="img/foto01.jpg" alt="Imagen invitado">
-                                   <p>Carmen Arrobas</p>
-                               </a>
-          </div>
-          <!-- END .invitado -->
-      </li>
-
-
-      <li>
-          <div class="invitado">
-              <a class="invitado-info" href="#invitado2">
-                                   <img style="max-width:100%;height:440px" src="img/foto02.jpg" alt="Imagen invitado">
-                                   <p>Marlen Perozo</p>
-                               </a>
-          </div>
-          <!-- END .invitado -->
-      </li>
-
-
-
-      <li>
-          <div class="invitado">
-              <a class="invitado-info" href="#invitado3">
-                                   <img style="max-width:100%;height:440px" src="img/foto01.jpg" alt="Imagen invitado">
-                                   <p>Kasen Lee</p>
-                               </a>
-          </div>
-          <!-- END .invitado -->
-      </li>
+<li>
+    <div class="invitado">
+        <a class="invitado-info" href="#invitado3">
+                             <img style="max-width:100%;height:440px" src="img/foto09.png" alt="Imagen invitado">
+                            
+                         </a>
+    </div>
+    <!-- END .invitado -->
+</li>
 
 
 </ul>
-    </div>
+</div>
+
+
+
 
 
 
