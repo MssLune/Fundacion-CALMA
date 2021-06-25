@@ -41,8 +41,6 @@
                 <!-- card start -->
                 <div class="card-body">
                   <input type="hidden" name="codigoPerfil" id="cod_perfil" value='<?php echo $data['id_usuario'] ?>'>
-
-                  <input class="d-none" type="text" id="id_miPerfil" name="idMiPerfil" value="1">
                   
                   <div class="form-group">
                     <div class="row">
@@ -160,57 +158,39 @@
                 <!-- card body -->
                 <div class="card-body">
 
-                  <input class="d-none" type="text" id="id_miCuenta" name="idMiCuenta" value="2">
-
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Correo</label>
+                    <label for="cuentaEmail">Correo</label>
                     <div class="input-group mb-3">
                       <div class="input-group-prepend">
                         <span class="input-group-text">@</span>
                       </div>
                       <input type="text" id="cuentaEmail" class="form-control" value='<?php echo $data['correo_user'] ?>' readonly>
-                      <button type="submit" class="btn btn-info">Cambiar</button>
+                      <button type="submit" id="editEmail" class="btn btn-info" onclick="editarCuentaEmail(false);">Cambiar</button>
+
+                      <button type="submit" class="d-none btn btn-primary" id="guardar_email" onclick="actualizarEmail();">Guardar</button>
+
+                      <button type="submit" class="d-none btn btn-danger" id="cancelar_email" onclick="cancelEmail(true);">Cancelar</button>
                     </div>
                   </div>
 
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Contraseña</label>
+                    <label for="cuentaPass">Contraseña</label>
                     <div class="input-group mb-3">
                       <div class="input-group-prepend">
                         <span class="input-group-text">#</span>
                       </div>
                       <input type="text" id="cuentaPass" class="form-control" value='<?php echo $_SESSION['passSinHash'] ?>' readonly>
-                      <button type="submit" class="btn btn-info">Cambiar</button>
+                      <button type="submit" id="editPass" class="btn btn-info" onclick="editarCuentaPass(false);">Cambiar</button>
+
+                      <button type="submit" class="d-none btn btn-primary" id="guardar_pass" onclick="actualizarPass();">Guardar</button>
+
+                      <button type="submit" class="d-none btn btn-danger" id="cancelar_pass" onclick="cancelPass(true);">Cancelar</button>
                     </div>
                   </div>
                 </div>
                 <!-- fin card-body -->
               </div>
               <!-- fin primer card -->
-
-              <!-- segundo card -->
-              <!-- <div class="card card-danger">
-                <div class="card-header">
-                  <h3 class="card-title h3-perfil">Foto </h3>
-                </div> -->
-                <!-- card body -->
-                <!-- <div class="card-body">
-                  <div class="form-group">
-                    <label for="perfilFoto">FOTO</label>
-                    <div class="input-group">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="perfilFoto">
-                        <label class="custom-file-label" for="perfilFoto">Imagen..</label>
-                      </div>
-                      <div class="input-group-append">
-                        <span class="input-group-text">Subir</span>
-                      </div>
-                    </div>
-                  </div>
-                </div> -->
-                <!-- fin card-body -->
-              <!-- </div> -->
-              <!-- fin segundo card -->
 
             </div>
             <!-- fin right column -->

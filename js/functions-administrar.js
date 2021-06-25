@@ -805,3 +805,156 @@ function actualizarPerfil(){
         }
     })
 }
+
+// Función para Mi Cuenta -- Email
+function editarCuentaEmail(z){
+    var condicion = z;
+
+    if(condicion == false) {
+
+        document.getElementById('cuentaEmail').readOnly=condicion;
+
+        //botón de actualizar
+        document.getElementById("guardar_email").classList.remove("d-none");
+        document.getElementById("cancelar_email").classList.remove("d-none");
+
+        document.getElementById("editEmail").classList.add("d-none");
+    }else{ 
+        document.getElementById('cuentaEmail').readOnly=condicion;
+
+        //botón de actualizar
+        document.getElementById("guardar_email").classList.add("d-none");
+        document.getElementById("cancelar_email").classList.add("d-none");
+
+        document.getElementById("editEmail").classList.remove("d-none");
+    }   
+}
+function cancelEmail(a){
+    var condicion = a;
+
+    document.getElementById('cuentaEmail').readOnly=condicion;
+
+    //botón de actualizar
+    document.getElementById("guardar_email").classList.add("d-none");
+    document.getElementById("cancelar_email").classList.add("d-none");
+
+    document.getElementById("editEmail").classList.remove("d-none");
+}
+
+ // Función Actualizar Mi Cuenta : Email
+function actualizarEmail(){
+    var codigoCuenta = document.getElementById('cod_perfil').value;
+
+    var cuentaEmail = document.getElementById('cuentaEmail').value;
+    
+    swal({
+        title: '¿SEGURO QUE DESEA ACTUALIZAR SU CORREO?',
+        text: "Se actualizará el correo modificado.",
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, Actualizar',
+        cancelButtonText: 'No, Cancelar !'
+    }).then(function () {
+                $.ajax({
+                url: "includes/admin/crud_perfil.php",
+                type: "POST",
+                dataType:'json',
+                data:{
+                    id_cuenta_email:codigoCuenta,
+                    email_cuenta:cuentaEmail,
+                },
+                cache: false,
+                success: function(arr){
+                    swal({
+                        title: 'Correo Actualizado',
+                        text: 'Se ha actualizado el correo de su cuenta satisfactoriamente.',
+                        type: 'success',
+                    }).then(function(){ 
+                        location.reload();
+                        });
+                }
+            })
+        }, function (dismiss) {
+            if (dismiss === 'cancel') {
+        }
+    })
+}
+
+// Función para Mi Cuenta -- Password
+function editarCuentaPass(z){
+    var condicion = z;
+
+    if(condicion == false) {
+
+        document.getElementById('cuentaPass').readOnly=condicion;
+
+        //botón de actualizar
+        document.getElementById("guardar_pass").classList.remove("d-none");
+        document.getElementById("cancelar_pass").classList.remove("d-none");
+
+        document.getElementById("editPass").classList.add("d-none");
+    }else{ 
+        document.getElementById('cuentaPass').readOnly=condicion;
+
+        //botón de actualizar
+        document.getElementById("guardar_pass").classList.add("d-none");
+        document.getElementById("cancelar_pass").classList.add("d-none");
+
+        document.getElementById("editPass").classList.remove("d-none");
+    }   
+}
+function cancelPass(a){
+    var condicion = a;
+
+    document.getElementById('cuentaPass').readOnly=condicion;
+
+    //botón de actualizar
+    document.getElementById("guardar_pass").classList.add("d-none");
+    document.getElementById("cancelar_pass").classList.add("d-none");
+
+    document.getElementById("editPass").classList.remove("d-none");
+}
+
+ // Función Actualizar Mi Cuenta : Password
+function actualizarPass(){
+    var codCuenta = document.getElementById('cod_perfil').value;
+
+    var cuentaPass = document.getElementById('cuentaPass').value;
+    
+    swal({
+        title: '¿SEGURO QUE DESEA ACTUALIZAR SU CONTRASEÑA?',
+        text: "Se actualizará la contraseña modificada.",
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, Actualizar',
+        cancelButtonText: 'No, Cancelar !'
+    }).then(function () {
+                $.ajax({
+                url: "includes/admin/crud_perfil.php",
+                type: "POST",
+                dataType:'json',
+                data:{
+                    id_cuenta_pass:codCuenta,
+                    pass_cuenta:cuentaPass,
+                },
+                cache: false,
+                success: function(arr){
+                    swal({
+                        title: 'Contraseña Actualizada',
+                        text: 'Se ha actualizado la contraseña de su cuenta satisfactoriamente. Debe iniciar sesión nuevamente.',
+                        type: 'success',
+                    }).then(function(){ 
+                        window.location.href = 'includes/login/logout.php'
+                        });
+                }
+            })
+        }, function (dismiss) {
+            if (dismiss === 'cancel') {
+        }
+    })
+}
+ // -----TERMINA FUNCIONES EDITAR PERFIL -------

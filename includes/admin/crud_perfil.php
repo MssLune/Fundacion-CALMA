@@ -38,50 +38,49 @@ $arr='';
 		unset($arr);
 
 		Database::disconnect();
-	}/*else if(isset($_POST['id_usuario'])){
-		//Actualizar Usuario
+	}else if(isset($_POST['id_cuenta_email'])){
+		//Editar -- Mi cuenta : Email
 		$pdo=Database::connect();
 
-	 	$codigo_user=$_POST['id_usuario'];
-		$tipoDoc_user=$_POST['tipo_docUser'];
-		$num_doc_user=$_POST['numdoc_user'];
-		$nombre_user=$_POST['nombre_user'];
-		$ape_pat_user=$_POST['apellido_p_user'];
-		$ape_mat_user=$_POST['apellido_m_user'];
-		$correo_user=$_POST['correo_user'];
-		$nacimiento_user=$_POST['fecha_nac_user'];
-		$sexo_user=$_POST['sexo_user'];
-		$telf_user=$_POST['telefono_user'];
-		$pais_user=$_POST['pais_user'];
-		$ciudad_user=$_POST['ciudad_user'];
-		$activ_user=$_POST['activ_user'];
-		$donacion_user=$_POST['dona_user'];
+	 	$codigo_cuenta=$_POST['id_cuenta_email'];
+		$email_cuenta=$_POST['email_cuenta'];
 
 		$sql="UPDATE usuarios SET 
-		nombres='$nombre_user',
-		apellido_pat='$ape_pat_user',
-		apellido_mat='$ape_mat_user',
-		correo_user='$correo_user',
-		tipo_doc='$tipoDoc_user',
-		nro_doc='$num_doc_user',
-		fecha_nacimiento='$nacimiento_user',
-		sexo='$sexo_user',
-		telefono='$telf_user',
-		pais='$pais_user',
-		estado_lugar='$ciudad_user',
-		cod_recurrenteDona='$donacion_user',
-		actividad='$activ_user' 
-		WHERE id_usuario='$codigo_user'";
+		correo_user='$email_cuenta'
+		WHERE id_usuario='$codigo_cuenta'";
 
 		$q = $pdo->prepare($sql);
 		$q->execute(array());
 
-		$arr='Usuario_actualizado';
+		$arr='CorreoCuenta_actualizado';
 
 		echo json_encode($arr);
 		unset($arr);
 
 		Database::disconnect();
+	}else if(isset($_POST['id_cuenta_pass'])){
+		//Editar -- Mi cuenta : Password
+		$pdo=Database::connect();
 
-	}*/
+	 	$cod_cuenta=$_POST['id_cuenta_pass'];
+
+		 //Password sin Hash
+		$passSinHash_cuenta=$_POST['pass_cuenta'];
+		//password con hash
+		$pass_cuentaHash = password_hash($passSinHash_cuenta, PASSWORD_BCRYPT);
+
+		$sql="UPDATE usuarios SET 
+		pass='$pass_cuentaHash'
+		WHERE id_usuario='$cod_cuenta'";
+
+		$q = $pdo->prepare($sql);
+		$q->execute(array());
+
+		$arr='PassCuenta_actualizado';
+
+		echo json_encode($arr);
+		unset($arr);
+
+		Database::disconnect();
+	}
 ?>
