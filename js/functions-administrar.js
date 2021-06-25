@@ -681,3 +681,127 @@ function msje_regMed(){
 function msje_regAdm(){
     swal({title: "Registrando Administrador...",allowEscapeKey: false,allowOutsideClick:false,text: "Espere unos segundos.",showConfirmButton: false});
 }
+
+//--- FUNCIONES PARA EDITAR PERFIL ----
+
+ // Función para Mi Perfil
+function editarPerfil(z){
+    var condicion = z;
+
+    if(condicion == false) {
+        //para campo Sexo
+        document.getElementById('perfilSexo').classList.add("d-none");
+        document.getElementById('select_perfilSexo').classList.remove("d-none");
+
+        document.getElementById('perfilNombre').readOnly=condicion;
+        document.getElementById('perfilPaterno').readOnly=condicion;
+        document.getElementById('perfilMaterno').readOnly=condicion;
+        document.getElementById('perfilTelf').readOnly=condicion;
+        document.getElementById('perfilNroDoc').readOnly=condicion;
+        document.getElementById('perfilPais').readOnly=condicion;
+        document.getElementById('perfilCiudad').readOnly=condicion;
+        document.getElementById('perfilNacimiento').readOnly=condicion;
+
+        //botón de actualizar
+        document.getElementById("guardar_perfil").classList.remove("d-none");
+        document.getElementById("cancelar_perfil").classList.remove("d-none");
+
+        document.getElementById("edit_perfil").classList.add("d-none");
+    }else{ 
+        document.getElementById('perfilSexo').classList.remove("d-none");
+        document.getElementById('select_perfilSexo').classList.add("d-none");
+
+        document.getElementById('perfilNombre').readOnly=condicion;
+        document.getElementById('perfilPaterno').readOnly=condicion;
+        document.getElementById('perfilMaterno').readOnly=condicion;
+        document.getElementById('perfilTelf').readOnly=condicion;
+        document.getElementById('perfilNroDoc').readOnly=condicion;
+        document.getElementById('perfilPais').readOnly=condicion;
+        document.getElementById('perfilCiudad').readOnly=condicion;
+        document.getElementById('perfilNacimiento').readOnly=condicion;
+
+        //botón de actualizar
+        document.getElementById("guardar_perfil").classList.add("d-none");
+        document.getElementById("cancelar_perfil").classList.add("d-none");
+
+        document.getElementById("edit_perfil").classList.remove("d-none");
+    }   
+}
+function cancelPerfil(a){
+    var condicion = a;
+
+    document.getElementById('perfilSexo').classList.remove("d-none");
+    document.getElementById('select_perfilSexo').classList.add("d-none");
+
+    document.getElementById('perfilNombre').readOnly=condicion;
+    document.getElementById('perfilPaterno').readOnly=condicion;
+    document.getElementById('perfilMaterno').readOnly=condicion;
+    document.getElementById('perfilTelf').readOnly=condicion;
+    document.getElementById('perfilNroDoc').readOnly=condicion;
+    document.getElementById('perfilPais').readOnly=condicion;
+    document.getElementById('perfilCiudad').readOnly=condicion;
+    document.getElementById('perfilNacimiento').readOnly=condicion;
+
+    //botón de actualizar
+    document.getElementById("guardar_perfil").classList.add("d-none");
+    document.getElementById("cancelar_perfil").classList.add("d-none");
+
+    document.getElementById("edit_perfil").classList.remove("d-none");
+}
+
+ // Función Actualizar Mi Perfil
+function actualizarPerfil(){
+    var codPerfil = document.getElementById('cod_perfil').value;
+    var nombrePerfil = document.getElementById('perfilNombre').value;
+    var perfilPaterno = document.getElementById('perfilPaterno').value;
+    var perfilMaterno = document.getElementById('perfilMaterno').value;
+    var perfilTelf = document.getElementById('perfilTelf').value;
+    var perfilNumDoc = document.getElementById('perfilNroDoc').value;
+    var perfilPais = document.getElementById("perfilPais").value;
+    var perfilCiudad = document.getElementById("perfilCiudad").value;
+    var perfilNac = document.getElementById('perfilNacimiento').value;
+
+    var perfilSexo = document.getElementById('select_perfilSexo').value;
+    
+    swal({
+        title: '¿SEGURO QUE DESEA ACTUALIZAR SU PERFIL?',
+        text: "Se actualizarán los datos modificados",
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, Actualizar',
+        cancelButtonText: 'No, Cancelar !'
+    }).then(function () {
+                $.ajax({
+                url: "includes/admin/crud_perfil.php",
+                type: "POST",
+                dataType:'json',
+                data:{
+                    id_perfil:codPerfil,
+                    nombre_perfil:nombrePerfil,
+                    paterno_perfil:perfilPaterno,
+                    materno_perfil:perfilMaterno,
+                    telf_perfil:perfilTelf,
+                    numdoc_perfil:perfilNumDoc,
+                    pais_perfil:perfilPais,
+                    ciudad_perfil:perfilCiudad,
+                    nacimiento_perfil:perfilNac,
+                    sexo_perfil:perfilSexo,
+                },
+                cache: false,
+                success: function(arr){
+                    swal({
+                        title: 'Perfil Actualizado',
+                        text: 'Se han actualizado los datos del perfil satisfactoriamente.',
+                        type: 'success',
+                    }).then(function(){ 
+                        location.reload();
+                        });
+                }
+            })
+        }, function (dismiss) {
+            if (dismiss === 'cancel') {
+        }
+    })
+}

@@ -1,6 +1,8 @@
 <?php 
   require_once 'database/database.php';
 ?>
+<script src="js/functions-administrar.js"></script>
+
 <body class="hold-transition sidebar-mini layout-fixed">
   <div class="wrapper">
       
@@ -38,14 +40,17 @@
 
                 <!-- card start -->
                 <div class="card-body">
+                  <input type="hidden" name="codigoPerfil" id="cod_perfil" value='<?php echo $data['id_usuario'] ?>'>
 
+                  <input class="d-none" type="text" id="id_miPerfil" name="idMiPerfil" value="1">
+                  
                   <div class="form-group">
                     <div class="row">
                       <div class="col-12">
                         <!-- text input -->
                         <div class="form-group">
                           <label>Nombres</label>
-                          <input type="text" class="form-control" value='<?php echo $data['nombres'] ?>' readonly>
+                          <input type="text" onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()" id="perfilNombre" class="form-control" value='<?php echo $data['nombres'] ?>' readonly>
                         </div>
                       </div>
                     </div>
@@ -54,14 +59,14 @@
                       <div class="col-sm-6">
                         <!-- text input -->
                         <div class="form-group">
-                          <label>Apellido paterno </label>
-                          <input type="text" class="form-control" value='<?php echo $data['apellido_pat'] ?>' readonly>
+                          <label>Apellido paterno</label>
+                          <input type="text" onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()" id="perfilPaterno" class="form-control" value='<?php echo $data['apellido_pat'] ?>' readonly>
                         </div>
                       </div>
                       <div class="col-sm-6">
                         <div class="form-group">
                           <label>Apellido Materno</label>
-                          <input type="text" class="form-control" value='<?php echo $data['apellido_mat'] ?>' readonly>
+                          <input type="text" onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()" id="perfilMaterno" class="form-control" value='<?php echo $data['apellido_mat'] ?>' readonly>
                         </div>
                       </div>
                     </div>
@@ -70,14 +75,14 @@
                       <div class="col-sm-6">
                         <!-- text input -->
                         <div class="form-group">
-                          <label>Celular </label>
-                          <input type="text" class="form-control" value='<?php echo $data['telefono'] ?>' readonly>
+                          <label>Celular</label>
+                          <input type="text" id="perfilTelf" class="form-control" value='<?php echo $data['telefono'] ?>' readonly>
                         </div>
                       </div>
                       <div class="col-sm-6">
                         <div class="form-group">
                           <label>Documento</label>
-                          <input type="text" class="form-control" value='<?php echo $data['nro_doc'] ?>' readonly>
+                          <input type="text" id="perfilNroDoc" class="form-control" value='<?php echo $data['nro_doc'] ?>' readonly>
                         </div>
                       </div>
                     </div>
@@ -87,13 +92,13 @@
                         <!-- text input -->
                         <div class="form-group">
                           <label>PAÍS</label>
-                          <input type="text" class="form-control" value='<?php echo $data['pais'] ?>' readonly>
+                          <input type="text" onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()" id="perfilPais" class="form-control" value='<?php echo $data['pais'] ?>' readonly>
                         </div>
                       </div>
                       <div class="col-sm-6">
                         <div class="form-group">
                           <label>CIUDAD</label>
-                          <input type="text" class="form-control" value='<?php echo $data['estado_lugar'] ?>' readonly>
+                          <input type="text" onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()" id="perfilCiudad" class="form-control" value='<?php echo $data['estado_lugar'] ?>' readonly>
                         </div>
                       </div>
                     </div>
@@ -107,7 +112,7 @@
                             <div class="input-group-prepend">
                               <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
                             </div>
-                            <input type="text" class="form-control" value='<?php echo $data['fecha_nacimiento'] ?>' readonly>
+                            <input type="date" id="perfilNacimiento" class="form-control" value='<?php echo $data['fecha_nacimiento'] ?>' readonly>
                           </div>
                         </div>
                       </div>
@@ -115,15 +120,26 @@
                       <div class="col-sm-6">
                         <div class="form-group">
                           <label>Sexo</label>
-                          <input type="text" class="form-control" value='<?php echo $data['nombre_genero'] ?>' readonly>
+                          <input type="text" id="perfilSexo" class="form-control" value='<?php echo $data['nombre_genero'] ?>' readonly>
+                          <select class="form-control d-none" required name="sexo_select_perfil" id="select_perfilSexo" >
+                            <option value="1">Masculino</option>
+                            <option value="2">Femenino</option>  
+                            <option value="3">No Binario</option>
+                            <option value="4">Prefiero No Decir</option> 
+                          </select> 
                         </div>
                       </div>
                     </div>
 
                     <div class="card-footer">
                       <center>
-                        <button type="submit" class="btn btn-primary">Actualizar</button>
-                        <button type="submit" class="btn btn-primary left">Borrar</button>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;" onclick="editarPerfil(false);" id= "edit_perfil">Editar</button>
+                      </center>
+                      <center class="d-none" id="guardar_perfil">
+                        <button type="submit" class="btn btn-primary" onclick="actualizarPerfil();">Guardar</button>
+                      </center>
+                      <center class="d-none" id="cancelar_perfil">
+                        <button type="submit" class="btn btn-danger" onclick="cancelPerfil(true);">Cancelar</button>
                       </center>
                     </div>
                   </div>
@@ -144,13 +160,15 @@
                 <!-- card body -->
                 <div class="card-body">
 
+                  <input class="d-none" type="text" id="id_miCuenta" name="idMiCuenta" value="2">
+
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Correo </label>
+                    <label for="exampleInputEmail1">Correo</label>
                     <div class="input-group mb-3">
                       <div class="input-group-prepend">
                         <span class="input-group-text">@</span>
                       </div>
-                      <input type="text" class="form-control" value='<?php echo $data['correo_user'] ?>' readonly>
+                      <input type="text" id="cuentaEmail" class="form-control" value='<?php echo $data['correo_user'] ?>' readonly>
                       <button type="submit" class="btn btn-info">Cambiar</button>
                     </div>
                   </div>
@@ -161,7 +179,7 @@
                       <div class="input-group-prepend">
                         <span class="input-group-text">#</span>
                       </div>
-                      <input type="text" class="form-control" value='<?php echo $_SESSION['passSinHash'] ?>' readonly>
+                      <input type="text" id="cuentaPass" class="form-control" value='<?php echo $_SESSION['passSinHash'] ?>' readonly>
                       <button type="submit" class="btn btn-info">Cambiar</button>
                     </div>
                   </div>
@@ -178,11 +196,11 @@
                 <!-- card body -->
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputFile">FOTO</label>
+                    <label for="perfilFoto">FOTO</label>
                     <div class="input-group">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile">
-                        <label class="custom-file-label" for="exampleInputFile">Imagen..</label>
+                        <input type="file" class="custom-file-input" id="perfilFoto">
+                        <label class="custom-file-label" for="perfilFoto">Imagen..</label>
                       </div>
                       <div class="input-group-append">
                         <span class="input-group-text">Subir</span>
