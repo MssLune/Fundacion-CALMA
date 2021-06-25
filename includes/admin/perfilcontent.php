@@ -189,12 +189,12 @@
               <!-- fin primer card -->
 
               <!-- segundo card -->
-              <div class="card card-danger">
+              <!-- <div class="card card-danger">
                 <div class="card-header">
                   <h3 class="card-title h3-perfil">Foto </h3>
-                </div>
+                </div> -->
                 <!-- card body -->
-                <div class="card-body">
+                <!-- <div class="card-body">
                   <div class="form-group">
                     <label for="perfilFoto">FOTO</label>
                     <div class="input-group">
@@ -207,10 +207,11 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <!-- fin card-body -->
-              </div>
+              <!-- </div> -->
               <!-- fin segundo card -->
+
             </div>
             <!-- fin right column -->
           </div>
