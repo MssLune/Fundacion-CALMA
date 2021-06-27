@@ -727,27 +727,6 @@ function editarPerfil(z){
         document.getElementById("edit_perfil").classList.remove("d-none");
     }   
 }
-function cancelPerfil(a){
-    var condicion = a;
-
-    document.getElementById('perfilSexo').classList.remove("d-none");
-    document.getElementById('select_perfilSexo').classList.add("d-none");
-
-    document.getElementById('perfilNombre').readOnly=condicion;
-    document.getElementById('perfilPaterno').readOnly=condicion;
-    document.getElementById('perfilMaterno').readOnly=condicion;
-    document.getElementById('perfilTelf').readOnly=condicion;
-    document.getElementById('perfilNroDoc').readOnly=condicion;
-    document.getElementById('perfilPais').readOnly=condicion;
-    document.getElementById('perfilCiudad').readOnly=condicion;
-    document.getElementById('perfilNacimiento').readOnly=condicion;
-
-    //botón de actualizar
-    document.getElementById("guardar_perfil").classList.add("d-none");
-    document.getElementById("cancelar_perfil").classList.add("d-none");
-
-    document.getElementById("edit_perfil").classList.remove("d-none");
-}
 
  // Función Actualizar Mi Perfil
 function actualizarPerfil(){
@@ -829,17 +808,6 @@ function editarCuentaEmail(z){
         document.getElementById("editEmail").classList.remove("d-none");
     }   
 }
-function cancelEmail(a){
-    var condicion = a;
-
-    document.getElementById('cuentaEmail').readOnly=condicion;
-
-    //botón de actualizar
-    document.getElementById("guardar_email").classList.add("d-none");
-    document.getElementById("cancelar_email").classList.add("d-none");
-
-    document.getElementById("editEmail").classList.remove("d-none");
-}
 
  // Función Actualizar Mi Cuenta : Email
 function actualizarEmail(){
@@ -904,17 +872,6 @@ function editarCuentaPass(z){
 
         document.getElementById("editPass").classList.remove("d-none");
     }   
-}
-function cancelPass(a){
-    var condicion = a;
-
-    document.getElementById('cuentaPass').readOnly=condicion;
-
-    //botón de actualizar
-    document.getElementById("guardar_pass").classList.add("d-none");
-    document.getElementById("cancelar_pass").classList.add("d-none");
-
-    document.getElementById("editPass").classList.remove("d-none");
 }
 
  // Función Actualizar Mi Cuenta : Password

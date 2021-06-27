@@ -157,7 +157,7 @@ CREATE TABLE consulta (
 	fecha_registroConsulta datetime not null
 );
 
-INSERT INTO consulta VALUES ('1', '1', '2', 1,5,'2021-06-15','09:00:00','','','','','','',now());
+INSERT INTO consulta VALUES ('1', '1', '2', 1,5,'2021-06-15','09:00:00','','999879841','','','','',now());
 
 
 CREATE TABLE estado_consulta (

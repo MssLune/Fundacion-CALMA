@@ -1,3 +1,5 @@
+<script src="js/funciones.js"></script>
+
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
         

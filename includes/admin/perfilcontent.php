@@ -133,11 +133,10 @@
                       <center>
                         <button type="submit" class="btn btn-primary" style="width: 100%;" onclick="editarPerfil(false);" id= "edit_perfil">Editar</button>
                       </center>
-                      <center class="d-none" id="guardar_perfil">
-                        <button type="submit" class="btn btn-primary" onclick="actualizarPerfil();">Guardar</button>
-                      </center>
-                      <center class="d-none" id="cancelar_perfil">
-                        <button type="submit" class="btn btn-danger" onclick="cancelPerfil(true);">Cancelar</button>
+                      <center>
+                        <button type="submit" class="btn btn-primary d-none" id="guardar_perfil" onclick="actualizarPerfil();">Guardar</button>
+
+                        <button type="submit" id="cancelar_perfil" class="btn btn-danger d-none" onclick="editarPerfil(true);">Cancelar</button>
                       </center>
                     </div>
                   </div>
@@ -169,7 +168,7 @@
 
                       <button type="submit" class="d-none btn btn-primary" id="guardar_email" onclick="actualizarEmail();">Guardar</button>
 
-                      <button type="submit" class="d-none btn btn-danger" id="cancelar_email" onclick="cancelEmail(true);">Cancelar</button>
+                      <button type="submit" class="d-none btn btn-danger" id="cancelar_email" onclick="editarCuentaEmail(true);">Cancelar</button>
                     </div>
                   </div>
 
@@ -184,7 +183,7 @@
 
                       <button type="submit" class="d-none btn btn-primary" id="guardar_pass" onclick="actualizarPass();">Guardar</button>
 
-                      <button type="submit" class="d-none btn btn-danger" id="cancelar_pass" onclick="cancelPass(true);">Cancelar</button>
+                      <button type="submit" class="d-none btn btn-danger" id="cancelar_pass" onclick="editarCuentaPass(true);">Cancelar</button>
                     </div>
                   </div>
                 </div>
