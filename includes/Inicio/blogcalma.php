@@ -15,11 +15,10 @@
          </div>
          <div class="card-body px-0">
            <h5>
-             <a href="javascript:;" class="text-dark font-weight-bold">Entrada 1</a>
+             <a href="javascript:;" class="text-dark font-weight-bold">DISFRUTA MSN KIDS </a>
            </h5>
            <p>
-             ESTOY ESCRIBIENDO ACA 123 Deivy
-             renting an Airbnb. That’s the idea behind Rover ...
+              Messenger kids es una app gratuita de videollamadas y mensajes para smartphones y tabletas. Los padres controlan la lista de contactos y los niños controlan la diversión.
            </p>
            <a href="javascript:;" class="text-primary icon-move-right">Saber mas
              <i class="fas fa-arrow-right text-sm"></i>
@@ -36,11 +35,10 @@
          </div>
          <div class="card-body px-0">
            <h5>
-             <a href="javascript:;" class="text-dark font-weight-bold">Entrada 2</a>
+             <a href="javascript:;" class="text-dark font-weight-bold">CENTRO DE SEGURIDAD CONTRA LA VIOLENCIA EN FACEBOOK</a>
            </h5>
            <p>
-             If you’ve ever wanted to train a machine learning model
-             and integrate it with IFTTT, you now can with ...
+              Las personas acuden a Facebook para compartir sus historias, ver el mundo a través de los ojos de los demás y conectarse con amigos y familiares. Su misión consiste en dar a las personas la posibilidad de compartir y hacer que el mundo sea un lugar más abierto y conectado.
            </p>
            <a href="javascript:;" class="text-primary icon-move-right">Saber mas
              <i class="fas fa-arrow-right text-sm"></i>
@@ -57,11 +55,10 @@
          </div>
          <div class="card-body px-0">
            <h5>
-             <a href="javascript:;" class="text-dark font-weight-bold">Entrada 3</a>
+             <a href="javascript:;" class="text-dark font-weight-bold">RECURSOS FACEBOOK</a>
            </h5>
            <p>
-             Venture investment in U.S. startups rose sequentially in
-             the second quarter of 2017
+              Fundación Calma forma parte del Centro de Seguridad de Facebook contra la violencia.
            </p>
            <a href="javascript:;" class="text-primary icon-move-right">Saber mas
              <i class="fas fa-arrow-right text-sm"></i>
@@ -78,11 +75,10 @@
          </div>
          <div class="card-body px-0">
            <h5>
-             <a href="javascript:;" class="text-dark font-weight-bold">Entrada 4</a>
+             <a href="javascript:;" class="text-dark font-weight-bold">UNGLOBAL COMPACT</a>
            </h5>
            <p>
-             Venture investment in U.S. startups rose sequentially in
-             the second quarter of 2017
+              El Pacto Mundial de Naciones Unidas (Global Compact) es una iniciativa internacional que promueve implementar Diez Principios universalmente aceptados. Con más de 12.500 entidades adheridas en más de 160 países, es la mayor iniciativa de responsabilidad social empresarial en el mundo.
            </p>
            <a href="javascript:;" class="text-primary icon-move-right">Saber mas
              <i class="fas fa-arrow-right text-sm"></i>

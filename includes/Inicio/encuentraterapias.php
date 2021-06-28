@@ -33,7 +33,7 @@
               <div class="card-body">
                 <h6 class="mb-0">TERAPIA PARA JOVENES</h6>
                 <h6 class="text-primary">Dr. Diaz</h6>
-                <p class="mb-0">Artist is a term applied to a person who engages in an activity deemed to be an art.</p>
+                <p class="mb-0">La terapia psicológica ayuda al adolescente a expresarse de lo que está viviendo, pensando y sintiendo, a comprenderse mejor y a conocerse.</p>
               </div>
             </div>
           </div>
@@ -53,7 +53,7 @@
               <div class="card-body">
                 <h6 class="mb-0">TERAPIA PARA PAREJAS</h6>
                 <h6 class="text-primary">Dra. Mendez</h6>
-                <p>Artist is a term applied to a person who engages in an activity deemed to be an art.</p>
+                <p>Es el tratamiento clínico psicológico que se brinda a ambos miembros de una relación sentimental.</p>
               </div>
             </div>
           </div>
@@ -73,9 +73,9 @@
             </div>
             <div class="col-lg-8 col-md-6 col-12 ps-lg-0 my-auto">
               <div class="card-body">
-                <h6 class="mb-0">TERAPIA PARA A.</h6>
+                <h6 class="mb-0">TERAPIA PARA NIÑOS.</h6>
                 <h6 class="text-primary">Dr. Villanueva</h6>
-                <p>Artist is a term applied to a person who engages in an activity deemed to be an art.</p>
+                <p>La terapia conductual es un tratamiento eficaz, que puede mejorar el comportamiento, el autocontrol y la autoestima del niño.</p>
               </div>
             </div>
           </div>
@@ -93,9 +93,9 @@
             </div>
             <div class="col-lg-8 col-md-6 col-12 ps-lg-0 my-auto">
               <div class="card-body">
-                <h6 class="mb-0">TERAPIA PARA B.</h6>
+                <h6 class="mb-0">TERAPIA PARA ADULTOS.</h6>
                 <h6 class="text-primary">Dra. Vargas</h6>
-                <p>Artist is a term applied to a person who engages in an activity deemed to be an art.</p>
+                <p>La psicoterapia para adultos es un proceso que se establece entre el psicólogo y su pacientes.</p>
               </div>
             </div>
           </div>
