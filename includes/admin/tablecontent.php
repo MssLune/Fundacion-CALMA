@@ -75,33 +75,33 @@
                                     $pdo = Database::connect();
                                     if($_SESSION['privilegio'] == 3){
                                         //Usuario
-                                        $sql="SELECT c.consulta_id, c.codigoMedico, c.codigoUser, c.estado_consulta, c.especialidad, c.fecha_consulta, c.hora_consulta, c.link_medico, c.telefono_consultaMedico, c.diagnostico_medico, m.cod_medico, m.usuario_cod, u.id_usuario, u.nombres, u.apellido_pat, u.apellido_mat, u.correo_user, ec.id_estadoConsulta, ec.nombre_estadoConsulta, esp.especialidad_id, esp.nombre_especialidad, (SELECT u.nombres FROM consulta c INNER JOIN medicos m ON c.codigoMedico = m.cod_medico INNER JOIN usuarios u ON u.id_usuario = m.usuario_cod WHERE c.codigoMedico = m.cod_medico AND u.privilegio = 2) as 'nombre_medico', (SELECT u.apellido_pat FROM consulta c INNER JOIN medicos m ON c.codigoMedico = m.cod_medico INNER JOIN usuarios u ON u.id_usuario = m.usuario_cod WHERE c.codigoMedico = m.cod_medico AND u.privilegio = 2) as 'paterno', (SELECT u.apellido_mat FROM consulta c INNER JOIN medicos m ON c.codigoMedico = m.cod_medico INNER JOIN usuarios u ON u.id_usuario = m.usuario_cod WHERE c.codigoMedico = m.cod_medico AND u.privilegio = 2) as 'materno', (SELECT u.correo_user FROM consulta c INNER JOIN medicos m ON c.codigoMedico = m.cod_medico INNER JOIN usuarios u ON u.id_usuario = m.usuario_cod WHERE c.codigoMedico = m.cod_medico AND u.privilegio = 2) as 'email_medico' FROM consulta c INNER JOIN medicos m ON c.codigoMedico = m.cod_medico INNER JOIN usuarios u ON c.codigoUser = u.id_usuario INNER JOIN estado_consulta ec ON c.estado_consulta = ec.id_estadoConsulta INNER JOIN especialidades esp ON c.especialidad = esp.especialidad_id WHERE c.codigoUser = '".$_SESSION['codUsuario']."'";
+                                        $sql="SELECT * FROM consulta c INNER JOIN medicos m ON c.codigoMedico = m.cod_medico INNER JOIN usuarios u ON c.codigoUser = u.id_usuario INNER JOIN estado_consulta ec ON c.estado_consulta = ec.id_estadoConsulta INNER JOIN especialidades esp ON c.especialidad = esp.especialidad_id WHERE c.codigoUser = '".$_SESSION['codUsuario']."'";
 
                                         foreach ($pdo->query($sql) as $row){
-                                            if($row['link_medico'] == ''){
+                                            if($row['link_medico'] == '' || $row['link_medico'] == NULL){
                                                 $rowLinkMedico = 'SIN LINK DISPONIBLE';
                                             }else{
                                                 $rowLinkMedico = $row['link_medico'];
                                             }
     
-                                            if($row['diagnostico_medico'] == ''){
+                                            if($row['diagnostico_medico'] == '' || $row['diagnostico_medico'] == NULL){
                                                 $rowDiagMedico = 'SIN RESULTADOS DISPONIBLES';
                                             }else{
                                                 $rowDiagMedico = $row['diagnostico_medico'];
                                             }
                                             echo '<tr>';
                                             echo '<td>'. $row['nombre_estadoConsulta'] .'</td>
-                                            <td>'. $row['nombre_medico'].' '. $row['paterno'].' '. $row['materno'] .'</td>
+                                            <td>'. $row['nombre_med'].' '. $row['ap_pat_med'].' '. $row['ap_mat_med'] .'</td>
                                             <td>'. $row['nombre_especialidad'] .'</td>
                                             <td>'. $row['fecha_consulta'] .'</td>
                                             <td>'. $row['hora_consulta'] .'</td>
                                             <td>'. $rowLinkMedico .'</td>
-                                            <td>'. $row['email_medico'] .'</td>
+                                            <td>'. $row['email_med'] .'</td>
                                             <td>'. $row['telefono_consultaMedico'] .'</td>
                                             <td>'. $rowDiagMedico .'</td>
                                             <td>
                                                 <center>
-                                                    <a class="btn btn-warning" id="reprog_user" href="#" data-toggle="modal" data-target="#modalUser" onclick="reprogConsultaUser('."'".$row["codigoUser"]."'".'); editconsultaUser(false);" style="font-size: 30px; padding: 20px;" title="Reprogramar">
+                                                    <a class="btn btn-warning" id="reprog_user" href="#" data-toggle="modal" data-target="#modalUser" onclick="reprogConsultaUser('."'".$row["codigoUser"]."'". ','."'".$row["consulta_id"]."'".'); editconsultaUser(false);" style="font-size: 30px; padding: 20px;" title="Reprogramar">
                                                 <i class="far fa-edit"></i>
                                             </a>
                                                 </center>
@@ -119,33 +119,33 @@
 
                                     }else if($_SESSION['privilegio'] == 2){
                                         //Psicólogo
-                                        $sql="SELECT c.consulta_id, c.codigoMedico, c.codigoUser, c.estado_consulta, c.especialidad, c.fecha_consulta, c.hora_consulta, c.link_medico, c.diagnostico_medico, c.detalle_diagnostico, c.proxSesionRecomendada, c.apuntes_medico, m.cod_medico, m.usuario_cod, u.id_usuario, u.nombres, u.apellido_pat, u.apellido_mat, u.correo_user, ec.id_estadoConsulta, ec.nombre_estadoConsulta, esp.especialidad_id, esp.nombre_especialidad, (SELECT u.nombres FROM consulta c INNER JOIN usuarios u ON u.id_usuario = c.codigoUser WHERE u.id_usuario = c.codigoUser AND u.privilegio = 3) as 'nombre_paciente', (SELECT u.apellido_pat FROM consulta c INNER JOIN usuarios u ON u.id_usuario = c.codigoUser WHERE u.id_usuario = c.codigoUser AND u.privilegio = 3) as 'paterno', (SELECT u.apellido_mat FROM consulta c INNER JOIN usuarios u ON u.id_usuario = c.codigoUser WHERE u.id_usuario = c.codigoUser AND u.privilegio = 3) as 'materno', (SELECT u.correo_user FROM consulta c INNER JOIN usuarios u ON u.id_usuario = c.codigoUser WHERE u.id_usuario = c.codigoUser AND u.privilegio = 3) as 'email_paciente', (SELECT u.telefono FROM consulta c INNER JOIN usuarios u ON u.id_usuario = c.codigoUser WHERE u.id_usuario = c.codigoUser AND u.privilegio = 3) as 'telf_paciente', (SELECT u.id_usuario FROM consulta c INNER JOIN medicos m ON c.codigoMedico = m.cod_medico INNER JOIN usuarios u ON u.id_usuario = m.usuario_cod WHERE c.codigoMedico = m.cod_medico AND u.privilegio = 2) as 'codigoUserMed' FROM consulta c INNER JOIN medicos m ON c.codigoMedico = m.cod_medico INNER JOIN usuarios u ON m.usuario_cod = u.id_usuario INNER JOIN estado_consulta ec ON c.estado_consulta = ec.id_estadoConsulta INNER JOIN especialidades esp ON c.especialidad = esp.especialidad_id WHERE u.id_usuario = '".$_SESSION['codUsuario']."'";
+                                        $sql="SELECT * FROM consulta c INNER JOIN medicos m ON c.codigoMedico = m.cod_medico INNER JOIN usuarios u ON m.usuario_cod = u.id_usuario INNER JOIN estado_consulta ec ON c.estado_consulta = ec.id_estadoConsulta INNER JOIN especialidades esp ON c.especialidad = esp.especialidad_id WHERE u.id_usuario = '".$_SESSION['codUsuario']."'";
 
                                         foreach ($pdo->query($sql) as $row){
-                                            if($row['link_medico'] == ''){
+                                            if($row['link_medico'] == '' || $row['link_medico'] == NULL){
                                                 $rowLinkMedico = 'SIN LINK DISPONIBLE';
                                             }else{
                                                 $rowLinkMedico = $row['link_medico'];
                                             }
     
-                                            if($row['diagnostico_medico'] == ''){
+                                            if($row['diagnostico_medico'] == '' || $row['diagnostico_medico'] == NULL){
                                                 $rowDiagMedico = 'SIN RESULTADOS DISPONIBLES';
                                             }else{
                                                 $rowDiagMedico = $row['diagnostico_medico'];
                                             }
                                             echo '<tr>';
                                             echo '<td>'. $row['nombre_estadoConsulta'] .'</td>
-                                            <td>'. $row['nombre_paciente'].' '. $row['paterno'].' '. $row['materno'] .'</td>
+                                            <td>'. $row['nombre_pcte'].' '. $row['ap_pat_pcte'].' '. $row['ap_mat_pcte'] .'</td>
                                             <td>'. $row['nombre_especialidad'] .'</td>
                                             <td>'. $row['fecha_consulta'] .'</td>
                                             <td>'. $row['hora_consulta'] .'</td>
                                             <td>'. $rowLinkMedico .'</td>
-                                            <td>'. $row['email_paciente'] .'</td>
-                                            <td>'. $row['telf_paciente'] .'</td>
+                                            <td>'. $row['email_pcte'] .'</td>
+                                            <td>'. $row['telf_pcte'] .'</td>
                                             <td>'. $rowDiagMedico .'</td>
                                             <td>
                                                 <center>
-                                                    <a class="btn btn-warning" id="reprog_medico" href="#" data-toggle="modal" data-target="#modalMedico" onclick="reprogConsultaMed('."'".$row["codigoUserMed"]."'".'); editconsultaMed(false);" style="font-size: 10px; padding: 10px;" title="Reprogramar">
+                                                    <a class="btn btn-warning" id="reprog_medico" href="#" data-toggle="modal" data-target="#modalMedico" onclick="reprogConsultaMed('."'".$row["idUser_med"]."'". ','."'".$row["consulta_id"]."'".'); editconsultaMed(false);" style="font-size: 10px; padding: 10px;" title="Reprogramar">
                                                         <i class="far fa-edit"></i>
                                                     </a>
                                                 </center>

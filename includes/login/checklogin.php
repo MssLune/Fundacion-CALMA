@@ -34,6 +34,9 @@ $passwordHash = $dato['pass'];
 if ($dato['actividad'] == 1 && password_verify($password_sinHash, $passwordHash) ===true) {
     $_SESSION['passSinHash'] = $password_sinHash;
     $_SESSION['nombres'] = $dato['nombres']." ".$dato['apellido_pat']." ".$dato['apellido_mat'];
+    $_SESSION['nombres_nom'] = $dato['nombres'];
+    $_SESSION['nombres_pat'] = $dato['apellido_pat'];
+    $_SESSION['nombres_mat'] = $dato['apellido_mat'];
     $_SESSION['privilegio'] = $dato['privilegio'];
     $_SESSION['username'] = $dato['correo_user'];
     $_SESSION['codUsuario'] = $dato['id_usuario'];

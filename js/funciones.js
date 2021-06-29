@@ -140,11 +140,11 @@ function registrar_nuevo_usuario(){
 	});
 }
 
-// ---- FUNCIÓN PARA TABLA CONSULTAS -------
+// ---- FUNCIÓN PARA TABLA MIS CONSULTAS -------
 
  // --- Función para consultas Médico
   //mostrar info en modal
- function reprogConsultaMed(y){
+ function reprogConsultaMed(x, y){
   document.getElementById("codigo_medConsulta").value="";
   document.getElementById("id_consulta_med").value="";
   document.getElementById("status_medConsulta").value="";
@@ -161,7 +161,10 @@ function registrar_nuevo_usuario(){
   $.ajax({
       url: "includes/admin/crud_consultas.php",
       type: "POST",
-      data: "cod_medicoConsulta=" + y,
+      data:{
+        cod_consultaMedico:x,
+        codigo_consultaId:y,
+      },
       dataType: 'json',
       cache: false,
       success: function(arr){
@@ -277,7 +280,7 @@ function actualizarConsultaMedico(){
 
   //--Funciones consulta User--
 //mostrar info en modal
-function reprogConsultaUser(x){
+function reprogConsultaUser(x, y){
   document.getElementById("id_User").value="";
   document.getElementById("id_ConsultaUser").value="";
   document.getElementById("id_tableMedico").value="";
@@ -294,7 +297,10 @@ function reprogConsultaUser(x){
   $.ajax({
       url: "includes/admin/crud_consultas.php",
       type: "POST",
-      data: "cod_consultaUsuario=" + x,
+      data:{
+        cod_consultaUsuario:x,
+        cod_consultaId:y,
+      },
       dataType: 'json',
       cache: false,
       success: function(arr){
@@ -393,5 +399,51 @@ function actualizarConsultaUser(){
             if (dismiss === 'cancel') {
         }
     })
+}
+
+ // --- FUNCIÓN PARA NUEVA CONSULTA ----
+function newConsulta(){
+  var idUser_newConsulta = document.getElementById('idUser_newConsulta').value;
+  var esp_newConsulta = document.getElementById('newConsulta_especialidad').value;
+  var medico_newConsulta = document.getElementById('newConsulta_medico').value;
+  var fecha_newConsulta = document.getElementById('newConsulta_fecha').value;
+  var hora_newConsulta = document.getElementById('newConsulta_hora').value;
+
+  swal({
+    title: '¿SEGURO QUE DESEA PROGRAMAR UNA NUEVA CONSULTA?',
+    text: "Se agendará una nueva Consulta con los datos ingresados.",
+    type: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Sí, Agendar',
+    cancelButtonText: 'No, Cancelar !'
+  }).then(function () {
+              $.ajax({
+              url: "includes/admin/crud_consultas.php",
+              type: "POST",
+              dataType:'json',
+              data:{
+                  newCons_idUser:idUser_newConsulta,
+                  newCons_esp:esp_newConsulta,
+                  newCons_medico:medico_newConsulta,
+                  newCons_fecha:fecha_newConsulta,
+                  newCons_hora:hora_newConsulta,
+              },
+              cache: false,
+              success: function(arr){
+                  swal({
+                      title: 'Consulta Agendada',
+                      text: 'Se ha agendado su Consulta satisfactoriamente.',
+                      type: 'success',
+                  }).then(function(){ 
+                      window.location.href = 'tableConsultas.php'
+                      });
+              }
+          })
+      }, function (dismiss) {
+          if (dismiss === 'cancel') {
+      }
+  })
 }
 

@@ -143,12 +143,22 @@ INSERT INTO ramas VALUES ('6','6', 'PSICOLOGÍA FAMILIAR');
 CREATE TABLE consulta (
 	consulta_id int(5) auto_increment primary key,
 	codigoMedico int(10) not NULL,
+	idUser_med int(10) not NULL,
 	codigoUser int(10) not NULL,
+	nombre_pcte varchar(250) not null,
+	ap_pat_pcte varchar(100) not null,
+	ap_mat_pcte varchar(100) not null,
+	email_pcte varchar(100) not null,
+	telf_pcte varchar(50) not null,
 	estado_consulta int(10) not NULL, 
 	especialidad int(20) not NULL, 
 	fecha_consulta date, 
 	hora_consulta time,
 	link_medico varchar(250),
+	nombre_med varchar(250) not null,
+	ap_pat_med varchar(100) not null,
+	ap_mat_med varchar(100) not null,
+	email_med varchar(100) not null,
 	telefono_consultaMedico varchar(50),
 	diagnostico_medico text,
 	detalle_diagnostico text,
@@ -157,7 +167,7 @@ CREATE TABLE consulta (
 	fecha_registroConsulta datetime not null
 );
 
-INSERT INTO consulta VALUES ('1', '1', '2', 1,5,'2021-06-15','09:00:00','','999879841','','','','',now());
+INSERT INTO consulta VALUES ('1', '1','3', '2', 'GERARDO', 'GODOY', 'COLLAO','ggodoy@gmail.com', '987516987',1,5,'2021-06-15','09:00:00','','ALEJANDRO MATÍAS', 'MANRIQUEZ', 'ESPINOZA','am@gmail.com','999879841','','','','',now());
 
 
 CREATE TABLE estado_consulta (
