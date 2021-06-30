@@ -25,7 +25,7 @@
             <div class="col-lg-4 col-md-6 col-12 pe-lg-0">
               <a href="javascript:;">
                 <div class="p-3 pe-0">
-                  <img class="w-100 border-radius-md" src="./assets/img/marie.jpg">
+                  <img class="w-100 border-radius-md" src="./assets/img/marie.png">
                 </div>
               </a>
             </div>
@@ -45,7 +45,7 @@
             <div class="col-lg-4 col-md-6 col-12 pe-lg-0">
               <a href="javascript:;">
                 <div class="p-3 pe-0">
-                  <img class="w-100 border-radius-md" src="./assets/img/team-2.jpg">
+                  <img class="w-100 border-radius-md" src="./assets/img/team-2.png">
                 </div>
               </a>
             </div>
@@ -67,7 +67,7 @@
             <div class="col-lg-4 col-md-6 col-12 pe-lg-0">
               <a href="javascript:;">
                 <div class="p-3 pe-0">
-                  <img class="w-100 border-radius-md" src="./assets/img/team-3.jpg">
+                  <img class="w-100 border-radius-md" src="./assets/img/team-3.png">
                 </div>
               </a>
             </div>
@@ -87,7 +87,7 @@
             <div class="col-lg-4 col-md-6 col-12 pe-lg-0">
               <a href="javascript:;">
                 <div class="p-3 pe-0">
-                  <img class="w-100 border-radius-md" src="./assets/img/kal-visuals-square.jpg">
+                  <img class="w-100 border-radius-md" src="./assets/img/kal-visuals-square.png">
                 </div>
               </a>
             </div>
