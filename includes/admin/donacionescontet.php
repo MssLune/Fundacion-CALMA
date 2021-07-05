@@ -92,7 +92,7 @@
                     <li><center><img src="img/check.png">Descuento en Mamá Millennials</center></li>
                   </ul>
                   <td>
-                    <button type="button" class="btn btn-lg btn-block btn-outline-primary">Solicita Ya</button>
+                  <button type="button" class="btn btn-lg btn-block btn-primary">Solicita Ya</button>
                   </td>
                 </div>
               </div>
