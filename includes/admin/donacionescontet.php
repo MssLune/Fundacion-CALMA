@@ -71,6 +71,8 @@
 
             <!-- inicia card -->
 
+
+
             <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
               <div class="card">
@@ -80,16 +82,17 @@
 
               </div>
                 <div class="card-body">
+                <ul>
+                    <li><center><h1 class=" pricing-card-title">S/ 40 <small class="text-muted">/ mes</small></h1></center></li>
+                    <br/>
+                  </ul>
                   <ul>
-                    <li><center><h1 class=" pricing-card-title">S/ 40 <small class="text-muted">/ mes</small></h1></center></li><br/>
-                    </ul>
-                  <ul class="list-unstyled mt-3 mb-4">
                     <li><center>Este servicio se brinda por: </center> </li>
                     <li><center><img src="img/wsp1.png"></center></li>
-                    <li><center><img src="img/check.png">4 Consejerias por Mes</center></li>
-                    <li><center><img src="img/check.png">Informe Bimensual y envio de contenido </center> </li>
-                    <li><center><img src="img/check.png">Descuento en charlas, talleres y/o conferencias ONLINE. </center></li>
-                    <li><center><img src="img/check.png">Descuento en Mamá Millennials</center></li>
+                    <li><img src="img/check.png">4 Consejerias por Mes</li>
+                    <li><img src="img/check.png">Informe Bimensual y envio de contenido</li>
+                    <li><img src="img/check.png">Descuento en charlas, talleres y/o conferencias ONLINE.</li>
+                    <li><img src="img/check.png">Descuento en Mamá Millennials</li>
                   </ul>
                   <td>
                   <button type="button" class="btn btn-lg btn-block btn-primary">Solicita Ya</button>
@@ -115,16 +118,16 @@
                     <li><center><h1 class=" pricing-card-title">S/ 80 <small class="text-muted">/ mes</small></h1></center></li>
                     <br/>
                   </ul>
-                  <ul class="list-unstyled mt-3 mb-4">
+                  <ul>
                     <li><center>Este servicio se brinda por: </center> </li>
                     <li><center><img src="img/wsp1.png"></center></li>
-                    <li><center><img src="img/check.png">6 Consejerias o Terapias por Mes</center></li>
-                    <li><center><img src="img/check.png">Informe Bimensual y envio de contenido </center> </li>
-                    <li><center><img src="img/check.png">Programa Psico Nutrición </center> </li>
-                    <li><center><img src="img/check.png">VIP PASS Free a eventos ONLINE </center> </li>
-                    <li><center><img src="img/check.png">Descuento en Mamá Millennials y menbresia en la Plataforma de Psicologos</center></li>
-                    <li><center><img src="img/check.png">Reconocimiento por cumpleaños </center> </li>
-                    <li><center><img src="img/check.png">Vales de descuento con empresas aliadas a la Fundación Calma.</center> </li>
+                    <li><img src="img/check.png">6 Consejerias o Terapias por Mes</li>
+                    <li><img src="img/check.png">Informe Bimensual y envio de contenido  </li>
+                    <li><img src="img/check.png">Programa Psico Nutrición  </li>
+                    <li><img src="img/check.png">VIP PASS Free a eventos ONLINE </li>
+                    <li><img src="img/check.png">Descuento en Mamá Millennials y menbresia en la Plataforma de Psicologos</li>
+                    <li><img src="img/check.png">Reconocimiento por cumpleaños</li>
+                    <li><img src="img/check.png">Vales de descuento con empresas aliadas a la Fundación Calma.</li>
                   </ul>
                   <td>
                     <button type="button"class="btn btn-lg btn-block btn-primary">Solicita Ya</button>
@@ -149,16 +152,16 @@
                     <li><center><h1 class=" pricing-card-title">S/ 150 <small class="text-muted">/ mes</small></h1></center></li>
                     <br/>
                   </ul>
-                  <ul class="list-unstyled mt-3 mb-4">
+                  <ul>
                     <li><center>Este servicio se brinda por: </center> </li>
                     <li><center><img src="img/wsp1.png"></center> </li>
-                    <li><center><img src="img/check.png">Consejerias o Terapias ilimitadas por Mes</center></li>
-                    <li><center><img src="img/check.png">Informe quincenal, envío de contenido por correo o WhatsApp.</center></li>
-                    <li><center><img src="img/check.png">Programa Psico Nutrición </center> </li>
-                    <li><center><img src="img/check.png">VIP PASS Free a eventos ONLINE y OFFLINE </center> </li>
-                    <li><center><img src="img/check.png">Descuento en Mamá Millennials y menbresia en la Plataforma de Psicologos</center></li>
-                    <li><center><img src="img/check.png">Reconocimiento por cumpleaños </center> </li>
-                    <li><center><img src="img/check.png">Vales de descuento con empresas aliadas a la Fundación Calma. </center> </li>
+                    <li><img src="img/check.png">Consejerias o Terapias ilimitadas por Mes</li>
+                    <li><img src="img/check.png">Informe quincenal, envío de contenido por correo o WhatsApp.</li>
+                    <li><img src="img/check.png">Programa Psico Nutrición</li>
+                    <li><img src="img/check.png">VIP PASS Free a eventos ONLINE y OFFLINE</li>
+                    <li><img src="img/check.png">Descuento en Mamá Millennials y menbresia en la Plataforma de Psicologos</li>
+                    <li><img src="img/check.png">Reconocimiento por cumpleaños</li>
+                    <li><img src="img/check.png">Vales de descuento con empresas aliadas a la Fundación Calma.</li>
                   </ul>
                   <td>
                     <button type="button" class="btn btn-lg btn-block btn-primary">Solicita Ya</button>
