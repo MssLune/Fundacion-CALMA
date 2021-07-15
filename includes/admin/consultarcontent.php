@@ -3,7 +3,14 @@
 ?>
 <script src="js/funciones.js"></script>
 
-<body class="hold-transition sidebar-mini layout-fixed">
+<!-- abrir modal de horarios -->
+<script type="text/javascript">
+     function modalOpenHorario(){
+          $('#modalHorarios').modal({backdrop: 'static', keyboard: false});
+     }
+</script>
+
+<body class="hold-transition sidebar-mini layout-fixed" onload="setTimeout(modalOpenHorario(), 5000);">
      <!-- inicia wrapper -->
      <div class="wrapper">
 
@@ -98,6 +105,8 @@
                                                        <input type="time" id="newConsulta_hora" name="newConsulta_hora" class="form-control" required>
                                                   </div>
 
+                                                  <br>
+
                                                   <div class="col-md-12 col-sm-12">
                                                        <button type="submit" id="newConsulta_programar" class="btn btn-primary" style="width: 100%;" onclick="newConsulta();">Programar consulta</button>                        
                                                   </div>
@@ -115,5 +124,71 @@
      </div>
      <!-- END wrapper -->
 </body>
+
+  <!-- INICIA MODAL HORARIOS -->
+<div class="modal fade" id="modalHorarios" style="overflow:hidden;">
+     <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
+          <div class="modal-content" style = "border: 3px solid rgba(133, 193, 233, 1); border-radius: 0.3rem;">
+               <div class="modal-header" style="background: rgba(133, 193, 233, 0.4);">
+                    <h5 class="modal-title">HORARIOS REFERENCIALES DE PSICÓLOGOS</h5>
+               </div>
+               <!-- contenido modal -->
+               <div class="modal-body">
+                    <table id="tableHorarios" class="table table-bordered table-striped">
+                         <thead>
+                              <tr>
+                                   <th scope="col"><center>HORA / DÍA</center></th>
+                                   <th scope="col"><center>Lunes</center></th>
+                                   <th scope="col"><center>Martes</center></th>
+                                   <th scope="col"><center>Miércoles</center></th>
+                                   <th scope="col"><center>Jueves</center></th>
+                                   <th scope="col"><center>Viernes</center></th>
+                                   <th scope="col"><center>Sábado</center></th>
+                                   <th scope="col"><center>Domingo</center></th>
+                              </tr>
+                         </thead>
+                         <tbody>
+                              <tr>
+                                   <th scope="row"><center>9 A.M <br>-<br> 10 A.M.</center></th>
+                                   <td><center>ALEJANDRO MANRÍQUEZ ESPINOZA</center></td>
+                                   <td><center>LORENA CAMPOS VERA</center></td>
+                                   <td><center>ALEJANDRO MANRÍQUEZ ESPINOZA</center></td>
+                                   <td><center></center></td>
+                                   <td><center>ALEJANDRO MANRÍQUEZ ESPINOZA <br><br> NAOMI CAMPBELL CLARK </center></td>
+                                   <td><center>NAOMI CAMPBELL CLARK</center></td>
+                                   <td><center>ALEJANDRO MANRÍQUEZ ESPINOZA</center></td>
+                              </tr>
+
+                              <tr>
+                                   <th scope="row"><center>10 A.M <br>-<br> 11 A.M.</center></th>
+                                   <td><center>LORENA CAMPOS VERA</center></td>
+                                   <td><center>LORENA CAMPOS VERA</center></td>
+                                   <td><center>NAOMI CAMPBELL CLARK</center></td>
+                                   <td><center></center></td>
+                                   <td><center>ALEJANDRO MANRÍQUEZ ESPINOZA <br><br> LORENA CAMPOS VERA </center></td>
+                                   <td><center>NAOMI CAMPBELL CLARK</center></td>
+                                   <td><center>LORENA CAMPOS VERA</center></td>
+                              </tr>
+
+                              <tr>
+                                   <th scope="row"><center>11 A.M <br>-<br> 12 P.M.</center></th>
+                                   <td><center>LORENA CAMPOS VERA</center></td>
+                                   <td><center>LORENA CAMPOS VERA</center></td>
+                                   <td><center>NAOMI CAMPBELL CLARK</center></td>
+                                   <td><center>NAOMI CAMPBELL CLARK</center></td>
+                                   <td><center>NAOMI CAMPBELL CLARK <br><br> LORENA CAMPOS VERA </center></td>
+                                   <td><center>NAOMI CAMPBELL CLARK</center></td>
+                                   <td><center>ALEJANDRO MANRÍQUEZ ESPINOZA</center></td>
+                              </tr>
+                         </tbody>
+                    </table>
+               </div>
+               <!-- fin contenido modal -->
+               <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+               </div>
+          </div>
+     </div>
+</div>
 
 </html>

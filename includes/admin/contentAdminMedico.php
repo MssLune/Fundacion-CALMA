@@ -37,7 +37,7 @@
                                 <!-- /.card-header -->
                                 <div class="card-body">
                                     <table id="tableAdminMedico" class="table table-bordered table-striped">
-                                        <a href="newMedico.php" data-toggle="modal" data-target="#newMedModal" class="btn btn-primary" style="width: 100%; margin-bottom: 2%;" >Nuevo  Psicólogo</a>
+                                        <a href="#" data-toggle="modal" data-target="#newMedModal" class="btn btn-primary" style="width: 100%; margin-bottom: 2%;" >Nuevo  Psicólogo</a>
                                         <thead>
                                             <tr>
                                                 <th><center>ID</center></th>
