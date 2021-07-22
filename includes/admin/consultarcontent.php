@@ -127,7 +127,7 @@
 
   <!-- INICIA MODAL HORARIOS -->
 <div class="modal fade" id="modalHorarios" style="overflow:hidden;">
-     <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
+     <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" style="max-width:80%">
           <div class="modal-content" style = "border: 3px solid rgba(133, 193, 233, 1); border-radius: 0.3rem;">
                <div class="modal-header" style="background: rgba(133, 193, 233, 0.4);">
                     <h5 class="modal-title">HORARIOS REFERENCIALES DE PSICÓLOGOS</h5>

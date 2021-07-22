@@ -170,5 +170,77 @@ $arr='';
 		unset($arr);
 
 		Database::disconnect();
+	}else if(isset($_POST['id_medUser_result'])){
+		//mostrar resultados - médico
+		$pdo = Database::connect();
+		$sql = "SELECT * FROM consulta c INNER JOIN medicos m ON c.codigoMedico = m.cod_medico INNER JOIN usuarios u ON m.usuario_cod = u.id_usuario INNER JOIN estado_consulta ec ON c.estado_consulta = ec.id_estadoConsulta WHERE u.id_usuario='".$_POST['id_medUser_result']."' AND c.consulta_id = '".$_POST['id_consulta_result']."'";
+
+	    $busqueda=$pdo->query($sql);
+	    $arrDatos=$busqueda->fetchAll(PDO::FETCH_ASSOC);
+
+		foreach ($arrDatos as $row) {
+			$arr = array(
+                $row['idUser_med'], //0
+                $row['codigoMedico'], //1
+                $row['codigoUser'], //2
+                $row['diagnostico_medico'], //3
+                $row['detalle_diagnostico'], //4
+                $row['proxSesionRecomendada'], //5
+                $row['apuntes_medico'], //6
+				$row['consulta_id'] //7
+            );
+		}
+
+		echo json_encode($arr);
+		unset($arr);
+        Database::disconnect();
+	}else if(isset($_POST['id_userConsulta'])){
+		// Actualizar resultados - Médico
+		$pdo = Database::connect();
+
+		$consultaId_result=$_POST['id_userConsulta'];
+		$userId_result=$_POST['usuarioId'];
+		$medicoID=$_POST['medicoId'];
+		$medUser_id=$_POST['idusuario_med'];
+		$diagnostico_result=$_POST['result_diag'];
+		$detail_result=$_POST['result_detail'];
+		$proxSes_result=$_POST['result_proxSesion'];
+		$apuntes_result=$_POST['result_apuntes'];
+
+		$sql="UPDATE consulta SET 
+		diagnostico_medico='$diagnostico_result',
+		detalle_diagnostico='$detail_result',
+		proxSesionRecomendada='$proxSes_result',
+		apuntes_medico='$apuntes_result'
+		WHERE consulta_id='$consultaId_result'";
+
+		$q = $pdo->prepare($sql);
+		$q->execute(array());
+
+		$arr='ResultadosConsultaUsuario_actualizado';
+
+		echo json_encode($arr);
+		unset($arr);
+
+		Database::disconnect();
+	}else if(isset($_POST['id_usuario_result_user'])){
+		//mostrar resultados - usuario
+		$pdo = Database::connect();
+		$sql = "SELECT * FROM consulta c INNER JOIN usuarios u ON c.codigoUser = u.id_usuario INNER JOIN estado_consulta ec ON c.estado_consulta = ec.id_estadoConsulta WHERE c.codigoUser='".$_POST['id_usuario_result_user']."' AND c.consulta_id = '".$_POST['consultId_result_user']."'";
+
+	    $busqueda=$pdo->query($sql);
+	    $arrDatos=$busqueda->fetchAll(PDO::FETCH_ASSOC);
+
+		foreach ($arrDatos as $row) {
+			$arr = array(
+                $row['diagnostico_medico'], //0
+                $row['detalle_diagnostico'], //1
+                $row['proxSesionRecomendada'] //2
+            );
+		}
+
+		echo json_encode($arr);
+		unset($arr);
+        Database::disconnect();
 	}
 ?>

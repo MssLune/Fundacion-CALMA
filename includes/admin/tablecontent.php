@@ -83,12 +83,7 @@
                                             }else{
                                                 $rowLinkMedico = $row['link_medico'];
                                             }
-    
-                                            if($row['diagnostico_medico'] == '' || $row['diagnostico_medico'] == NULL){
-                                                $rowDiagMedico = 'SIN RESULTADOS DISPONIBLES';
-                                            }else{
-                                                $rowDiagMedico = $row['diagnostico_medico'];
-                                            }
+
                                             echo '<tr>';
                                             echo '<td>'. $row['nombre_estadoConsulta'] .'</td>
                                             <td>'. $row['nombre_med'].' '. $row['ap_pat_med'].' '. $row['ap_mat_med'] .'</td>
@@ -98,7 +93,13 @@
                                             <td>'. $rowLinkMedico .'</td>
                                             <td>'. $row['email_med'] .'</td>
                                             <td>'. $row['telefono_consultaMedico'] .'</td>
-                                            <td>'. $rowDiagMedico .'</td>
+                                            <td>
+                                                <center>
+                                                    <a class="btn btn-default" id="results_verUser" href="#" data-toggle="modal" data-target="#modalResult_user" onclick="mostrarResultuser('."'".$row["codigoUser"]."'". ','."'".$row["consulta_id"]."'".');" style="font-size: 30px; padding: 20px;" title="Ver Mis Resultados">
+                                                        <i class="far fa-file"></i>
+                                                    </a>
+                                                </center>
+                                            </td>
                                             <td>
                                                 <center>
                                                     <a class="btn btn-warning" id="reprog_user" href="#" data-toggle="modal" data-target="#modalUser" onclick="reprogConsultaUser('."'".$row["codigoUser"]."'". ','."'".$row["consulta_id"]."'".'); editconsultaUser(false);" style="font-size: 30px; padding: 20px;" title="Reprogramar">
@@ -127,12 +128,6 @@
                                             }else{
                                                 $rowLinkMedico = $row['link_medico'];
                                             }
-    
-                                            if($row['diagnostico_medico'] == '' || $row['diagnostico_medico'] == NULL){
-                                                $rowDiagMedico = 'SIN RESULTADOS DISPONIBLES';
-                                            }else{
-                                                $rowDiagMedico = $row['diagnostico_medico'];
-                                            }
                                             echo '<tr>';
                                             echo '<td>'. $row['nombre_estadoConsulta'] .'</td>
                                             <td>'. $row['nombre_pcte'].' '. $row['ap_pat_pcte'].' '. $row['ap_mat_pcte'] .'</td>
@@ -142,7 +137,13 @@
                                             <td>'. $rowLinkMedico .'</td>
                                             <td>'. $row['email_pcte'] .'</td>
                                             <td>'. $row['telf_pcte'] .'</td>
-                                            <td>'. $rowDiagMedico .'</td>
+                                            <td>
+                                                <center>
+                                                    <a class="btn btn-default" id="results_verMed" href="#" data-toggle="modal" data-target="#modalResult_med" onclick="mostrarResultmed('."'".$row["idUser_med"]."'". ','."'".$row["consulta_id"]."'".');" style="font-size: 15px; padding: 8px;" title="Ver Resultados">
+                                                        <i class="far fa-file"></i>
+                                                    </a>
+                                                </center>
+                                            </td>
                                             <td>
                                                 <center>
                                                     <a class="btn btn-warning" id="reprog_medico" href="#" data-toggle="modal" data-target="#modalMedico" onclick="reprogConsultaMed('."'".$row["idUser_med"]."'". ','."'".$row["consulta_id"]."'".'); editconsultaMed(false);" style="font-size: 10px; padding: 10px;" title="Reprogramar">
@@ -324,4 +325,98 @@
     </div>
 </div>
     <!-- END MODAL USER -->
+
+    <!-- INICIA MODAL RESULT MEDICO -->
+<div class="modal fade" id="modalResult_med" data-backdrop="static" data-keyboard="false" style="overflow:hidden;">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+            <div class="modal-header" style="background: rgba(133, 193, 233, 0.4);">
+                <h5 class="modal-title">Resultados de Paciente</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <!-- contenido modal -->
+            <div class="modal-body" style="background: rgba(133, 193, 233, 0.2);">
+                <input type="hidden" name="id_user" id="id_user" value="">
+                <input type="hidden" name="id_medico" id="id_medico" value="">
+                <input type="hidden" name="id_userMedico" id="id_userMedico" value="">
+                <input type="hidden" name="id_consulta" id="id_consulta" value="">
+
+                <div class="mb-3">
+                    <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">Diagnóstico:</label> 
+                    <textarea rows="10" class="form-control input-md" name="diag_result" id="diag_result" readonly></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">Detalles:</label> 
+                    <textarea rows="10" class="form-control input-md" name="diagdetail_result" id="diagdetail_result" readonly></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">Próxima Sesión Recomendada:</label> 
+                    <textarea rows="10" class="form-control input-md" name="proxSesion_result" id="proxSesion_result" readonly></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">Notas Adicionales:</label> 
+                    <textarea rows="10" class="form-control input-md" name="apuntes_result" id="apuntes_result" readonly></textarea>
+                </div>
+                
+                <center>
+                    <button type="submit" class="btn btn-primary" onclick="editResultmed(false);" id= "edit_diag_med">Editar</button>
+                </center>
+                <center>
+                    <button type="submit" class="btn btn-primary d-none" id="guardar_result_med" onclick="actualizarResultMed('<?php $consult_id ?>');">Guardar</button>
+
+                    <button type="submit" id="cancelar_resultmed" class="btn btn-danger d-none" onclick="editResultmed(true);">Cancelar</button>
+                </center>
+            </div>
+            <!-- fin contenido modal -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- END MODAL RESULT MEDICO -->
+
+    <!-- INICIA MODAL RESULT USUARIO -->
+<div class="modal fade" id="modalResult_user" data-backdrop="static" data-keyboard="false" style="overflow:hidden;">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+            <div class="modal-header" style="background: rgba(133, 193, 233, 0.4);">
+                <h5 class="modal-title">Mis Resultados</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <!-- contenido modal -->
+            <div class="modal-body" style="background: rgba(133, 193, 233, 0.2);">
+                <div class="mb-3">
+                    <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">Diagnóstico:</label> 
+                    <textarea rows="10" class="form-control input-md" name="resultado_diag_user" id="resultado_diag_user" readonly></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">Detalles:</label> 
+                    <textarea rows="10" class="form-control input-md" name="resultado_detail_user" id="resultado_detail_user" readonly></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label class="col-lg-12 col-md-3 col-sm-3 col-12 control-label">Próxima Sesión Recomendada:</label> 
+                    <textarea rows="10" class="form-control input-md" name="resultado_proxSes_user" id="resultado_proxSes_user" readonly></textarea>
+                </div>
+            </div>
+            <!-- fin contenido modal -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- END MODAL RESULT USUARIO -->
+
 <!-- END MODALES -->
+
+<script src="js/resultadosClinica.js"></script>
