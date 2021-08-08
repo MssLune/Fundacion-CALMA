@@ -11,6 +11,7 @@ Durante todo el proceso del proyecto, se brinda las principales gracias a nuestr
 - Geraldine Jayo
 - Duany Lirio
 - Paris Aranda
+- Julissa Castillo
 
 Esta es una version de prueba.
 
