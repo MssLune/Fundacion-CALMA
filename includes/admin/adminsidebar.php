@@ -11,7 +11,7 @@
     <div class="sidebar" style="padding: 0px 23px">
       <!-- avatar -->
       <div class="avatarall">
-        <?php 
+        <?php
           if(isset($_SESSION['genero']) && ($_SESSION['genero'] == 1)){
             //masculino
             echo '
@@ -67,6 +67,13 @@
                   <p>Donaciones</p>
                 </a>
               </li>
+              <li class="nav-header mg6">USUARIO EXTERNO</li>
+                <li class="nav-item">
+                  <a href="usuarioex.php" class="nav-link active">
+                    <i class="nav-icon fas fa-user" style="color:#9EC3C1"></i>
+                    <p>Usuario Externo</p>
+                  </a>
+                </li>
             <li class="nav-header mg6">SALIR</li>
               <li class="nav-item">
                 <a href="includes/login/logout.php" class="nav-link close-session">
@@ -124,7 +131,7 @@
                   <i class="far fa-check-circle nav-icon"></i>
                   <p>Consultas Aceptadas</p>
                 </a>
-              </li> 
+              </li>
               ';
               echo sidebarAll();
             }else if(isset($_SESSION['Logueado']) && isset($_SESSION['privilegio']) && ($_SESSION['Logueado'] === true) && ($_SESSION['privilegio'] == 1)){
@@ -134,7 +141,7 @@
               <li class="nav-item menu-open">
                 <a href="#" class="nav-link active">
                 <i class="fas fa-user-cog nav-icon" style="color:#dc7057"></i>
-                
+
                   <p>
                     Administración
                     <i class="right fas fa-angle-left"></i>
@@ -143,25 +150,25 @@
                 <ul class="nav nav-treeview">
                   <li class="nav-item pd25-l mg3" >
                     <a href="administrarUsers.php" class="nav-link">
-                      
+
                       <p class="p-14">Administrar Usuarios</p>
                     </a>
                   </li>
                   <li class="nav-item pd25-l mg3">
                     <a href="administrarMedicos.php" class="nav-link">
-                      
+
                       <p class="p-14 ">Administrar Psicólogos</p>
                     </a>
                   </li>
                   <li class="nav-item pd25-l mg3">
                     <a href="#" class="nav-link">
-                      
+
                       <p class="p-14">Administrar Calma Informativa</p>
                     </a>
                   </li>
                   <li class="nav-item pd25-l mg3">
                     <a href="#" class="nav-link">
-                      
+
                       <p class="p-14">Administrar Calma Cursos</p>
                     </a>
                   </li>

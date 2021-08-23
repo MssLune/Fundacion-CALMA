@@ -12,8 +12,7 @@
   require_once 'database/database.php';
 ?>
 <body>
-    <div class="wrapper">
-
+  <div class="wrapper">
 
       <?php include_once 'includes/admin/preloaderadmin.php'; ?>
 
@@ -21,27 +20,49 @@
 
       <?php include_once 'includes/admin/adminsidebar.php'; ?>
 
-      <div class="contenedor">
-        <div class="contenedor-contenido">
-          <div class="col-sm-6">
-                <h1>Mis consultas</h1>
-            </div>
-            <div class="table1">
-              <table>
-                <thead>
-                  <tr>
-                    <th> Nombres </th>
-                    <th> Apellidos </th>
-                    <th> Correo </th>
-                    <th> Distrito </th>
-                  </tr>
-                </thead>
-              </table>
-            </Div>
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+          <!-- Content Header (Page header) -->
+          <section class="content-header">
+              <div class="container-fluid">
+                  <div class="row mb-2">
+                      <?php
+                          if($_SESSION['privilegio'] == 3){
+                              //user
+                              echo '
+                                  <div class="col-sm-6">
+                                      <h1>Usuarios Externos</h1>
+                                  </div>
+                                  <div class="col-sm-6">
+                                      <ol class="breadcrumb float-sm-right">
+                                          <li class="breadcrumb-item"><a href="consultoriocalma.php">Inicio</a></li>
+                                          <li class="breadcrumb-item active">Usuarios Externos</li>
+                                      </ol>
+                                  </div>
+                              ';
+                          }else if($_SESSION['privilegio'] == 2){
+                              //psicólogo
+                              echo '
+                                  <div class="col-sm-6">
+                                      <h1>Consultas Aceptadas</h1>
+                                  </div>
+                                  <div class="col-sm-6">
+                                      <ol class="breadcrumb float-sm-right">
+                                          <li class="breadcrumb-item"><a href="consultoriocalma.php">Inicio</a></li>
+                                          <li class="breadcrumb-item active">Consultas Aceptadas</li>
+                                      </ol>
+                                  </div>
+                              ';
+                          }else{
 
-    </div>
-    </div>
+                          }
+                      ?>
+                  </div>
+              </div>
+          </section>
+
+          <!-- contenido de data table -->
+
+          <?php include_once 'includes/admin/usuarioextable.php'; ?>
+      </div>
   </div>
-
-  </body>
-</html>
