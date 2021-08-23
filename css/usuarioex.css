@@ -1,0 +1,17 @@
+body{
+
+}
+.table1{
+  margin: 150PX AUTO;
+  width: 600PX;
+}
+TABLE{
+  background-color: white;
+  text-align: left;
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td{
+  border: solid 1px black;
+  padding: 0;
+}
