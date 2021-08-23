@@ -9,7 +9,7 @@
                 <div class="card">
                     <div class="card-header">
                         <?php 
-                            if($_SESSION['privilegio'] == 3){
+                            if($_SESSION['privilegio'] == 3 || $_SESSION['privilegio'] == 4){
                                 //user
                                 echo '
                                     <h3 class="card-title h3-tablecontent">Mis consultas</h3>
@@ -29,7 +29,7 @@
                         <table id="example1" class="table table-bordered table-striped">
                             <thead>
                                 <?php 
-                                    if($_SESSION['privilegio'] == 3){
+                                    if($_SESSION['privilegio'] == 3 || $_SESSION['privilegio'] == 4){
                                         //usuario
                                         $theadUser = '
                                             <tr>
@@ -73,7 +73,7 @@
                             <tbody>
                                 <?php 
                                     $pdo = Database::connect();
-                                    if($_SESSION['privilegio'] == 3){
+                                    if($_SESSION['privilegio'] == 3 || $_SESSION['privilegio'] == 4){
                                         //Usuario
                                         $sql="SELECT * FROM consulta c INNER JOIN medicos m ON c.codigoMedico = m.cod_medico INNER JOIN usuarios u ON c.codigoUser = u.id_usuario INNER JOIN estado_consulta ec ON c.estado_consulta = ec.id_estadoConsulta INNER JOIN especialidades esp ON c.especialidad = esp.especialidad_id WHERE c.codigoUser = '".$_SESSION['codUsuario']."'";
 

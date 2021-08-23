@@ -118,6 +118,10 @@
                       <li class="nav-item my-auto ms-3 ms-lg-0" style="padding-left:  90px;">
                         <a href="login.php" class="btn btn-sm  btn-white  btn-round mb-0 me-1 mt-2 mt-md-0">Iniciar Sesión</a>
                       </li>
+
+                      <li class="nav-item my-auto ms-3 ms-lg-0" style="padding-left:  90px;">
+                        <a href="loginExterno.php" class="btn btn-sm  btn-white  btn-round mb-0 me-1 mt-2 mt-md-0">Soy Externo</a>
+                      </li>
                         <?php
                          }
                         ?>

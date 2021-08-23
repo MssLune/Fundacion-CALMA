@@ -13,7 +13,7 @@
           <div class="row mb-2">
             
             <?php 
-              if(isset($_SESSION['Logueado']) && isset($_SESSION['privilegio']) && ($_SESSION['Logueado'] === true) && ($_SESSION['privilegio'] == 3)){
+              if(isset($_SESSION['Logueado']) && isset($_SESSION['privilegio']) && ($_SESSION['Logueado'] === true) && ($_SESSION['privilegio'] == 3) || ($_SESSION['privilegio'] == 4)){
                 //usuario
                 echo '
                   <div class="col-sm-6">
@@ -81,7 +81,7 @@
         <div class="container-fluid">
           <!-- Small boxes -->
           <?php 
-            if(isset($_SESSION['Logueado']) && isset($_SESSION['privilegio']) && ($_SESSION['Logueado'] === true) && ($_SESSION['privilegio'] == 3)){
+            if(isset($_SESSION['Logueado']) && isset($_SESSION['privilegio']) && ($_SESSION['Logueado'] === true) && ($_SESSION['privilegio'] == 3) || ($_SESSION['privilegio'] == 4)){
               //user
               echo '
 

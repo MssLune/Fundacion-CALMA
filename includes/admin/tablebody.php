@@ -16,7 +16,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <?php 
-                            if($_SESSION['privilegio'] == 3){
+                            if($_SESSION['privilegio'] == 3 || $_SESSION['privilegio'] == 4){
                                 //user
                                 echo '
                                     <div class="col-sm-6">

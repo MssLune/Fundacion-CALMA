@@ -34,18 +34,6 @@
         </div>
       </div>
 
-      <!-- SidebarSearch Form -->
-      <!-- <div class="form-inline">
-        <div class="input-group" data-widget="sidebar-search">
-          <input class="form-control form-control-sidebar" type="search" placeholder="Buscar" aria-label="Buscar">
-          <div class="input-group-append">
-            <button class="btn btn-sidebar">
-              <i class="fas fa-search fa-fw" style="color: rgba(0,0,0,0.2);"></i>
-            </button>
-          </div>
-        </div>
-      </div> -->
-
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -67,13 +55,6 @@
                   <p>Donaciones</p>
                 </a>
               </li>
-              <li class="nav-header mg6">USUARIO EXTERNO</li>
-                <li class="nav-item">
-                  <a href="usuarioex.php" class="nav-link active">
-                    <i class="nav-icon fas fa-user" style="color:#9EC3C1"></i>
-                    <p>Usuario Externo</p>
-                  </a>
-                </li>
             <li class="nav-header mg6">SALIR</li>
               <li class="nav-item">
                 <a href="includes/login/logout.php" class="nav-link close-session">
@@ -85,7 +66,7 @@
             return $opcionTodos;
           }
            //CONSULTAS : SOLO PARA USUARIOS (3)
-            if(isset($_SESSION['Logueado']) && isset($_SESSION['privilegio']) && ($_SESSION['Logueado'] === true) && ($_SESSION['privilegio'] == 3)){
+            if(isset($_SESSION['Logueado']) && isset($_SESSION['privilegio']) && ($_SESSION['Logueado'] === true) && ($_SESSION['privilegio'] == 3) || ($_SESSION['privilegio'] == 4)){
               echo '
               <li class="nav-header">USUARIO</li>
               <li class="nav-item menu-open">
@@ -174,6 +155,13 @@
                   </li>
                 </ul>
               </li>
+              <li class="nav-header mg6">USUARIO EXTERNO</li>
+                <li class="nav-item">
+                  <a href="administrarExternos.php" class="nav-link active">
+                    <i class="nav-icon fas fa-user" style="color:#9EC3C1"></i>
+                    <p>Usuario Externo</p>
+                  </a>
+                </li>
               ';
               echo sidebarAll();
             }else if(isset($_SESSION['Logueado']) && isset($_SESSION['privilegio']) && ($_SESSION['Logueado'] === true) && ($_SESSION['privilegio'] == 0)){
@@ -220,6 +208,13 @@
                       </a>
                     </li>
                   </ul>
+                </li>
+                <li class="nav-header mg6">USUARIO EXTERNO</li>
+                <li class="nav-item">
+                  <a href="administrarExternos.php" class="nav-link active">
+                    <i class="nav-icon fas fa-user" style="color:#9EC3C1"></i>
+                    <p>Usuario Externo</p>
+                  </a>
                 </li>
               ';
               echo sidebarAll();

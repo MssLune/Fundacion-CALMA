@@ -53,7 +53,7 @@ if ($dato['actividad'] == 1 && password_verify($password_sinHash, $passwordHash)
     $_SESSION['pais']=$dato['pais'];
     $_SESSION['estado']=$dato['estado_lugar'];
 
-    if($_SESSION['privilegio'] == 0 || $_SESSION['privilegio'] == 1 || $_SESSION['privilegio'] == 2 || $_SESSION['privilegio'] == 3){
+    if($_SESSION['privilegio'] == 0 || $_SESSION['privilegio'] == 1 || $_SESSION['privilegio'] == 2 || $_SESSION['privilegio'] == 3 || $_SESSION['privilegio'] == 4){
         echo "<script>login_exitoso();</script>";
         header('Location: ../../consultoriocalma.php'); 
         $_SESSION['Logueado']=true;

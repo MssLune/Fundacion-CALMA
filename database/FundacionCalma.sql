@@ -38,6 +38,8 @@ INSERT INTO usuarios VALUES ('5', 'LORENA', 'CAMPOS', 'VERA','lor@gmail.com',1,'
 INSERT INTO usuarios VALUES ('6', 'NAOMI', 'CAMPBELL', 'CLARK','naomi@hotmail.com',2,'18745100244','$2y$10$dPkNFFLSZaCctuGxyfQuNOtGaPG.cdb2mQvmDHil876F5Jd6naBza','1990-08-22',4,'987141211', 'PERÚ','LIMA','ABVGF129', 1,2,1,now());
 -- seña: emma
 INSERT INTO usuarios VALUES ('7', 'EMMA', 'WATSON', 'GRANGER','ew@gmail.com',3,'11145782','$2y$10$k8hA2Q5eLplJ1X5/FMixVeworDlbmI7YV0jbPIg1SnUhgJ/mfnnKe','1991-03-30',3,'998769985', 'PERÚ','LIMA', 'SIN CODIGO',1, 3,1,now());
+-- seña: carlos
+INSERT INTO usuarios VALUES ('8', 'CARLOS', 'BALLADARES', 'BALLADARES','balladares@gmail.com',1,'85477741','$2y$10$dDxyS6XlKYulEGDV56d7F.9lrEr2J//vZ9Kz690Diai86tsP5hgxu','1985-03-22',1,'998744420', 'PERÚ','LIMA', 'SIN CODIGO',1, 4,1,now());
 
 -- Tabla Admin (inner join con tabla usuarios)
 CREATE TABLE admin (
@@ -82,6 +84,7 @@ INSERT INTO privilegios VALUES ('0', 'ADMIN MASTER');
 INSERT INTO privilegios VALUES ('1', 'ADMINISTRADOR');
 INSERT INTO privilegios VALUES ('2', 'PSICOLOGO');
 INSERT INTO privilegios VALUES ('3', 'USUARIO');
+INSERT INTO privilegios VALUES ('4', 'USUARIO EXTERNO');
 
 CREATE TABLE sexo (
 	id_genero int(5) auto_increment primary key,
