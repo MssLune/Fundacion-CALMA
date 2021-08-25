@@ -98,7 +98,7 @@
                         <?php
                           if(isset($_SESSION['Logueado']) && $_SESSION['Logueado'] === true){
                             echo '
-                            <li class="nav-item my-auto ms-10 ms-lg-0" style="padding-left: 90px; vertical-align: center;">
+                            <li class="nav-item my-auto ms-10 ms-lg-0" style="padding-left: 30px; vertical-align: center;">
                               <div class="dropdown">
                                 <a class="dropdown-toggle btn-dropdown" onclick="dropdown();" role="button" data-toggle="dropdown">'.$_SESSION['nombres'].'</a>
                                   <div class="dropdown-menu content_dropdown" id="menu_dropdown">
@@ -115,12 +115,12 @@
                         </a>
                       </li>
 
-                      <li class="nav-item my-auto ms-3 ms-lg-0" style="padding-left:  90px;">
-                        <a href="login.php" class="btn btn-sm  btn-white  btn-round mb-0 me-1 mt-2 mt-md-0">Iniciar Sesión</a>
+                      <li class="nav-item my-auto ms-2 ms-lg-0" style="padding-left: 20px;">
+                        <a href="login.php" class="btn btn-sm  btn-white  btn-round mb-0 me-1 mt-2 mt-md-0">Soy Paciente Calma</a>
                       </li>
 
-                      <li class="nav-item my-auto ms-3 ms-lg-0" style="padding-left:  90px;">
-                        <a href="loginExterno.php" class="btn btn-sm  btn-white  btn-round mb-0 me-1 mt-2 mt-md-0">Soy Externo</a>
+                      <li class="nav-item my-auto ms-2 ms-lg-0" style="padding-left: 20px;">
+                        <a href="loginExterno.php" class="btn btn-sm  btn-white  btn-round mb-0 me-1 mt-2 mt-md-0">Soy Paciente Externo</a>
                       </li>
                         <?php
                          }
