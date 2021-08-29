@@ -1,5 +1,5 @@
-CREATE DATABASE fundacioncalma;
-USE fundacioncalma;
+CREATE DATABASE clinicacalma;
+USE clinicacalma;
 
 
 -- Tabla Usuarios (en general)

@@ -65,10 +65,18 @@
             ';
             return $opcionTodos;
           }
-           //CONSULTAS : SOLO PARA USUARIOS (3)
+           //CONSULTAS : SOLO PARA USUARIOS (3) / Externos (4)
             if(isset($_SESSION['Logueado']) && isset($_SESSION['privilegio']) && ($_SESSION['Logueado'] === true) && ($_SESSION['privilegio'] == 3) || ($_SESSION['privilegio'] == 4)){
+              if($_SESSION['privilegio'] == 3){
+                echo '
+                  <li class="nav-header">PACIENTE CALMA</li>
+                ';
+              }else if($_SESSION['privilegio'] == 4){
+                echo '
+                  <li class="nav-header">PACIENTE EXTERNO</li>
+                ';
+              }
               echo '
-              <li class="nav-header">USUARIO</li>
               <li class="nav-item menu-open">
                 <a href="#" class="nav-link active">
                   <i class="nav-icon fas fa-archive"></i>

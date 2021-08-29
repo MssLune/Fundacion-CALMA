@@ -31,7 +31,7 @@ if (isset($_POST["nombres_r"])) {
 		'".$_POST['estado_r']."',
 		'".$convenioUser."',
 		1,
-		3,
+		'".$_POST['tipo_user_r']."',
 		1,
 		now()
 		)";

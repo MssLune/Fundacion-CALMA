@@ -26,6 +26,21 @@
                   <input type="email" name="email-user_registrar" id="email-user-registro" class="form-control form-control-lg" placeholder="Email (Será su Usuario)" aria-label="Email" aria-describedby="email-addon" required>
                   <p class="formulario__input-error">Correo inválido</p>
                 </div>
+                
+                <div class="mb-3">
+                  <p>Soy:</p>
+
+                  <!-- radiobuttons -->
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radio_pcteCalma" value="option1">
+                    <label class="form-check-label" for="radio_pcteCalma">Paciente Calma</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radio_pcteExt" value="option2">
+                    <label class="form-check-label" for="radio_pcteExt">Paciente Externo</label>
+                  </div>
+                </div>
+                
                 <div class="mb-3" id="grupo__selectTipoDoc">
                   <select class="form-control form-control-lg letra-select" id="tipoDoc-registro" name="tipoDoc_registrar" aria-label="Tipo Documento Identidad" aria-describedby="tipoDoc-addon" required>
                     <option disabled selected value="defecto_tipoDoc">Selecciona el Tipo de Documento de Identidad</option>

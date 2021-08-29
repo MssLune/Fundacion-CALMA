@@ -5,7 +5,7 @@
       <div class=" row">
         <div class="col-md-3 mb-4 ms-auto">
           <div>
-            <h6 class="text-gradient text-primary font-weight-bolder">Fundacion Calma</h6>
+            <h6 class="text-gradient text-primary font-weight-bolder">Fundación Calma</h6>
           </div>
           <div>
             <h6 class="mt-3 mb-2 opacity-8">Social</h6>
@@ -170,7 +170,6 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
   <script src="./assets/js/soft-design-system.min.js?v=1.0.3" type="text/javascript"></script>
   <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-  <script src="js/plugins.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-animateNumber/0.0.14/jquery.animateNumber.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
@@ -178,9 +177,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.colorbox/1.6.4/jquery.colorbox-min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
-
-  <script src="js/main.js"></script>
-  <script src="js/cotizador.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeSzprwFmUOSsAIf36sT9hONLvf3ReD_4&callback=initMap" async defer></script>
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

@@ -71,6 +71,17 @@ function registrar_nuevo_usuario(){
   var paterno_registro = document.getElementById("apellidoPat-registro").value;
   var materno_registro = document.getElementById("apellidoMat-registro").value;
   var email_registro = document.getElementById("email-user-registro").value;
+   //check radio buttons
+  var tipoPcte;
+  var tipo_pacientes = $('input:radio[name=inlineRadioOptions]:checked').val(); // option1 or option2
+  if(tipo_pacientes == 'option1'){
+    //Paciente Calma
+    tipoPcte = 3;
+  }else if(tipo_pacientes == 'option2'){
+    //Paciente Externo
+    tipoPcte = 4;
+  }
+  
   var nroDoc_registro = document.getElementById("nroDoc-registro").value;
   var fechaNac_registro = document.getElementById("nacimiento-registro").value;
   var celular_registro = document.getElementById("celular-registro").value;
@@ -120,6 +131,7 @@ function registrar_nuevo_usuario(){
         "paterno_r":paterno_registro,
         "materno_r":materno_registro,
         "email_r":email_registro,
+        "tipo_user_r":tipoPcte,
         "tipoDoc_r":tipoDoc_registro,
         "nroDoc_r":nroDoc_registro,
         "fechaNacimiento_r":fechaNac_registro,
