@@ -115,12 +115,8 @@
                         </a>
                       </li>
 
-                      <li class="nav-item my-auto ms-2 ms-lg-0" style="padding-left: 20px;">
+                      <li class="nav-item my-auto ms-2 ms-lg-0" style="padding-left: 40px;">
                         <a href="login.php" class="btn btn-sm  btn-white  btn-round mb-0 me-1 mt-2 mt-md-0">Soy Paciente Calma</a>
-                      </li>
-
-                      <li class="nav-item my-auto ms-2 ms-lg-0" style="padding-left: 20px;">
-                        <a href="loginExterno.php" class="btn btn-sm  btn-white  btn-round mb-0 me-1 mt-2 mt-md-0">Soy Paciente Externo</a>
                       </li>
                         <?php
                          }
