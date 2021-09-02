@@ -458,3 +458,14 @@ function newConsulta(){
       }
   })
 }
+
+// LOGIN -- Redireccionar si es User Externo
+function redirect_externo(){
+  var radio_box = $('input:radio[name=userExternoradio]:checked').val();
+
+  if(radio_box == 'optionExterno'){
+    window.location.href = 'loginExterno.php';
+  }else{
+    //nothing
+  }
+}

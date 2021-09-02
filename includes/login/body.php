@@ -13,6 +13,10 @@
               <p class="mb-0">Acceda a su cuenta</p>
             </div>
             <div class="card-body">
+              <div class="form-check form-check-inline" onClick="redirect_externo()">
+                <input class="form-check-input" type="radio" name="userExternoradio" id="radio_externo" value="optionExterno">
+                <label class="form-check-label" for="radio_pcteCalma">Soy Paciente Externo</label>
+              </div>
               <form role="form" action="includes/login/checklogin.php" onsubmit="cargando()" method="POST">
                 <div class="mb-3">
                   <input type="email" name="email_user" id="email_login" class="form-control form-control-lg" placeholder="Email" aria-label="Email" aria-describedby="email-addon">
@@ -20,10 +24,10 @@
                 <div class="mb-3">
                   <input type="password" name="password_user" id="password_login" class="form-control form-control-lg" placeholder="Password" aria-label="Password" aria-describedby="password-addon">
                 </div>
-                <div class="form-check form-switch">
+                <!-- <div class="form-check form-switch">
                   <input class="form-check-input" type="checkbox" id="rememberMe">
                   <label class="form-check-label" for="rememberMe">Recuérdame</label>
-                </div>
+                </div> -->
                 <div class="text-center">
                   <button type="submit" class="btn btn-lg bg-gradient-primary btn-lg w-100 mt-4 mb-0">INGRESAR</button>
                 </div>
@@ -31,13 +35,13 @@
             </div>
             <div class="card-footer text-center pt-0 px-lg-2 px-1">
               <p class="mb-4 text-sm mx-auto">
-                Todavia no se ha registrado?
-                <a href="javascript:;" class="text-primary text-gradient font-weight-bold">Registrarse como paciente</a>
+                Todavía no se ha registrado?
+                <a href="registrar.php" class="text-primary text-gradient font-weight-bold">Registrarse como paciente</a>
               </p>
-              <p class="mb-4 text-sm mx-auto">
+              <!-- <p class="mb-4 text-sm mx-auto">
                 Únete a nosotros!
                 <a href="javascript:;" class="text-primary text-gradient font-weight-bold">Registrarse como psicólogo pro bono</a>
-              </p>
+              </p> -->
             </div>
           </div>
         </div>
