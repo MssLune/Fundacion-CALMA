@@ -81,7 +81,7 @@
         <div class="container-fluid">
           <!-- Small boxes -->
           <?php 
-            if(isset($_SESSION['Logueado']) && isset($_SESSION['privilegio']) && ($_SESSION['Logueado'] === true) && ($_SESSION['privilegio'] == 3) || ($_SESSION['privilegio'] == 4)){
+            if(isset($_SESSION['Logueado']) && isset($_SESSION['privilegio']) && ($_SESSION['Logueado'] === true) && ($_SESSION['privilegio'] == 3)){
               //user
               echo '
 
@@ -95,6 +95,21 @@
                     <a href="buscarConsulta.php" class="small-box-footer btn btn-primary wd100">Más información <i class="fas fa-arrow-circle-right"></i></a>
                   </div>
                 </div>
+
+                <div class="card w-75 mx-auto small-box pd25">
+                  <div class="card-body">
+                    <h5 class="card-title mg6 p-25">MIS CONSULTAS</h5>
+                    <p class="card-text text-muted">Ingrese aquí para ver en una lista de todas sus consultas realizadas.</p>
+                    <div class="icon">
+                      <i class="ion ion-grid"></i>
+                    </div>
+                    <a href="tableConsultas.php" class="small-box-footer btn btn-primary wd100">Más información <i class="fas fa-arrow-circle-right"></i></a>
+                  </div>
+                </div>
+              ';
+            }else if(isset($_SESSION['Logueado']) && isset($_SESSION['privilegio']) && ($_SESSION['Logueado'] === true) && ($_SESSION['privilegio'] == 4)){
+              //user externo
+              echo '
 
                 <div class="card w-75 mx-auto small-box pd25">
                   <div class="card-body">

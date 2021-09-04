@@ -65,18 +65,10 @@
             ';
             return $opcionTodos;
           }
-           //CONSULTAS : SOLO PARA USUARIOS (3) / Externos (4)
-            if(isset($_SESSION['Logueado']) && isset($_SESSION['privilegio']) && ($_SESSION['Logueado'] === true) && ($_SESSION['privilegio'] == 3) || ($_SESSION['privilegio'] == 4)){
-              if($_SESSION['privilegio'] == 3){
-                echo '
-                  <li class="nav-header">PACIENTE CALMA</li>
-                ';
-              }else if($_SESSION['privilegio'] == 4){
-                echo '
-                  <li class="nav-header">PACIENTE EXTERNO</li>
-                ';
-              }
+           //CONSULTAS : SOLO PARA USUARIOS (3) 
+            if(isset($_SESSION['Logueado']) && isset($_SESSION['privilegio']) && ($_SESSION['Logueado'] === true) && ($_SESSION['privilegio'] == 3)){
               echo '
+              <li class="nav-header">PACIENTE CALMA</li>
               <li class="nav-item menu-open">
                 <a href="#" class="nav-link active">
                   <i class="nav-icon fas fa-archive"></i>
@@ -96,6 +88,29 @@
                     <a href="buscarConsulta.php" class="nav-link">
                       <i class="fas fa-tachometer-alt nav-icon"></i>
                       <p>Programar Consultas</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              ';
+              echo sidebarAll();
+            }else if (isset($_SESSION['Logueado']) && isset($_SESSION['privilegio']) && ($_SESSION['Logueado'] === true) && ($_SESSION['privilegio'] == 4)){
+              // Externos (4)
+              echo '
+              <li class="nav-header">PACIENTE EXTERNO</li>
+              <li class="nav-item menu-open">
+                <a href="#" class="nav-link active">
+                  <i class="nav-icon fas fa-archive"></i>
+                  <p>
+                    Consultas
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="tableConsultas.php" class="nav-link">
+                      <i class="fas fa-align-left nav-icon"></i>
+                      <p>Mis consultas</p>
                     </a>
                   </li>
                 </ul>
